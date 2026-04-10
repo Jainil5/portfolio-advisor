@@ -1,0 +1,10 @@
+langchain
+langchain_ollama
+langchain_chroma
+langchain_community
+langchain_core
+yfinance
+requests
+streamlit
+pandas
+streamlit_autorefresh

@@ -1,0 +1,101 @@
+ticker,company_name,sector,industry,market_cap,country,exchange,yahoo_ticker,stock_id,is_active
+ABB.NS,ABB India Ltd.,Capital Goods,Capital Goods,Large Cap,India,NSE,ABB.NS,1,True
+ADANIENSOL.NS,Adani Energy Solutions Ltd.,Power,Power,Large Cap,India,NSE,ADANIENSOL.NS,2,True
+ADANIENT.NS,Adani Enterprises Ltd.,Metals & Mining,Metals & Mining,Large Cap,India,NSE,ADANIENT.NS,3,True
+ADANIGREEN.NS,Adani Green Energy Ltd.,Power,Power,Large Cap,India,NSE,ADANIGREEN.NS,4,True
+ADANIPORTS.NS,Adani Ports and Special Economic Zone Ltd.,Services,Services,Large Cap,India,NSE,ADANIPORTS.NS,5,True
+ADANIPOWER.NS,Adani Power Ltd.,Power,Power,Large Cap,India,NSE,ADANIPOWER.NS,6,True
+AMBUJACEM.NS,Ambuja Cements Ltd.,Construction Materials,Construction Materials,Large Cap,India,NSE,AMBUJACEM.NS,7,True
+APOLLOHOSP.NS,Apollo Hospitals Enterprise Ltd.,Healthcare,Healthcare,Large Cap,India,NSE,APOLLOHOSP.NS,8,True
+ASIANPAINT.NS,Asian Paints Ltd.,Consumer Durables,Consumer Durables,Large Cap,India,NSE,ASIANPAINT.NS,9,True
+DMART.NS,Avenue Supermarts Ltd.,Consumer Services,Consumer Services,Large Cap,India,NSE,DMART.NS,10,True
+AXISBANK.NS,Axis Bank Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,AXISBANK.NS,11,True
+BAJAJ-AUTO.NS,Bajaj Auto Ltd.,Automobile and Auto Components,Automobile and Auto Components,Large Cap,India,NSE,BAJAJ-AUTO.NS,12,True
+BAJFINANCE.NS,Bajaj Finance Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,BAJFINANCE.NS,13,True
+BAJAJFINSV.NS,Bajaj Finserv Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,BAJAJFINSV.NS,14,True
+BAJAJHLDNG.NS,Bajaj Holdings & Investment Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,BAJAJHLDNG.NS,15,True
+BANKBARODA.NS,Bank of Baroda,Financial Services,Financial Services,Large Cap,India,NSE,BANKBARODA.NS,16,True
+BEL.NS,Bharat Electronics Ltd.,Capital Goods,Capital Goods,Large Cap,India,NSE,BEL.NS,17,True
+BPCL.NS,Bharat Petroleum Corporation Ltd.,Oil Gas & Consumable Fuels,Oil Gas & Consumable Fuels,Large Cap,India,NSE,BPCL.NS,18,True
+BHARTIARTL.NS,Bharti Airtel Ltd.,Telecommunication,Telecommunication,Large Cap,India,NSE,BHARTIARTL.NS,19,True
+BOSCHLTD.NS,Bosch Ltd.,Automobile and Auto Components,Automobile and Auto Components,Large Cap,India,NSE,BOSCHLTD.NS,20,True
+BRITANNIA.NS,Britannia Industries Ltd.,Fast Moving Consumer Goods,Fast Moving Consumer Goods,Large Cap,India,NSE,BRITANNIA.NS,21,True
+CGPOWER.NS,CG Power and Industrial Solutions Ltd.,Capital Goods,Capital Goods,Large Cap,India,NSE,CGPOWER.NS,22,True
+CANBK.NS,Canara Bank,Financial Services,Financial Services,Large Cap,India,NSE,CANBK.NS,23,True
+CHOLAFIN.NS,Cholamandalam Investment and Finance Company Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,CHOLAFIN.NS,24,True
+CIPLA.NS,Cipla Ltd.,Healthcare,Healthcare,Large Cap,India,NSE,CIPLA.NS,25,True
+COALINDIA.NS,Coal India Ltd.,Oil Gas & Consumable Fuels,Oil Gas & Consumable Fuels,Large Cap,India,NSE,COALINDIA.NS,26,True
+CUMMINSIND.NS,Cummins India Ltd.,Capital Goods,Capital Goods,Large Cap,India,NSE,CUMMINSIND.NS,27,True
+DLF.NS,DLF Ltd.,Realty,Realty,Large Cap,India,NSE,DLF.NS,28,True
+DIVISLAB.NS,Divi's Laboratories Ltd.,Healthcare,Healthcare,Large Cap,India,NSE,DIVISLAB.NS,29,True
+DRREDDY.NS,Dr. Reddy's Laboratories Ltd.,Healthcare,Healthcare,Large Cap,India,NSE,DRREDDY.NS,30,True
+EICHERMOT.NS,Eicher Motors Ltd.,Automobile and Auto Components,Automobile and Auto Components,Large Cap,India,NSE,EICHERMOT.NS,31,True
+ETERNAL.NS,Eternal Ltd.,Consumer Services,Consumer Services,Large Cap,India,NSE,ETERNAL.NS,32,True
+GAIL.NS,GAIL (India) Ltd.,Oil Gas & Consumable Fuels,Oil Gas & Consumable Fuels,Large Cap,India,NSE,GAIL.NS,33,True
+GODREJCP.NS,Godrej Consumer Products Ltd.,Fast Moving Consumer Goods,Fast Moving Consumer Goods,Large Cap,India,NSE,GODREJCP.NS,34,True
+GRASIM.NS,Grasim Industries Ltd.,Construction Materials,Construction Materials,Large Cap,India,NSE,GRASIM.NS,35,True
+HCLTECH.NS,HCL Technologies Ltd.,Information Technology,Information Technology,Large Cap,India,NSE,HCLTECH.NS,36,True
+HDFCAMC.NS,HDFC Asset Management Company Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,HDFCAMC.NS,37,True
+HDFCBANK.NS,HDFC Bank Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,HDFCBANK.NS,38,True
+HDFCLIFE.NS,HDFC Life Insurance Company Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,HDFCLIFE.NS,39,True
+HINDALCO.NS,Hindalco Industries Ltd.,Metals & Mining,Metals & Mining,Large Cap,India,NSE,HINDALCO.NS,40,True
+HAL.NS,Hindustan Aeronautics Ltd.,Capital Goods,Capital Goods,Large Cap,India,NSE,HAL.NS,41,True
+HINDUNILVR.NS,Hindustan Unilever Ltd.,Fast Moving Consumer Goods,Fast Moving Consumer Goods,Large Cap,India,NSE,HINDUNILVR.NS,42,True
+HINDZINC.NS,Hindustan Zinc Ltd.,Metals & Mining,Metals & Mining,Large Cap,India,NSE,HINDZINC.NS,43,True
+HYUNDAI.NS,Hyundai Motor India Ltd.,Automobile and Auto Components,Automobile and Auto Components,Large Cap,India,NSE,HYUNDAI.NS,44,True
+ICICIBANK.NS,ICICI Bank Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,ICICIBANK.NS,45,True
+ITC.NS,ITC Ltd.,Fast Moving Consumer Goods,Fast Moving Consumer Goods,Large Cap,India,NSE,ITC.NS,46,True
+INDHOTEL.NS,Indian Hotels Co. Ltd.,Consumer Services,Consumer Services,Large Cap,India,NSE,INDHOTEL.NS,47,True
+IOC.NS,Indian Oil Corporation Ltd.,Oil Gas & Consumable Fuels,Oil Gas & Consumable Fuels,Large Cap,India,NSE,IOC.NS,48,True
+IRFC.NS,Indian Railway Finance Corporation Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,IRFC.NS,49,True
+INFY.NS,Infosys Ltd.,Information Technology,Information Technology,Large Cap,India,NSE,INFY.NS,50,True
+INDIGO.NS,InterGlobe Aviation Ltd.,Services,Services,Large Cap,India,NSE,INDIGO.NS,51,True
+JSWSTEEL.NS,JSW Steel Ltd.,Metals & Mining,Metals & Mining,Large Cap,India,NSE,JSWSTEEL.NS,52,True
+JINDALSTEL.NS,Jindal Steel Ltd.,Metals & Mining,Metals & Mining,Large Cap,India,NSE,JINDALSTEL.NS,53,True
+JIOFIN.NS,Jio Financial Services Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,JIOFIN.NS,54,True
+KOTAKBANK.NS,Kotak Mahindra Bank Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,KOTAKBANK.NS,55,True
+LTM.NS,LTIMindtree Ltd.,Information Technology,Information Technology,Large Cap,India,NSE,LTM.NS,56,True
+LT.NS,Larsen & Toubro Ltd.,Construction,Construction,Large Cap,India,NSE,LT.NS,57,True
+LODHA.NS,Lodha Developers Ltd.,Realty,Realty,Large Cap,India,NSE,LODHA.NS,58,True
+M&M.NS,Mahindra & Mahindra Ltd.,Automobile and Auto Components,Automobile and Auto Components,Large Cap,India,NSE,M&M.NS,59,True
+MARUTI.NS,Maruti Suzuki India Ltd.,Automobile and Auto Components,Automobile and Auto Components,Large Cap,India,NSE,MARUTI.NS,60,True
+MAXHEALTH.NS,Max Healthcare Institute Ltd.,Healthcare,Healthcare,Large Cap,India,NSE,MAXHEALTH.NS,61,True
+MAZDOCK.NS,Mazagoan Dock Shipbuilders Ltd.,Capital Goods,Capital Goods,Large Cap,India,NSE,MAZDOCK.NS,62,True
+MUTHOOTFIN.NS,Muthoot Finance Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,MUTHOOTFIN.NS,63,True
+NTPC.NS,NTPC Ltd.,Power,Power,Large Cap,India,NSE,NTPC.NS,64,True
+NESTLEIND.NS,Nestle India Ltd.,Fast Moving Consumer Goods,Fast Moving Consumer Goods,Large Cap,India,NSE,NESTLEIND.NS,65,True
+ONGC.NS,Oil & Natural Gas Corporation Ltd.,Oil Gas & Consumable Fuels,Oil Gas & Consumable Fuels,Large Cap,India,NSE,ONGC.NS,66,True
+PIDILITIND.NS,Pidilite Industries Ltd.,Chemicals,Chemicals,Large Cap,India,NSE,PIDILITIND.NS,67,True
+PFC.NS,Power Finance Corporation Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,PFC.NS,68,True
+POWERGRID.NS,Power Grid Corporation of India Ltd.,Power,Power,Large Cap,India,NSE,POWERGRID.NS,69,True
+PNB.NS,Punjab National Bank,Financial Services,Financial Services,Large Cap,India,NSE,PNB.NS,70,True
+RECLTD.NS,REC Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,RECLTD.NS,71,True
+RELIANCE.NS,Reliance Industries Ltd.,Oil Gas & Consumable Fuels,Oil Gas & Consumable Fuels,Large Cap,India,NSE,RELIANCE.NS,72,True
+SBILIFE.NS,SBI Life Insurance Company Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,SBILIFE.NS,73,True
+MOTHERSON.NS,Samvardhana Motherson International Ltd.,Automobile and Auto Components,Automobile and Auto Components,Large Cap,India,NSE,MOTHERSON.NS,74,True
+SHREECEM.NS,Shree Cement Ltd.,Construction Materials,Construction Materials,Large Cap,India,NSE,SHREECEM.NS,75,True
+SHRIRAMFIN.NS,Shriram Finance Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,SHRIRAMFIN.NS,76,True
+ENRIN.NS,Siemens Energy India Ltd.,Capital Goods,Capital Goods,Large Cap,India,NSE,ENRIN.NS,77,True
+SIEMENS.NS,Siemens Ltd.,Capital Goods,Capital Goods,Large Cap,India,NSE,SIEMENS.NS,78,True
+SOLARINDS.NS,Solar Industries India Ltd.,Chemicals,Chemicals,Large Cap,India,NSE,SOLARINDS.NS,79,True
+SBIN.NS,State Bank of India,Financial Services,Financial Services,Large Cap,India,NSE,SBIN.NS,80,True
+SUNPHARMA.NS,Sun Pharmaceutical Industries Ltd.,Healthcare,Healthcare,Large Cap,India,NSE,SUNPHARMA.NS,81,True
+TVSMOTOR.NS,TVS Motor Company Ltd.,Automobile and Auto Components,Automobile and Auto Components,Large Cap,India,NSE,TVSMOTOR.NS,82,True
+TATACAP.NS,Tata Capital Ltd.,Financial Services,Financial Services,Large Cap,India,NSE,TATACAP.NS,83,True
+TCS.NS,Tata Consultancy Services Ltd.,Information Technology,Information Technology,Large Cap,India,NSE,TCS.NS,84,True
+TATACONSUM.NS,Tata Consumer Products Ltd.,Fast Moving Consumer Goods,Fast Moving Consumer Goods,Large Cap,India,NSE,TATACONSUM.NS,85,True
+TMCV.NS,Tata Motors Ltd.,Capital Goods,Capital Goods,Large Cap,India,NSE,TMCV.NS,86,True
+TMPV.NS,Tata Motors Passenger Vehicles Ltd.,Automobile and Auto Components,Automobile and Auto Components,Large Cap,India,NSE,TMPV.NS,87,True
+TATAPOWER.NS,Tata Power Co. Ltd.,Power,Power,Large Cap,India,NSE,TATAPOWER.NS,88,True
+TATASTEEL.NS,Tata Steel Ltd.,Metals & Mining,Metals & Mining,Large Cap,India,NSE,TATASTEEL.NS,89,True
+TECHM.NS,Tech Mahindra Ltd.,Information Technology,Information Technology,Large Cap,India,NSE,TECHM.NS,90,True
+TITAN.NS,Titan Company Ltd.,Consumer Durables,Consumer Durables,Large Cap,India,NSE,TITAN.NS,91,True
+TORNTPHARM.NS,Torrent Pharmaceuticals Ltd.,Healthcare,Healthcare,Large Cap,India,NSE,TORNTPHARM.NS,92,True
+TRENT.NS,Trent Ltd.,Consumer Services,Consumer Services,Large Cap,India,NSE,TRENT.NS,93,True
+ULTRACEMCO.NS,UltraTech Cement Ltd.,Construction Materials,Construction Materials,Large Cap,India,NSE,ULTRACEMCO.NS,94,True
+UNIONBANK.NS,Union Bank of India,Financial Services,Financial Services,Large Cap,India,NSE,UNIONBANK.NS,95,True
+UNITDSPR.NS,United Spirits Ltd.,Fast Moving Consumer Goods,Fast Moving Consumer Goods,Large Cap,India,NSE,UNITDSPR.NS,96,True
+VBL.NS,Varun Beverages Ltd.,Fast Moving Consumer Goods,Fast Moving Consumer Goods,Large Cap,India,NSE,VBL.NS,97,True
+VEDL.NS,Vedanta Ltd.,Metals & Mining,Metals & Mining,Large Cap,India,NSE,VEDL.NS,98,True
+WIPRO.NS,Wipro Ltd.,Information Technology,Information Technology,Large Cap,India,NSE,WIPRO.NS,99,True
+ZYDUSLIFE.NS,Zydus Lifesciences Ltd.,Healthcare,Healthcare,Large Cap,India,NSE,ZYDUSLIFE.NS,100,True
