@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+from helper_functions import get_current_price_by_name
 
 st.set_page_config(page_title="Stock Analysis", page_icon="📈", layout="wide")
 
@@ -38,55 +39,76 @@ with c2:
 
 st.divider()    
 if selected_id:
-    # 2. Display Metrics
+    # === 2. THEMATIC METRIC DISPLAY ===
     stock_feat = features_df[features_df["stock_id"] == selected_id].iloc[0]
     
-    # Price Overview Row
+    # --- SECTION A: MARKET CONTEXT & PROFILE ---
+    st.markdown("### 🏢 Company Profile")
+    prof_c1, prof_c2, prof_c3, prof_c4 = st.columns(4)
+    prof_c1.metric("Ticker", stock_feat.get('ticker', 'N/A'))
+    prof_c2.metric("Sector", stock_feat.get('sector', 'N/A'))
+    prof_c3.metric("Industry", stock_feat.get('industry', 'N/A'))
+    prof_c4.metric("Market Cap", stock_feat.get('market_cap', 'N/A'))
+    st.write("")
+
+    # --- SECTION B: PRICE DYNAMICS ---
+    st.markdown("### 📊 Price Dynamics")
     r1c1, r1c2, r1c3, r1c4, r1c5 = st.columns(5)
     
-    cp = stock_feat.get('current_price', 0)
+    cp = get_current_price_by_name(stock_feat['company_name'])
+    if cp is None:
+        cp = stock_feat.get('current_price', 0)
+        
     dr = stock_feat.get('daily_return', 0)
     r1c1.metric("Current Price", f"₹{cp:,.2f}", f"{dr:.2f}%")
     r1c2.metric("52-Week High", f"₹{stock_feat.get('52w_high', 0):,.2f}")
     r1c3.metric("52-Week Low", f"₹{stock_feat.get('52w_low', 0):,.2f}")
-    r1c4.metric("50-Day MA", f"₹{stock_feat.get('ma50', 0):,.2f}")
+    r1c4.metric("20-Day MA", f"₹{stock_feat.get('ma20', 0):,.2f}")
+    r1c5.metric("50-Day MA", f"₹{stock_feat.get('ma50', 0):,.2f}")
     
-    trend_color = "🟢" if stock_feat.get("trend") == "Bullish" else "🔴"
-    r1c5.markdown(f"**Trend**<br/><div style='font-size:24px'>{trend_color} {stock_feat.get('trend', 'Neutral')}</div>", unsafe_allow_html=True)
-
-    st.write("") # Spacer
-
-    # Performance Row
-    r2c1, r2c2, r2c3, r2c4 = st.columns(4)
-    r2c1.metric("7d Return", f"{stock_feat.get('return_7d', 0):.2f}%")
-    r2c2.metric("30d Return", f"{stock_feat.get('return_30d', 0):.2f}%")
-    r2c3.metric("180d Return", f"{stock_feat.get('return_180d', 0):.2f}%")
-    r2c4.metric("Volatility (30d)", f"{stock_feat.get('volatility_30d', 0):.2f}%")
+    # --- SECTION C: PERFORMANCE & RETURNS ---
+    st.markdown("### 💹 Performance Dashboard")
+    perf_c1, perf_c2, perf_c3, perf_c4 = st.columns(4)
+    perf_c1.metric("7-Day Return", f"{stock_feat.get('return_7d', 0):.2f}%")
+    perf_c2.metric("30-Day Return", f"{stock_feat.get('return_30d', 0):.2f}%")
+    perf_c3.metric("180-Day Return", f"{stock_feat.get('return_180d', 0):.2f}%")
     
-    st.write("") # Spacer
+    trend_val = stock_feat.get('trend', 'Neutral')
+    trend_color = "🟢" if trend_val == "Bullish" else "🔴"
+    perf_c4.markdown(f"**Current Trend**<br/><div style='font-size:20px'>{trend_color} {trend_val}</div>", unsafe_allow_html=True)
+    st.write("")
 
-    # Fundamentals Row
-    st.markdown("#### Key Fundamentals")
-    f1, f2, f3 = st.columns(3)
-    f1.metric("Debt to Equity", f"{stock_feat.get('debt_to_equity', 0):.2f}")
-    f2.metric("Cash Ratio", f"{stock_feat.get('cash_ratio', 0):.2f}")
-    f3.metric("Company Sector", f"{stock_feat.get('sector', 'N/A')}")
+    # --- SECTION D: VOLUME & LIQUIDITY ---
+    st.markdown("### 🌊 Volume & Liquidity")
+    vol_c1, vol_c2, vol_c3 = st.columns(3)
+    vol_c1.metric("Avg Volume (7d)", f"{stock_feat.get('avg_volume_7d', 0):,.0f}")
+    vol_c2.metric("Avg Volume (30d)", f"{stock_feat.get('avg_volume_30d', 0):,.0f}")
+    vol_c3.metric("Avg Volume (180d)", f"{stock_feat.get('avg_volume_180d', 0):,.0f}")
+    st.write("")
+
+    # --- SECTION E: RISK & FUNDAMENTALS ---
+    st.markdown("### ⚖️ Risk & Fundamental Health")
+    risk_c1, risk_c2, risk_c3, risk_c4 = st.columns(4)
+    risk_c1.metric("Volatility (30d)", f"{stock_feat.get('volatility_30d', 0):.2f}%")
+    risk_c2.metric("Volatility (180d)", f"{stock_feat.get('volatility_180d', 0):.2f}%")
+    risk_c3.metric("Debt to Equity", f"{stock_feat.get('debt_to_equity', 0):.2f}")
+    risk_c4.metric("Cash Ratio", f"{stock_feat.get('cash_ratio', 0):.2f}")
     
+    # Extra fundamental row
+    fund_c1, fund_c2, fund_c3 = st.columns(3)
+    fund_c1.metric("Debt to Assets", f"{stock_feat.get('debt_to_assets', 0):.2f}")
+    st.write("")
+
     st.divider()
 
-    
-    # 4. Display Explanation
-    st.subheader("AI Analysis & Explanation")
+    # === 3. ANALYSIS & VISUALIZATION ===
+    st.subheader("🤖 AI Analysis & Visualization")
     score = stock_feat.get("score", 0)
-    trend = stock_feat.get("trend", "Neutral")
-    volatility = stock_feat.get("volatility_30d", 0)
     
     exp_col1, exp_col2 = st.columns(2)
     with exp_col1:
-         # 3. Display Price Chart
-        st.subheader(f"{stock_feat['company_name']} Price Chart")
+        st.write(f"#### {stock_feat['company_name']} Price History")
         
-        # Needs a bit of string matching to find the right file in PRICE_DIR
         price_file = None
         for f in os.listdir(PRICE_DIR):
             if f.startswith(f"{selected_id}_"):
@@ -98,27 +120,30 @@ if selected_id:
             if "Date" in price_df.columns and "Close" in price_df.columns:
                 price_df['Date'] = pd.to_datetime(price_df['Date'], utc=True, errors='coerce')
                 price_df.set_index('Date', inplace=True)
-                st.line_chart(price_df['Close'])
+                st.area_chart(price_df['Close'])
         else:
             st.warning("Price history data not found for this stock.")
             
     with exp_col2:
+        st.write("#### Advisor Outlook")
         if score >= 3:
             st.success(f"**Overall Rating: STRONG** (Score: {score:.2f})")
-            st.write("This stock shows strong momentum based on outperforming algorithms. Highly recommended to maintain in portfolio or consider buying.")
+            st.write("This stock shows exceptional strength across multiple horizons. High technical momentum combined with stable health makes it a top pick.")
         elif score >= 1.5:
             st.info(f"**Overall Rating: MODERATE** (Score: {score:.2f})")
-            st.write("This stock has average performance. It's safe but don't expect explosive short-term growth.")
+            st.write("Mixed signals here. While fundamentals may be stable, momentum is either cooling or hasn't fully picked up yet.")
         else:
             st.error(f"**Overall Rating: WEAK** (Score: {score:.2f})")
-            st.write("Poor momentum and scoring. Consider taking profits if you own it or look for better opportunities.")
+            st.write("High risk or poor momentum. Technical trends are significantly bearish or volatility is outside acceptable ranges.")
            
+        trend = stock_feat.get('trend', 'Neutral')
         if trend == "Bullish":
-            st.write("🐂 **Bullish Trend:** The stock is trading above its 50-day moving average, a strong positive indicator.")
+            st.write("🐂 **Bullish Trend:** Positive EMA/MA crossover indicates upward force.")
         else:
-            st.write("🐻 **Bearish Trend:** The stock is trading below short-term averages, indicating selling pressure.")
+            st.write(" Bears currently dominate the price action for this stock.")
             
+        volatility = stock_feat.get('volatility_30d', 0)
         if volatility > 40:
-            st.write("⚠️ **High Volatility:** Prices fluctuate wildly. Keep position sizes manageable.")
+            st.write("⚠️ **High Volatility:** Caution - large swings are common.")
         else:
-            st.write("✅ **Stable Volatility:** Risk of massive daily swing is relatively low.")
+            st.write("✅ **Stable Volatility:** Price action is relatively predictable.")

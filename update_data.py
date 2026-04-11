@@ -3,6 +3,7 @@ import yfinance as yf
 import os
 import re
 from datetime import datetime, timedelta
+from concurrent.futures import ThreadPoolExecutor
 from add_features import generate_features
 from recommendations import generate_recommendations
 
@@ -70,125 +71,107 @@ def update_stock_master():
 
 
 def fetch_price_single(row):
+    ticker = row["yahoo_ticker"]
     try:
-        ticker = row["yahoo_ticker"]
         stock_id = int(row["stock_id"])
         name = clean_name(row["company_name"])
-
         file_path = f"{PRICE_DIR}/{stock_id}_{name}.csv"
-
         stock = yf.Ticker(ticker)
         today = datetime.today().date()
 
         if os.path.exists(file_path):
             existing = pd.read_csv(file_path)
-
             if not existing.empty:
                 existing["Date"] = pd.to_datetime(existing["Date"], utc=True, errors="coerce")
                 last_date = existing["Date"].max().date()
-
                 start_date = last_date + timedelta(days=1)
-
+                
                 if start_date > today:
                     return
-
                 data = stock.history(start=start_date.strftime("%Y-%m-%d"))
             else:
                 data = stock.history(period="1y")
+                existing = pd.DataFrame()
         else:
             data = stock.history(period="1y")
+            existing = pd.DataFrame()
 
         if data is None or data.empty:
             return
 
         data = data.reset_index()
         data.rename(columns={data.columns[0]: "Date"}, inplace=True)
-
-        data["Date"] = pd.to_datetime(data["Date"], utc=True).dt.date
+        data["Date"] = pd.to_datetime(data["Date"], utc=True)
         data["stock_id"] = stock_id
 
-        data.to_csv(
-            file_path,
-            mode='a' if os.path.exists(file_path) else 'w',
-            header=not os.path.exists(file_path),
-            index=False
-        )
-
+        combined = pd.concat([existing, data], ignore_index=True)
+        combined["Date_Only"] = pd.to_datetime(combined["Date"], utc=True).dt.tz_convert('Asia/Kolkata').dt.date
+        combined = combined.drop_duplicates(subset=["Date_Only"], keep="last").sort_values(by="Date_Only")
+        
+        combined["Date"] = combined["Date_Only"]
+        combined.drop(columns=["Date_Only"], inplace=True)
+        combined.to_csv(file_path, index=False)
     except Exception as e:
         print(f"Price error for {ticker}: {e}")
 
 
 def fetch_fundamental_single(row):
+    name = row['company_name']
     try:
         ticker = row["yahoo_ticker"]
         stock_id = int(row["stock_id"])
-        name = clean_name(row["company_name"])
-
-        file_path = f"{FUNDAMENTAL_DIR}/{stock_id}_{name}.csv"
+        filename = clean_name(name)
+        file_path = f"{FUNDAMENTAL_DIR}/{stock_id}_{filename}.csv"
 
         stock = yf.Ticker(ticker)
         bs = stock.balance_sheet.T
-
         if bs is None or bs.empty:
             return
 
         bs.reset_index(inplace=True)
         bs.rename(columns={"index": "report_date"}, inplace=True)
-
-        bs["report_date"] = pd.to_datetime(bs["report_date"], utc=True, errors="coerce")
-        bs = bs.dropna(subset=["report_date"])
-
+        bs["report_date"] = pd.to_datetime(bs["report_date"], utc=True).dt.date
+        
         required_cols = [
-            "report_date",
-            "Total Debt",
-            "Stockholders Equity",
-            "Total Assets",
-            "Total Liabilities Net Minority Interest",
-            "Cash And Cash Equivalents"
+            "report_date", "Total Debt", "Total Liabilities Net Minority Interest",
+            "Total Assets", "Stockholders Equity", "Cash And Cash Equivalents"
         ]
-
-        bs = bs[[col for col in required_cols if col in bs.columns]]
+        bs = bs[[c for c in required_cols if c in bs.columns]]
 
         if os.path.exists(file_path):
             existing = pd.read_csv(file_path)
-
-            existing["report_date"] = pd.to_datetime(existing["report_date"], utc=True, errors="coerce")
-
-            last_date = existing["report_date"].max()
-
-            if last_date is not None:
-                bs = bs[bs["report_date"] > last_date]
-
+            existing["report_date"] = pd.to_datetime(existing["report_date"]).dt.date
+            if bs["report_date"].max() <= existing["report_date"].max():
+                return
             combined = pd.concat([existing, bs], ignore_index=True)
+            combined["rep_dt"] = pd.to_datetime(combined["report_date"])
+            combined = combined.drop_duplicates(subset=["report_date"], keep="last").sort_values(by="rep_dt")
+            combined.drop(columns=["rep_dt"], inplace=True)
+            combined.to_csv(file_path, index=False)
         else:
-            combined = bs
-
-        combined = combined.drop_duplicates(subset=["report_date"])
-        combined = combined.sort_values("report_date")
-
-        combined.to_csv(file_path, index=False)
-
+            bs.sort_values(by="report_date").to_csv(file_path, index=False)
     except Exception as e:
-        print(f"Fundamental error for {row['company_name']}: {e}")
+        print(f"Fundamental error for {name}: {e}")
 
 
 def run_data_pipeline():
-    print("Updating stock master...")
+    print("🚀 Initializing Data Pipeline...")
     stocks_df = update_stock_master()
+    stocks = [row for _, row in stocks_df.iterrows()]
 
-    print("Updating prices...")
-    for _, row in stocks_df.iterrows():
-        fetch_price_single(row)
+    print(f"📊 Updating Prices for {len(stocks)} stocks (Parallel)...")
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        executor.map(fetch_price_single, stocks)
 
-    print("Updating fundamentals...")
-    for _, row in stocks_df.iterrows():
-        fetch_fundamental_single(row)
+    print(f"💎 Updating Fundamentals for {len(stocks)} stocks (Parallel)...")
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        executor.map(fetch_fundamental_single, stocks)
 
-    print("\nGenerating final AI datasets...")
+    print("\n🧠 Generating AI Models & Features...")
     generate_features()
     generate_recommendations()
 
-    print("\nAll data updated successfully")
+    print("\n✨ Portfolio Advisor Data is Refresh!")
 
 
 if __name__ == "__main__":

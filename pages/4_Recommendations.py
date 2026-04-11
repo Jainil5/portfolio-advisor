@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+from helper_functions import get_current_price_by_name
 
 st.set_page_config(page_title="Recommendations", page_icon="⭐", layout="wide")
 st.title("⭐ Top Stock Recommendations")
@@ -28,7 +29,12 @@ for idx, row in recommended_df.iterrows():
         st.subheader(f"{row['company_name']} - {rec_label} (Score: {row['score']:.2f})")
         
         c1, c2, c3, c4, c5 = st.columns(5)
-        c1.metric("Current Price", f"₹{row.get('current_price', 0):.2f}")
+        # Use fresh price lookup
+        curr_p = get_current_price_by_name(row['company_name'])
+        if curr_p is None:
+            curr_p = row.get('current_price', 0)
+            
+        c1.metric("Current Price", f"₹{curr_p:.2f}")
         c2.metric("30d Return", f"{row.get('return_30d', 0):.2f}%")
         c3.metric("180d Return", f"{row.get('return_180d', 0):.2f}%")
         c4.metric("Volatility", f"{row.get('volatility_30d', 0):.2f}%")

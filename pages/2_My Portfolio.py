@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 from user_data import add_stock
+from helper_functions import get_current_price_by_name
 
 st.set_page_config(page_title="Portfolio", page_icon="💼", layout="wide")
 st.title("💼 Your Portfolio")
@@ -46,9 +47,7 @@ if portfolio_df.empty:
     st.info("Portfolio is empty.")
     st.stop()
     
-if os.path.exists("data/features.csv"):
-    feat_df = pd.read_csv("data/features.csv")[["stock_id", "current_price"]]
-    portfolio_df = portfolio_df.merge(feat_df, on="stock_id", how="left")
+# No longer merging with features.csv here, we use the direct lookup in the loop
 
 results = []
 for _, row in portfolio_df.iterrows():
@@ -57,8 +56,9 @@ for _, row in portfolio_df.iterrows():
     qty = row["quantity"]
     buy_price = row["buy_price"]
 
-    current_price = row.get("current_price", buy_price)
-    if pd.isna(current_price):
+    # Use the fresh lookup helper
+    current_price = get_current_price_by_name(name)
+    if current_price is None:
         current_price = buy_price
 
     investment = buy_price * qty

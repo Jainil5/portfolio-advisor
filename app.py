@@ -1,10 +1,12 @@
 import streamlit as st
 import pandas as pd
 import os
+from helper_functions import get_current_price_by_name
 import threading
 import json
 from stock_agent import query_stock_info
 from update_data import run_data_pipeline
+from helper_functions import get_current_price_by_name
 from streamlit_autorefresh import st_autorefresh
 
 st.set_page_config(
@@ -33,9 +35,9 @@ def load_portfolio():
     if not os.path.exists("data/user_portfolio.csv"):
         return pd.DataFrame()
     port_df = pd.read_csv("data/user_portfolio.csv")
-    if os.path.exists("data/features.csv"):
-        feat_df = pd.read_csv("data/features.csv")[["stock_id", "current_price"]]
-        port_df = port_df.merge(feat_df, on="stock_id", how="left")
+    
+    # Use the name-based price lookup for fresh data
+    port_df['current_price'] = port_df['stock_name'].apply(get_current_price_by_name)
     return port_df
 
 
@@ -70,8 +72,10 @@ else:
         name = row["stock_name"]
         qty = row["quantity"]
         buy_price = row["buy_price"]
-        current_price = row.get("current_price", buy_price)
-        if pd.isna(current_price):
+        
+        # Robustly fetch current price using the new direct lookup helper
+        current_price = get_current_price_by_name(name)
+        if current_price is None:
             current_price = buy_price
 
         investment = buy_price * qty
@@ -98,7 +102,7 @@ else:
     col1.metric("Total Investment", f"₹ {total_investment:,.2f}")
     col2.metric("Current Value", f"₹ {total_current:,.2f}")
     col3.metric("Profit / Loss", f"{total_pct_return:.2f} %",
-                delta_color="green" if total_profit < 0 else "red")
+                delta_color="normal" if total_profit >= 0 else "inverse")
 
     st.divider()
     col1,col2 = st.columns(2)
