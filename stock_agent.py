@@ -21,7 +21,7 @@ recommendation_docs = recommendation_loader.load()
 
 # We do not want to split CSV rows! Each stock should be its own document
 all_splits = docs
-print(f"Split stock data into {len(all_splits)} sub-documents.")
+# print(f"Split stock data into {len(all_splits)} sub-documents.")
 
 vector_store = Chroma(
     collection_name="example_collection",
@@ -58,7 +58,7 @@ def stock_details(query: str):
         for doc in retrieved_docs
     )
     print(f"[Debug] Tool retrieved {len(retrieved_docs)} docs for '{query}'")
-    print(serialized)
+    # print(serialized)
     return serialized, retrieved_docs
 
 @tool(response_format="content_and_artifact")
@@ -109,6 +109,6 @@ if __name__ == '__main__':
     while True:
         try:
             inp = input("Enter: ")
-            print(query_stock_info(inp))
+            # print(query_stock_info(inp))
         except (EOFError, KeyboardInterrupt):
             break

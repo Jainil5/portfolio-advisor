@@ -6,7 +6,6 @@ import threading
 import json
 from stock_agent import query_stock_info
 from update_data import run_data_pipeline
-from helper_functions import get_current_price_by_name
 from streamlit_autorefresh import st_autorefresh
 
 st.set_page_config(
@@ -22,12 +21,7 @@ st.sidebar.title("📈 AI FinTech Portfolio Advisor")
 st.sidebar.markdown("""
 Welcome to your **AI-Powered Stock Portfolio Advisor**.
 
-Use the sidebar navigation:
-- Dashboard
-- My Portfolio
-- Stock Analysis
-- Recommendations
-- AI Advisor
+
 """)
                                             
 @st.cache_data(ttl=60)
@@ -121,18 +115,31 @@ else:
         st.dataframe(display_df, width="content", hide_index=True)
 
     with col2:
-        
         st.header("🤖 AI Portfolio Advisor")
+        
+        st.markdown("""
+        Welcome! I'm your AI-powered financial assistant. I can analyze market trends, compare companies, and provide data-driven investment outlooks.
+        
+        **You can ask me things like:**
+        * 📈 "Is **Reliance** a good buy right now?"
+        * ⚖️ "Compare **Adani Energy** and **NTPC**."
+        * 📊 "What is the 30-day return for **Vedanta**?"
+        """)
 
+        st.subheader("Quick Actions")
+        btn_col1, btn_col2, btn_col3 = st.columns(3)
+        
         user_q = st.chat_input("Ask about stocks like 'Should I buy TCS?'")
+        
+        active_query = user_q
 
-        if user_q:
+        if active_query:
             with st.chat_message("user"):
-                st.markdown(user_q)
+                st.markdown(active_query)
 
             with st.chat_message("assistant"):
                 with st.spinner("Analyzing market data..."):
-                    ans = query_stock_info(user_q)
+                    ans = query_stock_info(active_query)
                     st.markdown(ans)
 
                     

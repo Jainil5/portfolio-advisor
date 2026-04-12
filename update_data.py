@@ -21,7 +21,7 @@ def clean_name(name):
 
 
 def update_stock_master():
-    url = "https://archives.nseindia.com/content/indices/ind_nifty100list.csv"
+    url = "https://archives.nseindia.com/content/indices/ind_nifty200list.csv"
     df = pd.read_csv(url)
 
     new_df = pd.DataFrame({

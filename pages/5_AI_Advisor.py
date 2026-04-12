@@ -17,13 +17,15 @@ if "messages" not in st.session_state:
 demo_q = None
 if len(st.session_state.messages) == 0:
     st.markdown("### Try asking:")
-    col1, col2, col3 = st.columns(3)
-    if col1.button("Should I buy Reliance?"):
-        demo_q = "Should I buy Reliance Industries?"
+    col1, col2, col3,col4 = st.columns(4)
+    if col1.button("Compare Adani ensol and NTPC"):
+        demo_q = "Compare Adani ensol and NTPC"
     if col2.button("Why is Vedanta growing?"):
         demo_q = "Why is Vedanta growing?"
     if col3.button("Recommend me some stocks"):
         demo_q = "Recommend me some stocks to buy"
+    if col4.button("Should I buy Reliance?"):
+        demo_q = "Should I buy Reliance?"    
     st.divider()
 
 # Display chat messages from history on app rerun
