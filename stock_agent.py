@@ -58,6 +58,7 @@ def stock_details(query: str):
         for doc in retrieved_docs
     )
     print(f"[Debug] Tool retrieved {len(retrieved_docs)} docs for '{query}'")
+    print(serialized)
     return serialized, retrieved_docs
 
 @tool(response_format="content_and_artifact")
@@ -67,7 +68,7 @@ def get_recommendations(query: str = ""):
         (f"Source: {doc.metadata}\nContent: {doc.page_content}")
         for doc in recommendation_docs
     )
-    print(f"[Debug] Retrieved {len(recommendation_docs)} recommendation docs")
+    # print(f"[Debug] Retrieved {len(recommendation_docs)} recommendation docs")
     return serialized, recommendation_docs
 
 
