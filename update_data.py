@@ -163,9 +163,9 @@ def run_data_pipeline():
     with ThreadPoolExecutor(max_workers=10) as executor:
         executor.map(fetch_price_single, stocks)
 
-    print(f"💎 Updating Fundamentals for {len(stocks)} stocks (Parallel)...")
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        executor.map(fetch_fundamental_single, stocks)
+    # print(f"💎 Updating Fundamentals for {len(stocks)} stocks (Parallel)...")
+    # with ThreadPoolExecutor(max_workers=10) as executor:
+    #     executor.map(fetch_fundamental_single, stocks)
 
     print("\n🧠 Generating AI Models & Features...")
     generate_features()

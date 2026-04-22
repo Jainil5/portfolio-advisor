@@ -2,148 +2,166 @@ import streamlit as st
 import pandas as pd
 import os
 from helper_functions import get_current_price_by_name
+from stock_agent import query_stock_info
 
-st.set_page_config(page_title="Stock Analysis", page_icon="📈", layout="wide")
+st.set_page_config(page_title="Stock Analysis Pro", page_icon="📈", layout="wide")
 
-FEATURES_FILE = "data/features.csv"
-PRICE_DIR = "data/prices"
-STOCKS_FILE = "data/stocks.csv"
+# --- HELPER FUNCTIONS ---
+def describe_term(title, content):
+    """Displays a clean explanation expander for financial terms."""
+    with st.expander(f"📚 What is {title}?", expanded=False):
+        st.write(content)
 
-
-
+# --- DATA LOADING ---
 @st.cache_data
 def load_data():
-    features = pd.read_csv(FEATURES_FILE) if os.path.exists(FEATURES_FILE) else pd.DataFrame()
-    stocks = pd.read_csv(STOCKS_FILE) if os.path.exists(STOCKS_FILE) else pd.DataFrame()
-    return features, stocks
+    features = pd.read_csv("data/features.csv") if os.path.exists("data/features.csv") else pd.DataFrame()
+    return features
 
+features_df = load_data()
 
-
-features_df, stocks_df = load_data()
-
-if features_df.empty or stocks_df.empty:
-    st.warning("Insufficient data. Please run backend scripts to fetch stocks and generate features.")
-    st.stop()
-
-# 1. Select Stock
-stock_map = dict(zip(features_df["stock_id"], features_df["company_name"]))
-sorted_stock_ids = sorted(stock_map.keys(), key=lambda x: stock_map[x])
-
-
-c1,c2 = st.columns(2)
-
-with c1:
-    st.title("📈 Stock Analysis")
-with c2:
-    selected_id = st.selectbox("Select a stock to analyze:", options=sorted_stock_ids, format_func=lambda x: stock_map[x])
-
-st.divider()    
-if selected_id:
-    # === 2. THEMATIC METRIC DISPLAY ===
-    stock_feat = features_df[features_df["stock_id"] == selected_id].iloc[0]
+# --- SIDEBAR: SELECTION & KEY METRICS ---
+with st.sidebar:
+    st.title("🔍 Stock Selection")
+    stock_map = dict(zip(features_df["stock_id"], features_df["company_name"]))
+    selected_id = st.selectbox("Choose Company", options=sorted(stock_map.keys(), key=lambda x: stock_map[x]), format_func=lambda x: stock_map[x])
     
-    # --- SECTION A: MARKET CONTEXT & PROFILE ---
-    st.markdown("### 🏢 Company Profile")
-    prof_c1, prof_c2, prof_c3, prof_c4 = st.columns(4)
-    prof_c1.metric("Ticker", stock_feat.get('ticker', 'N/A'))
-    prof_c2.metric("Sector", stock_feat.get('sector', 'N/A'))
-    prof_c3.metric("Industry", stock_feat.get('industry', 'N/A'))
-    prof_c4.metric("Market Cap", stock_feat.get('market_cap', 'N/A'))
-    st.write("")
-
-    # --- SECTION B: PRICE DYNAMICS ---
-    st.markdown("### 📊 Price Dynamics")
-    r1c1, r1c2, r1c3, r1c4, r1c5 = st.columns(5)
+    st.divider()
     
-    cp = get_current_price_by_name(stock_feat['company_name'])
-    if cp is None:
-        cp = stock_feat.get('current_price', 0)
+    if selected_id:
+        stock_feat = features_df[features_df["stock_id"] == selected_id].iloc[0]
+        score = stock_feat.get("score", 0)
         
-    dr = stock_feat.get('daily_return', 0)
-    r1c1.metric("Current Price", f"₹{cp:,.2f}", f"{dr:.2f}%")
-    r1c2.metric("52-Week High", f"₹{stock_feat.get('52w_high', 0):,.2f}")
-    r1c3.metric("52-Week Low", f"₹{stock_feat.get('52w_low', 0):,.2f}")
-    r1c4.metric("20-Day MA", f"₹{stock_feat.get('ma20', 0):,.2f}")
-    r1c5.metric("50-Day MA", f"₹{stock_feat.get('ma50', 0):,.2f}")
-    
-    # --- SECTION C: PERFORMANCE & RETURNS ---
-    st.markdown("### 💹 Performance Dashboard")
-    perf_c1, perf_c2, perf_c3, perf_c4 = st.columns(4)
-    perf_c1.metric("7-Day Return", f"{stock_feat.get('return_7d', 0):.2f}%")
-    perf_c2.metric("30-Day Return", f"{stock_feat.get('return_30d', 0):.2f}%")
-    perf_c3.metric("180-Day Return", f"{stock_feat.get('return_180d', 0):.2f}%")
-    
-    trend_val = stock_feat.get('trend', 'Neutral')
-    trend_color = "🟢" if trend_val == "Bullish" else "🔴"
-    perf_c4.markdown(f"**Current Trend**<br/><div style='font-size:20px'>{trend_color} {trend_val}</div>", unsafe_allow_html=True)
-    st.write("")
-
-    # --- SECTION D: VOLUME & LIQUIDITY ---
-    st.markdown("### 🌊 Volume & Liquidity")
-    vol_c1, vol_c2, vol_c3 = st.columns(3)
-    vol_c1.metric("Avg Volume (7d)", f"{stock_feat.get('avg_volume_7d', 0):,.0f}")
-    vol_c2.metric("Avg Volume (30d)", f"{stock_feat.get('avg_volume_30d', 0):,.0f}")
-    vol_c3.metric("Avg Volume (180d)", f"{stock_feat.get('avg_volume_180d', 0):,.0f}")
-    st.write("")
-
-    # --- SECTION E: RISK & FUNDAMENTALS ---
-    st.markdown("### ⚖️ Risk & Fundamental Health")
-    risk_c1, risk_c2, risk_c3, risk_c4 = st.columns(4)
-    risk_c1.metric("Volatility (30d)", f"{stock_feat.get('volatility_30d', 0):.2f}%")
-    risk_c2.metric("Volatility (180d)", f"{stock_feat.get('volatility_180d', 0):.2f}%")
-    risk_c3.metric("Debt to Equity", f"{stock_feat.get('debt_to_equity', 0):.2f}")
-    risk_c4.metric("Cash Ratio", f"{stock_feat.get('cash_ratio', 0):.2f}")
-    
-    # Extra fundamental row
-    fund_c1, fund_c2, fund_c3 = st.columns(3)
-    fund_c1.metric("Debt to Assets", f"{stock_feat.get('debt_to_assets', 0):.2f}")
-    st.write("")
+        # Determine Suggestion
+        if score >= 3: 
+            suggestion = "BUY"
+            color = "#28a745" # Success Green
+        elif score >= 1.5: 
+            suggestion = "HOLD"
+            color = "#ffc107" # Warning Amber
+        else: 
+            suggestion = "SELL"
+            color = "#dc3545" # Danger Red
+            
+        st.subheader("Key Insight")
+        st.metric("AI Score", f"{score:.2f} / 5.0")
+        st.markdown(f"### Suggestion: <span style='color:{color}'>{suggestion}</span>", unsafe_allow_html=True)
+        
+        # Load latest OHLC from price file
+        price_file = next((os.path.join("data/prices", f) for f in os.listdir("data/prices") if f.startswith(f"{selected_id}_")), None)
+        latest_data = {"High": "N/A", "Low": "N/A", "Close": "N/A", "Price": 0.0}
+        
+        if price_file:
+            pdf_all = pd.read_csv(price_file).dropna(subset=['Close'])
+            if not pdf_all.empty:
+                last_row = pdf_all.iloc[-1]
+                latest_data["High"] = f"₹{last_row['High']:,.2f}"
+                latest_data["Low"] = f"₹{last_row['Low']:,.2f}"
+                latest_data["Close"] = f"₹{last_row['Close']:,.2f}"
+                latest_data["Price"] = last_row['Close']
+        
+        # Use fallback if price file lookup fails
+        current_p = get_current_price_by_name(stock_feat['company_name']) or latest_data["Price"] or stock_feat.get('current_price', 0)
+        
+        st.divider()
+        st.metric("Current Price", f"₹{current_p:,.2f}", f"{stock_feat.get('daily_return', 0):.2f}%")
+        
+        col_s1, col_s2 = st.columns(2)
+        col_s1.markdown(f"**Latest High**\n{latest_data['High']}")
+        col_s1.markdown(f"**Latest Low**\n{latest_data['Low']}")
+        col_s2.markdown(f"**Latest Close**\n{latest_data['Close']}")
+        col_s2.markdown(f"**Sector**\n{stock_feat.get('sector', 'N/A')}")
 
     st.divider()
+    with st.expander("ℹ️ Help & Info"):
+        st.write("**Scoring**: Based on technical momentum and fundamental health.")
+        st.write("**Agent**: AI-powered assistant using RAG technology.")
 
-    # === 3. ANALYSIS & VISUALIZATION ===
-    st.subheader("🤖 AI Analysis & Visualization")
-    score = stock_feat.get("score", 0)
+# --- MAIN CONTENT: SCROLLABLE DASHBOARD ---
+st.title("📈 Stock Intelligence Dashboard")
+
+if selected_id:
+    # Main scrollable container
+    main_container = st.container(height=650, border=True)
     
-    exp_col1, exp_col2 = st.columns(2)
-    with exp_col1:
-        st.write(f"#### {stock_feat['company_name']} Price History")
+    with main_container:
+        tab_analysis, tab_company = st.tabs(["📊 Performance Analysis", "🏢 Company Details"])
         
-        price_file = None
-        for f in os.listdir(PRICE_DIR):
-            if f.startswith(f"{selected_id}_"):
-                price_file = os.path.join(PRICE_DIR, f)
-                break
+        with tab_analysis:
+            # 1. Performance and Risk Metrics
+            m_col1, m_col2 = st.columns(2)
+            with m_col1:
+                st.subheader("Performance Returns")
+                describe_term("Returns", "Returns are calculated as the percentage change in the stock price over a specific timeframe (1 Week, 1 Month, or 1 Year). Positive returns represent profit, while negative returns represent a loss.")
+                st.metric("1 Week Return", f"{stock_feat.get('return_7d', 0):.2f}%")
+                st.metric("1 Month Return", f"{stock_feat.get('return_30d', 0):.2f}%")
+                st.metric("1 Year Return", f"{stock_feat.get('return_180d', 0):.2f}%")
+            
+            with m_col2:
+                st.subheader("Risk & Volatility")
+                describe_term("Volatility", "Volatility measures the degree of variation in a trading price series over time. High volatility indicates that the stock price can change dramatically in a short period in either direction, representing higher risk.")
+                st.metric("1 Week Volatility", f"{stock_feat.get('volatility_7d', 0):.2f}%")
+                st.metric("1 Month Volatility", f"{stock_feat.get('volatility_30d', 0):.2f}%")
+                st.metric("1 Year Volatility", f"{stock_feat.get('volatility_180d', 0):.2f}%")
+            
+            st.divider()
+            
+            # 2. Side-by-Side Charts (7D and 30D)
+            st.subheader("Price Action View")
+            price_file = next((os.path.join("data/prices", f) for f in os.listdir("data/prices") if f.startswith(f"{selected_id}_")), None)
+            if price_file:
+                pdf = pd.read_csv(price_file)
+                pdf['Date'] = pd.to_datetime(pdf['Date'], utc=True)
+                pdf = pdf.sort_values('Date').dropna(subset=['Close'])
                 
-        if price_file and os.path.exists(price_file):
-            price_df = pd.read_csv(price_file)
-            if "Date" in price_df.columns and "Close" in price_df.columns:
-                price_df['Date'] = pd.to_datetime(price_df['Date'], utc=True, errors='coerce')
-                price_df.set_index('Date', inplace=True)
-                st.area_chart(price_df['Close'])
-        else:
-            st.warning("Price history data not found for this stock.")
+                c_sub1, c_sub2 = st.columns(2)
+                with c_sub1:
+                    st.write("**Recent Weekly Trend (7 Days)**")
+                    recent_7 = pdf.tail(7)
+                    st.line_chart(recent_7.set_index('Date')['Close'], color="#29b5e8", height=250)
+                
+                with c_sub2:
+                    st.write("**Monthly Performance (30 Days)**")
+                    recent_30 = pdf.tail(30)
+                    st.area_chart(recent_30.set_index('Date')['Close'], color="#FF4B4B", height=250)
+            else:
+                st.info("Historical charts currently unavailable.")
+
+        with tab_company:
+            st.subheader("Fundamental Metrics")
+            describe_term("Key Fundamentals", """
+            - **Market Cap**: Total market value of a company's outstanding shares.
+            - **Debt to Equity**: Compares total liabilities to shareholder equity. High values suggest more debt-reliant growth.
+            - **Cash Ratio**: Measures ability to pay short-term debt using only cash.
+            """)
+            f1, f2, f3 = st.columns(3)
+            f1.metric("Market Cap", stock_feat.get('market_cap', 'N/A'))
+            f2.metric("Debt/Equity", f"{stock_feat.get('debt_to_equity', 0):.2f}")
+            f3.metric("Cash Ratio", f"{stock_feat.get('cash_ratio', 0):.2f}")
             
-    with exp_col2:
-        st.write("#### Advisor Outlook")
-        if score >= 3:
-            st.success(f"**Overall Rating: STRONG** (Score: {score:.2f})")
-            st.write("This stock shows exceptional strength across multiple horizons. High technical momentum combined with stable health makes it a top pick.")
-        elif score >= 1.5:
-            st.info(f"**Overall Rating: MODERATE** (Score: {score:.2f})")
-            st.write("Mixed signals here. While fundamentals may be stable, momentum is either cooling or hasn't fully picked up yet.")
-        else:
-            st.error(f"**Overall Rating: WEAK** (Score: {score:.2f})")
-            st.write("High risk or poor momentum. Technical trends are significantly bearish or volatility is outside acceptable ranges.")
-           
-        trend = stock_feat.get('trend', 'Neutral')
-        if trend == "Bullish":
-            st.write("🐂 **Bullish Trend:** Positive EMA/MA crossover indicates upward force.")
-        else:
-            st.write(" Bears currently dominate the price action for this stock.")
-            
-        volatility = stock_feat.get('volatility_30d', 0)
-        if volatility > 40:
-            st.write("⚠️ **High Volatility:** Caution - large swings are common.")
-        else:
-            st.write("✅ **Stable Volatility:** Price action is relatively predictable.")
+            st.divider()
+            st.subheader("Company Profile")
+            st.markdown(f"**Industry:** {stock_feat.get('industry', 'N/A')}")
+            st.markdown(f"**Sector:** {stock_feat.get('sector', 'N/A')}")
+            st.markdown(f"**Exchange:** {stock_feat.get('exchange', 'N/A')}")
+            st.markdown(f"**Ticker Symbol:** {stock_feat.get('ticker', 'N/A')}")
+
+# --- PERSISTENT AGENT QUESTION BAR (BOTTOM) ---
+st.markdown("---")
+st.write("### 🤖 Portfolio Advisor Agent")
+q_col, s_col = st.columns([5, 1])
+with q_col:
+    user_query = st.text_input("Ask me anything about this stock or your portfolio...", 
+                              placeholder="e.g., How does the 30-day return look?", 
+                              key="analysis_page_agent_input",
+                              label_visibility="collapsed")
+with s_col:
+    send_pressed = st.button("Send", key="analysis_page_agent_send", width='stretch')
+
+if send_pressed and user_query:
+    with st.chat_message("user"):
+        st.markdown(user_query)
+    with st.chat_message("assistant"):
+        with st.spinner("Analyzing market data..."):
+            ans = query_stock_info(user_query)
+            st.markdown(ans)

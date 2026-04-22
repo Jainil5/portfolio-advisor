@@ -3,6 +3,7 @@ import pandas as pd
 import os
 from user_data import add_stock
 from helper_functions import get_current_price_by_name
+from stock_agent import query_stock_info
 
 st.set_page_config(page_title="Portfolio", page_icon="💼", layout="wide")
 st.title("💼 Your Portfolio")
@@ -101,3 +102,25 @@ st.dataframe(display_df, width="content")
 
 st.subheader("Investment Distribution")
 st.bar_chart(res_df, x="Stock", y="Return %", color="#4CAF50")
+
+# --- FIXED AGENT QUESTION BAR ---
+st.markdown("<br/><br/><br/>", unsafe_allow_html=True) # Spacer
+with st.container():
+    st.markdown("---")
+    st.write("### 🤖 Portfolio Advisor Agent")
+    q_col, s_col = st.columns([5, 1])
+    with q_col:
+        user_query = st.text_input("Ask me anything about your portfolio or these stocks...", 
+                                  placeholder="e.g., How is my portfolio performing compared to last month?", 
+                                  key="portfolio_agent_input",
+                                  label_visibility="collapsed")
+    with s_col:
+        send_pressed = st.button("Send", width='stretch', key="portfolio_agent_send")
+    
+    if send_pressed and user_query:
+        with st.chat_message("user"):
+            st.markdown(user_query)
+        with st.chat_message("assistant"):
+            with st.spinner("Analyzing your portfolio..."):
+                ans = query_stock_info(user_query)
+                st.markdown(ans)

@@ -2,4 +2,5 @@ stock_id,stock_name,quantity,buy_price,buy_date
 75,Reliance Industries Ltd.,10,1000.0,2026-01-23
 62,Lodha Developers Ltd.,5,700.0,2026-01-23
 58,Kotak Mahindra Bank Ltd.,15,500.0,2026-03-23
-2,Adani Energy Solutions Ltd.,4,1500.0,2026-04-12
+2,Adani Energy Solutions Ltd.,4,1000.0,2026-04-12
+7,Ambuja Cements Ltd.,3,500.0,2026-04-21

@@ -184,3 +184,6 @@ def generate_features():
 
     print("Features generated")
 
+
+if __name__ == "__main__":
+    generate_features()

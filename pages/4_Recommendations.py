@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 from helper_functions import get_current_price_by_name
+from stock_agent import query_stock_info
 
 st.set_page_config(page_title="Recommendations", page_icon="⭐", layout="wide")
 st.title("⭐ Top Stock Recommendations")
@@ -48,4 +49,26 @@ for idx, row in recommended_df.iterrows():
         formatted_exp = explanation.replace('\n', '\n> ')
         st.markdown(f"> **Why we recommend it:**\n> {formatted_exp}")
         st.divider()
+
+# --- FIXED AGENT QUESTION BAR ---
+st.markdown("<br/><br/><br/>", unsafe_allow_html=True) # Spacer
+with st.container():
+    st.markdown("---")
+    st.write("### 🤖 Portfolio Advisor Agent")
+    q_col, s_col = st.columns([5, 1])
+    with q_col:
+        user_query = st.text_input("Ask me anything about these recommendations...", 
+                                  placeholder="e.g., Why is Adani recommended over Reliance?", 
+                                  key="rec_agent_input",
+                                  label_visibility="collapsed")
+    with s_col:
+        send_pressed = st.button("Send", width='stretch', key="rec_agent_send")
+    
+    if send_pressed and user_query:
+        with st.chat_message("user"):
+            st.markdown(user_query)
+        with st.chat_message("assistant"):
+            with st.spinner("Analyzing recommendations..."):
+                ans = query_stock_info(user_query)
+                st.markdown(ans)
 
