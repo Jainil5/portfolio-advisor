@@ -1,12 +1,46 @@
 stock_id,company_name,ticker,sector,current_price,return_30d,return_180d,volatility_30d,trend,debt_to_equity,cash_ratio,score,recommendation,explanation
-158,Lupin Ltd.,LUPIN.NS,Healthcare,2326.10009765625,0.6490415545052253,20.560799638357064,19.024184032997557,Bullish,0.3166663760281338,0.1621069759280233,4,STRONG BUY,"STRONG BUY because:
+120684,ICICI Prudential Nifty Next 50 Index Fund - Direct Plan - Growth,120684,Mutual Fund,66.0324,2.6032910172941515,6.249044630056622,16.716311101541393,Bullish,0.0,0.0,4,STRONG BUY,"STRONG BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low volatility (stable)
+"
+162,Marico Ltd.,MARICO.NS,Fast Moving Consumer Goods,821.7000122070312,8.50389877883746,12.300122796025724,15.882743842452024,Bullish,0.1393710691823899,0.0785854616895874,4,STRONG BUY,"STRONG BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
 - low volatility (stable)
 - low debt levels
 "
-114,Bharat Heavy Electricals Ltd.,BHEL.NS,Capital Goods,316.7900085449219,20.843034873391343,26.451176804827625,47.961874800972815,Bullish,0.3646361283673203,0.0090016374161112,3,BUY,"BUY because:
+52,JSW Steel Ltd.,JSWSTEEL.NS,Metals & Mining,1278.0,3.03958314018411,19.094215737185372,19.408669695200505,Bullish,0.0858545292280232,0.4641466580142764,4,STRONG BUY,"STRONG BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low volatility (stable)
+- low debt levels
+- good liquidity
+"
+8,Apollo Hospitals Enterprise Ltd.,APOLLOHOSP.NS,Healthcare,8176.5,6.202104169372635,4.905570732866127,18.349062849990126,Bullish,0.6598882164558041,0.0481569411470698,4,STRONG BUY,"STRONG BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low volatility (stable)
+- low debt levels
+"
+29,Divi's Laboratories Ltd.,DIVISLAB.NS,Healthcare,6667.0,5.934694526098361,8.698133202902092,18.81418281539353,Bullish,0.0002672189190994,0.2114111054508405,4,STRONG BUY,"STRONG BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low volatility (stable)
+- low debt levels
+"
+116,Biocon Ltd.,BIOCON.NS,Healthcare,428.6499938964844,22.209549222091063,20.12049504411131,25.015886774960045,Bullish,0.8483644428017002,0.1038031449454395,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+114,Bharat Heavy Electricals Ltd.,BHEL.NS,Capital Goods,416.75,31.554022778121627,96.2469385958767,38.30163398385821,Bullish,0.3646361283673203,0.0090016374161112,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -15,7 +49,34 @@ stock_id,company_name,ticker,sector,current_price,return_30d,return_180d,volatil
 Risks:
 - high volatility (risky)
 "
-156,Laurus Labs Ltd.,LAURUSLABS.NS,Healthcare,1135.75,6.643192488262906,35.8860872312867,38.43103482506892,Bullish,0.617930223406729,0.0210308363528802,3,BUY,"BUY because:
+113,Bharat Forge Ltd.,BHARATFORG.NS,Automobile and Auto Components,1957.199951171875,5.197524921896002,73.18699688610005,28.51208043327471,Bullish,0.7238752000089913,0.0546905796421335,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+110,BSE Ltd.,BSE.NS,Financial Services,4146.10009765625,17.403372438234467,78.74202117190443,29.097585604953156,Bullish,0.000736934668255,0.00416410131895,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+109,Aurobindo Pharma Ltd.,AUROPHARMA.NS,Healthcare,1426.4000244140625,2.877751490375946,37.82974111162656,27.09871245026202,Bullish,0.2530483883415224,0.3249467266968684,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+- good liquidity
+"
+105,Aditya Birla Capital Ltd.,ABCAPITAL.NS,Financial Services,363.2999877929687,6.727377881049024,29.242255391194405,28.323806875668673,Bullish,4.600325712961915,0.0175538648282002,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+
+Risks:
+- high debt
+"
+104,Adani Total Gas Ltd.,ATGL.NS,Oil Gas & Consumable Fuels,773.2999877929688,22.183592662820377,30.978989806178237,57.199126101619136,Bullish,0.4359586883921037,0.0647894819039466,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -24,25 +85,13 @@ Risks:
 Risks:
 - high volatility (risky)
 "
-26,Coal India Ltd.,COALINDIA.NS,Oil Gas & Consumable Fuels,438.75,2.9325513196480912,21.799069692101742,32.6501867700997,Bullish,0.0140475003566453,0.0965415338999867,3,BUY,"BUY because:
+103,AU Small Finance Bank Ltd.,AUBANK.NS,Financial Services,984.7000122070312,0.0762233843889736,41.429086133864445,26.19475347336912,Bullish,0.679232847495448,0.0680113751848267,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
 - low debt levels
-
-Risks:
-- high volatility (risky)
 "
-27,Cummins India Ltd.,CUMMINSIND.NS,Capital Goods,5140.89990234375,6.728535766440813,44.91334293131024,41.1104060274679,Bullish,0.003922554024387,0.0901349780790076,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-
-Risks:
-- high volatility (risky)
-"
-148,JSW Energy Ltd.,JSWENERGY.NS,Power,538.0499877929688,11.790983054088722,1.0327669000225637,38.391736227954915,Bullish,1.8341749681942792,0.0531359360251566,3,BUY,"BUY because:
+2,Adani Energy Solutions Ltd.,ADANIENSOL.NS,Power,1513.300048828125,20.12224084574432,99.55167106834506,44.22663543673712,Bullish,1.825036930968543,0.0429917540811527,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -51,7 +100,216 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-137,Hitachi Energy India Ltd.,POWERINDIA.NS,Capital Goods,28925.0,13.431372549019605,46.27597579872198,39.59205605527423,Bullish,0.0209890107282439,0.8551580852016613,3,BUY,"BUY because:
+100,Zydus Lifesciences Ltd.,ZYDUSLIFE.NS,Healthcare,1077.699951171875,14.758809412113983,6.497350478947594,30.742693312875485,Bullish,0.1341454759509207,0.0762498501378731,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+92,Torrent Pharmaceuticals Ltd.,TORNTPHARM.NS,Healthcare,4410.7998046875,6.13344662608446,23.38631259196793,26.08370764868725,Bullish,0.4218746912336032,0.0775072475520506,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+97,Varun Beverages Ltd.,VBL.NS,Fast Moving Consumer Goods,528.0,11.41591196461016,12.5645539008848,29.103906230273264,Bullish,0.128107713360394,0.3063385003367844,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+- good liquidity
+"
+87,Tata Motors Passenger Vehicles Ltd.,TMPV.NS,Automobile and Auto Components,393.8999938964844,9.386278039454533,0.780347382714619,35.1220069271387,Bullish,0.1196275401128339,0.2574697422780707,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+85,Tata Consumer Products Ltd.,TATACONSUM.NS,Fast Moving Consumer Goods,1178.4000244140625,5.856995697273515,9.884371278144677,31.990515065086672,Bullish,0.1196275401128339,0.2574697422780707,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+81,Sun Pharmaceutical Industries Ltd.,SUNPHARMA.NS,Healthcare,1799.199951171875,6.26661018934922,14.446506616507794,29.915802435560018,Bullish,0.032709149323119,0.5235260619241862,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+- good liquidity
+"
+79,Solar Industries India Ltd.,SOLARINDS.NS,Chemicals,18247.0,20.929153688117164,29.788747421580485,33.78607107248206,Bullish,0.3122329778357355,0.1579590302574704,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+78,Siemens Ltd.,SIEMENS.NS,Capital Goods,3844.0,7.862392595903711,19.67994386110854,38.98050813929312,Bullish,0.0485719260368422,0.0204173441107208,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+77,Siemens Energy India Ltd.,ENRIN.NS,Capital Goods,3872.10009765625,33.460863491876495,10.00855854453,48.04797126890294,Bullish,0.0336886312281742,0.0256008055926722,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+75,Shree Cement Ltd.,SHREECEM.NS,Construction Materials,25275.0,0.657108721624855,-15.356064036046934,18.875547989728688,Bullish,0.4383005218216318,0.1070130240203808,3,BUY,"BUY because:
+- positive short-term returns
+- bullish trend
+- low volatility (stable)
+- low debt levels
+
+Risks:
+- weak long-term performance
+"
+74,Samvardhana Motherson International Ltd.,MOTHERSON.NS,Automobile and Auto Components,145.74000549316406,16.56403016561212,54.53730872377349,39.802158504194125,Bullish,6.331558258988778,0.0011783242577576,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+
+Risks:
+- high volatility (risky)
+- high debt
+"
+65,Nestle India Ltd.,NESTLEIND.NS,Fast Moving Consumer Goods,1421.5,10.570941738865812,18.26023444817524,25.454348805583805,Bullish,0.2909697995865553,0.0060832617427848,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+64,NTPC Ltd.,NTPC.NS,Power,386.8999938964844,-1.7022388473411645,19.601674884329313,19.460020968012437,Bullish,0.0009039909642466,0.0051634533847906,3,BUY,"BUY because:
+- strong long-term performance
+- bullish trend
+- low volatility (stable)
+- low debt levels
+
+Risks:
+- negative short-term returns
+"
+127,Federal Bank Ltd.,FEDERALBNK.NS,Financial Services,288.95001220703125,-1.6340383976063857,51.66387031663427,17.386570826266347,Bullish,0.8786133310927305,0.125779742777226,3,BUY,"BUY because:
+- strong long-term performance
+- bullish trend
+- low volatility (stable)
+- low debt levels
+
+Risks:
+- negative short-term returns
+"
+129,GE Vernova T&D India Ltd.,GVT&D.NS,Capital Goods,5148.60009765625,24.416409420894357,87.29674708295062,41.1766072221434,Bullish,0.0194911765203512,0.1631561269680779,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+55,Kotak Mahindra Bank Ltd.,KOTAKBANK.NS,Financial Services,384.2000122070313,0.1564145187614496,-1.2593147827349882,19.5954530266304,Bullish,0.550837466217033,0.1123001653605462,3,BUY,"BUY because:
+- positive short-term returns
+- bullish trend
+- low volatility (stable)
+- low debt levels
+
+Risks:
+- weak long-term performance
+"
+170,Oberoi Realty Ltd.,OBEROIRLTY.NS,Realty,1707.0999755859375,0.0820791730163694,3.303106473558315,22.99223440030266,Bullish,0.2101512905598648,0.0380364806623,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+200,Yes Bank Ltd.,YESBANK.NS,Financial Services,23.149999618530273,14.660718207904775,13.2583121999297,31.884608052345165,Bullish,1.4815778227017051,0.1742963719298733,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+
+Risks:
+- high volatility (risky)
+- high debt
+"
+197,Vodafone Idea Ltd.,IDEA.NS,Telecommunication,13.989999771118164,45.577526232247,93.49930476087276,40.691364719036024,Bullish,-3.3166671880910465,0.0009575415344826,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+194,Tube Investments of India Ltd.,TIINDIA.NS,Automobile and Auto Components,3141.39990234375,14.112391070566744,4.9104298652236755,37.231788478747795,Bullish,0.5595395729199221,0.0793478865305155,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+191,Tata Communications Ltd.,TATACOMM.NS,Telecommunication,1965.0,25.848595444808844,26.4234664009388,45.3702418414772,Bullish,4.090243183932053,0.0226610017699265,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+
+Risks:
+- high volatility (risky)
+- high debt
+"
+187,Steel Authority of India Ltd.,SAIL.NS,Metals & Mining,204.3699951171875,17.908032630373818,60.08930085256663,48.9427514886468,Bullish,0.6270020801074804,0.0037640059412377,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+183,Radico Khaitan Ltd,RADICO.NS,Fast Moving Consumer Goods,3518.60009765625,15.880655079072326,21.243236940651645,30.179540859092157,Bullish,0.4003939048070041,0.0213072029732367,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+181,Premier Energies Ltd.,PREMIERENE.NS,Capital Goods,1061.0,2.55171322608152,6.073481629592603,27.42941925817164,Bullish,0.6922153172134569,0.1996822329084496,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+180,Polycab India Ltd.,POLYCAB.NS,Capital Goods,9477.5,19.915227430885057,30.598043268568276,30.86481425657627,Bullish,0.1535542148747713,0.0562313143859892,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+173,Oracle Financial Services Software Ltd.,OFSS.NS,Information Technology,9964.0,24.666875195495773,22.203877978125885,39.92627080256913,Bullish,0.0054529800057399,0.6825566963782015,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -61,7 +319,7 @@ Risks:
 Risks:
 - high volatility (risky)
 "
-131,Glenmark Pharmaceuticals Ltd.,GLENMARK.NS,Healthcare,2249.5,5.9435759558111645,5.168258104840762,38.38252689142692,Bullish,0.2794150500579641,0.2327214392810261,3,BUY,"BUY because:
+171,Oil India Ltd.,OIL.NS,Oil Gas & Consumable Fuels,476.1499938964844,1.2869576078321732,22.94211498332903,38.88604193695956,Bullish,0.615765399741037,0.0123279841299169,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -70,7 +328,7 @@ Risks:
 Risks:
 - high volatility (risky)
 "
-129,GE Vernova T&D India Ltd.,GVT&D.NS,Capital Goods,4138.2001953125,9.696752794990848,64.4499133658047,48.61981246913152,Bullish,0.0194911765203512,0.1631561269680779,3,BUY,"BUY because:
+166,Multi Commodity Exchange of India Ltd.,MCX.NS,Financial Services,2954.5,3.44525398197697,94.23443872332636,37.57616828074499,Bullish,0.0005359796221609,0.1387185191558401,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -79,41 +337,46 @@ Risks:
 Risks:
 - high volatility (risky)
 "
-115,Billionbrains Garage Ventures Ltd.,GROWW.NS,Financial Services,198.33999633789065,23.161950202943625,51.024132774351784,55.530961369722895,Bullish,0.0,0.0,3,BUY,"BUY because:
+130,GMR Airports Ltd.,GMRAIRPORT.NS,Services,100.37000274658205,3.6344907877324584,16.777203386084327,27.050595931157623,Bullish,-15.261210663811903,0.0109932460958999,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
 - low debt levels
+"
+164,Motilal Oswal Financial Services Ltd.,MOTILALOFS.NS,Financial Services,879.5,7.854557217997482,1.5519130704853443,29.23609113434572,Bullish,1.3296480924388028,0.2884334449143848,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+
+Risks:
+- high debt
+"
+160,Mahindra & Mahindra Financial Services Ltd.,M&MFIN.NS,Financial Services,303.6499938964844,2.135891814411228,15.50019054623679,42.54041778002728,Bullish,5.026752180500579,0.0399074431651806,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
 
 Risks:
 - high volatility (risky)
+- high debt
 "
-1,ABB India Ltd.,ABB.NS,Capital Goods,7029.5,17.491225137890698,23.582087604772628,33.458862372014856,Bullish,0.0108244140178841,0.2675696123560747,3,BUY,"BUY because:
+156,Laurus Labs Ltd.,LAURUSLABS.NS,Healthcare,1362.0,20.707229979132237,55.94598449541761,28.614671936895657,Bullish,0.617930223406729,0.0210308363528802,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
 - low debt levels
-
-Risks:
-- high volatility (risky)
 "
-157,Lenskart Solutions Ltd.,LENSKART.NS,Consumer Services,534.5499877929688,1.6544665990213536,32.60976921337404,38.55503979467756,Bullish,0.0,0.0,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-
-Risks:
-- high volatility (risky)
-"
-109,Aurobindo Pharma Ltd.,AUROPHARMA.NS,Healthcare,1386.0,14.50759848348011,24.50354509217547,23.162959827929633,Bullish,0.2530483883415224,0.3249467266968684,3,BUY,"BUY because:
+150,KEI Industries Ltd.,KEI.NS,Capital Goods,5267.5,13.342946823739531,27.823385936256795,30.481671814294263,Bullish,0.0375418917167178,0.3642764310803097,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
 - low debt levels
 - good liquidity
+
+Risks:
+- high volatility (risky)
 "
-2,Adani Energy Solutions Ltd.,ADANIENSOL.NS,Power,1259.4000244140625,31.119211287252725,48.3304920229447,50.872349375700445,Bullish,1.825036930968543,0.0429917540811527,3,BUY,"BUY because:
+148,JSW Energy Ltd.,JSWENERGY.NS,Power,595.0499877929688,10.593811224456818,18.042051297015217,38.5919948750373,Bullish,1.8341749681942792,0.0531359360251566,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -122,7 +385,32 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-98,Vedanta Ltd.,VEDL.NS,Metals & Mining,787.5,10.686662396157253,83.9256895966034,32.79569991597781,Bullish,1.9631060863207916,0.026701885783068,3,BUY,"BUY because:
+146,IndusInd Bank Ltd.,INDUSINDBK.NS,Financial Services,914.3499755859376,7.079277367787329,20.77801866842983,31.143953970301787,Bullish,0.8283023632596115,0.1328100539874361,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+140,ICICI Prudential Asset Management Company Ltd.,ICICIAMC.NS,Financial Services,3538.5,5.978019811739199,37.56060281926374,29.163557420187892,Bullish,0.0,0.1523754279409924,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+137,Hitachi Energy India Ltd.,POWERINDIA.NS,Capital Goods,38445.0,36.06441337816315,103.1439894319683,37.49524309813527,Bullish,0.0209890107282439,0.8551580852016613,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+- good liquidity
+
+Risks:
+- high volatility (risky)
+"
+136,Hindustan Petroleum Corporation Ltd.,HINDPETRO.NS,Oil Gas & Consumable Fuels,393.8500061035156,6.201968348783038,3.7418831560315,40.383508792610016,Bullish,1.3795913483206044,0.0011575180701161,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -131,7 +419,138 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-91,Titan Company Ltd.,TITAN.NS,Consumer Durables,4525.89990234375,5.9855305094897115,29.89036933732676,37.49840811351652,Bullish,1.7874225739848588,0.0140233607828274,3,BUY,"BUY because:
+131,Glenmark Pharmaceuticals Ltd.,GLENMARK.NS,Healthcare,2274.89990234375,1.1291354676039145,11.139922545481484,35.37317499667421,Bullish,0.2794150500579641,0.2327214392810261,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+57,Larsen & Toubro Ltd.,LT.NS,Construction,4076.5,-0.4785063154942204,14.71465240809242,18.83912478955611,Bullish,0.0321466678359308,0.0351846063352664,3,BUY,"BUY because:
+- strong long-term performance
+- bullish trend
+- low volatility (stable)
+- low debt levels
+
+Risks:
+- negative short-term returns
+"
+1,ABB India Ltd.,ABB.NS,Capital Goods,7253.0,3.1794579984351756,41.73213230176038,42.713535768611145,Bullish,0.0108244140178841,0.2675696123560747,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+101,360 ONE WAM Ltd.,360ONE.NS,Financial Services,1104.5,2.605792196617074,6.721558840871467,28.220864841666547,Bullish,0.003922554024387,0.0901349780790076,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+27,Cummins India Ltd.,CUMMINSIND.NS,Capital Goods,5881.0,16.728192053019917,50.1103242126002,39.27250944984943,Bullish,0.003922554024387,0.0901349780790076,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+31,Eicher Motors Ltd.,EICHERMOT.NS,Automobile and Auto Components,7177.0,0.6450708175571362,11.70428015564202,27.56032567320369,Bullish,0.0215119956387179,0.0372512725590004,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+9,Asian Paints Ltd.,ASIANPAINT.NS,Consumer Durables,2671.60009765625,8.425328638646512,3.7160201251013714,24.786296302494527,Bullish,0.1180573417987083,0.0431794203438217,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+35,Grasim Industries Ltd.,GRASIM.NS,Construction Materials,3122.39990234375,14.908175256182332,11.125341593114424,24.119208481849665,Bullish,1.9107376809354355,0.0142467877909635,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+
+Risks:
+- high debt
+"
+43,Hindustan Zinc Ltd.,HINDZINC.NS,Metals & Mining,632.9500122070312,6.863080407199207,43.819587236759894,35.31840397901616,Bullish,0.8656761218670269,0.0045360045360045,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+30,Dr. Reddy's Laboratories Ltd.,DRREDDY.NS,Healthcare,1303.5,6.721792528645398,4.030327214684748,35.79005791543576,Bullish,0.1402749949008362,0.0940425996162312,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+6,Adani Power Ltd.,ADANIPOWER.NS,Power,243.3699951171875,22.604531545182628,99.58175352188464,41.91176741524379,Bullish,0.6984618016653567,0.0057899489917549,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+22,CG Power and Industrial Solutions Ltd.,CGPOWER.NS,Capital Goods,917.4500122070312,18.411206332153363,24.87775995491226,35.68346222378362,Bullish,0.010689525097881,0.1211768813767961,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- high volatility (risky)
+"
+26,Coal India Ltd.,COALINDIA.NS,Oil Gas & Consumable Fuels,457.8999938964844,4.364670973557683,21.361017731389587,20.081068382886514,Bullish,0.0140475003566453,0.0965415338999867,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+5,Adani Ports and Special Economic Zone Ltd.,ADANIPORTS.NS,Services,1804.5999755859375,16.4408258310792,35.86809531153297,27.081752328888047,Bullish,0.8217265880776912,0.0484134982800325,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+12,Bajaj Auto Ltd.,BAJAJ-AUTO.NS,Automobile and Auto Components,10460.0,7.024095769171734,15.141174528042267,27.55350605491296,Bullish,0.2624851017683497,0.1226484571690691,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+15,Bajaj Holdings & Investment Ltd.,BAJAJHLDNG.NS,Financial Services,10361.0,0.0531118729177659,-19.44724329639001,19.994232309809444,Bullish,0.00049435653491,0.0319387798330849,3,BUY,"BUY because:
+- positive short-term returns
+- bullish trend
+- low volatility (stable)
+- low debt levels
+
+Risks:
+- weak long-term performance
+"
+40,Hindalco Industries Ltd.,HINDALCO.NS,Metals & Mining,1126.699951171875,8.440803770151595,51.47888809665909,28.95672456888734,Bullish,0.5167691922172194,0.0689393406902368,3,BUY,"BUY because:
+- positive short-term returns
+- strong long-term performance
+- bullish trend
+- low debt levels
+"
+4,Adani Green Energy Ltd.,ADANIGREEN.NS,Power,1475.4000244140625,30.879088131664844,58.75612666625947,37.398007727864226,Bullish,6.5947103897173935,0.0249028989586265,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -140,21 +559,7 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-88,Tata Power Co. Ltd.,TATAPOWER.NS,Power,427.6000061035156,16.085244745007344,6.713250081606126,27.817838635834192,Bullish,0.6371745419479267,0.1342345088476208,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-"
-69,Power Grid Corporation of India Ltd.,POWERGRID.NS,Power,318.1000061035156,7.176556329714057,9.736622655864991,21.384052601712565,Bullish,1.4516903815025683,0.0218905334378663,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-
-Risks:
-- high debt
-"
-68,Power Finance Corporation Ltd.,PFC.NS,Financial Services,464.8500061035156,15.346723480019552,14.241711718610372,42.440581406765226,Bullish,8.500292555484258,0.0010143105704452,3,BUY,"BUY because:
+3,Adani Enterprises Ltd.,ADANIENT.NS,Metals & Mining,2937.39990234375,32.41670818586999,28.754274922431257,38.84054982895351,Bullish,1.8249239724076631,0.0219233969356882,3,BUY,"BUY because:
 - positive short-term returns
 - strong long-term performance
 - bullish trend
@@ -163,197 +568,23 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-66,Oil & Natural Gas Corporation Ltd.,ONGC.NS,Oil Gas & Consumable Fuels,284.04998779296875,0.655554750500964,22.2987821891242,23.73034840751361,Bullish,0.0025604920981173,0.254498782733303,3,BUY,"BUY because:
+161,Mankind Pharma Ltd.,MANKIND.NS,Healthcare,2375.60009765625,12.887293665545885,-7.5246141163827325,28.369543202494185,Bullish,0.5938611773751621,0.0308808423701895,2,HOLD,"HOLD because:
 - positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-"
-110,BSE Ltd.,BSE.NS,Financial Services,3531.5,33.58677067423852,38.609778331087384,48.117958294977946,Bullish,0.000736934668255,0.00416410131895,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
 - bullish trend
 - low debt levels
 
 Risks:
-- high volatility (risky)
+- weak long-term performance
 "
-64,NTPC Ltd.,NTPC.NS,Power,393.6000061035156,4.251097557801553,19.20552785258074,24.395407198203262,Bullish,0.0009039909642466,0.0051634533847906,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-"
-22,CG Power and Industrial Solutions Ltd.,CGPOWER.NS,Capital Goods,774.7999877929688,8.843157177215023,14.133912517781845,40.90816732029091,Bullish,0.010689525097881,0.1211768813767961,3,BUY,"BUY because:
-- positive short-term returns
+106,Alkem Laboratories Ltd.,ALKEM.NS,Healthcare,5498.0,-1.29263913824057,4.73019931275569,25.71104347730856,Bullish,0.1152202735615822,0.0578491175413269,2,HOLD,"HOLD because:
 - strong long-term performance
 - bullish trend
 - low debt levels
 
 Risks:
-- high volatility (risky)
+- negative short-term returns
 "
-6,Adani Power Ltd.,ADANIPOWER.NS,Power,198.5,43.871854927702955,69.44088554377915,37.80532783275657,Bullish,0.6984618016653567,0.0057899489917549,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-
-Risks:
-- high volatility (risky)
-"
-166,Multi Commodity Exchange of India Ltd.,MCX.NS,Financial Services,2856.10009765625,14.189195322752802,73.91617059878696,40.84926253323678,Bullish,0.0005359796221609,0.1387185191558401,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-
-Risks:
-- high volatility (risky)
-"
-199,Waaree Energies Ltd.,WAAREEENER.NS,Capital Goods,3466.199951171875,31.131535850747348,6.958961517825224,38.783634676866846,Bullish,0.1574362815427462,0.0502191664778715,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-
-Risks:
-- high volatility (risky)
-"
-168,NMDC Ltd.,NMDC.NS,Metals & Mining,89.77999877929688,10.484858994690692,28.93689910305721,36.60002667539363,Bullish,0.1439875106791304,0.0075063939750612,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-
-Risks:
-- high volatility (risky)
-"
-4,Adani Green Energy Ltd.,ADANIGREEN.NS,Power,1127.300048828125,24.763440214491418,10.443816532400696,54.43419305526746,Bullish,6.5947103897173935,0.0249028989586265,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-
-Risks:
-- high volatility (risky)
-- high debt
-"
-169,National Aluminium Co. Ltd.,NATIONALUM.NS,Metals & Mining,438.75,20.91773256711238,129.40863484887544,47.089188244699024,Bullish,0.017472188275044,0.0239130777352306,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-
-Risks:
-- high volatility (risky)
-"
-10,Avenue Supermarts Ltd.,DMART.NS,Consumer Services,4628.5,21.722550953320187,15.108182044267604,38.74499570238621,Bullish,0.0382531997059887,0.2388935543736327,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-
-Risks:
-- high volatility (risky)
-"
-187,Steel Authority of India Ltd.,SAIL.NS,Metals & Mining,173.3300018310547,4.674198722349376,28.884774780355848,48.658025884062994,Bullish,0.6270020801074804,0.0037640059412377,3,BUY,"BUY because:
-- positive short-term returns
-- strong long-term performance
-- bullish trend
-- low debt levels
-
-Risks:
-- high volatility (risky)
-"
-183,Radico Khaitan Ltd,RADICO.NS,Fast Moving Consumer Goods,3186.89990234375,22.15024539454773,15.5469268519979,49.207918757377264,Bearish,0.4003939048070041,0.0213072029732367,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-- high volatility (risky)
-"
-90,Tech Mahindra Ltd.,TECHM.NS,Information Technology,1511.4000244140625,12.338337816835931,1.910123050487922,26.762920506624393,Bearish,1.0398314658071992,0.051078796111635,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-
-Risks:
-- bearish trend
-- high debt
-"
-89,Tata Steel Ltd.,TATASTEEL.NS,Metals & Mining,212.1199951171875,0.5260417227846759,29.752875373641064,41.85254038293062,Bearish,1.0398314658071992,0.051078796111635,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-
-Risks:
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-79,Solar Industries India Ltd.,SOLARINDS.NS,Chemicals,15089.0,7.863321180927874,1.773910697423453,39.64416528585093,Bearish,0.3122329778357355,0.1579590302574704,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-- high volatility (risky)
-"
-83,Tata Capital Ltd.,TATACAP.NS,Financial Services,337.8500061035156,2.7993343611407484,2.2239050237566227,38.08258128398716,Bearish,1.2691556209225403,0.0911790258753816,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-
-Risks:
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-103,AU Small Finance Bank Ltd.,AUBANK.NS,Financial Services,990.5999755859376,4.136659719940883,32.88617068408093,47.04305954108629,Bearish,0.679232847495448,0.0680113751848267,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-- high volatility (risky)
-"
-78,Siemens Ltd.,SIEMENS.NS,Capital Goods,3707.89990234375,10.961808534313167,17.969513764727395,47.59541574277761,Bearish,0.0485719260368422,0.0204173441107208,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-- high volatility (risky)
-"
-77,Siemens Energy India Ltd.,ENRIN.NS,Capital Goods,3138.39990234375,6.675727475994231,4.413306540042927,38.16782298763947,Bearish,0.0336886312281742,0.0256008055926722,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-- high volatility (risky)
-"
-193,Tata Investment Corporation Ltd.,TATAINVEST.NS,Financial Services,712.6500244140625,11.186521700832984,5.569963306572978,49.23388660567653,Bearish,7.129125437777432e-05,0.0021538396241012,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-- high volatility (risky)
-"
-65,Nestle India Ltd.,NESTLEIND.NS,Fast Moving Consumer Goods,1285.5999755859375,0.4610474829400024,11.32518238164022,22.37631550683593,Bearish,0.2909697995865553,0.0060832617427848,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-"
-181,Premier Energies Ltd.,PREMIERENE.NS,Capital Goods,1034.5999755859375,45.135724348665775,-6.012428333370856,35.39355375993934,Bullish,0.6922153172134569,0.1996822329084496,2,HOLD,"HOLD because:
+119,Coforge Ltd.,COFORGE.NS,Information Technology,1421.800048828125,7.973875767505012,-13.866138201257405,53.20417641592125,Bullish,0.1677953348382242,0.1911718768772376,2,HOLD,"HOLD because:
 - positive short-term returns
 - bullish trend
 - low debt levels
@@ -362,16 +593,57 @@ Risks:
 - weak long-term performance
 - high volatility (risky)
 "
-105,Aditya Birla Capital Ltd.,ABCAPITAL.NS,Financial Services,340.3999938964844,0.6802684860835351,25.63202751819285,52.77193023544575,Bearish,4.600325712961915,0.0175538648282002,2,HOLD,"HOLD because:
-- positive short-term returns
+163,Max Financial Services Ltd.,MFSL.NS,Financial Services,1674.0,-1.2505870565427846,6.896551724137923,28.655612881631757,Bullish,0.2734114145294681,0.0079182250588105,2,HOLD,"HOLD because:
 - strong long-term performance
+- bullish trend
+- low debt levels
 
 Risks:
-- bearish trend
+- negative short-term returns
+"
+18,Bharat Petroleum Corporation Ltd.,BPCL.NS,Oil Gas & Consumable Fuels,298.1000061035156,-4.485741661714848,0.1237280995318723,33.9166837123441,Bullish,0.0030655020128778,0.0342362384429601,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
 - high volatility (risky)
+"
+33,GAIL (India) Ltd.,GAIL.NS,Oil Gas & Consumable Fuels,164.50999450683594,4.238998144812878,-2.490209295554957,27.046408953791257,Bullish,0.2540706173295583,0.0274938032593551,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+"
+115,Billionbrains Garage Ventures Ltd.,GROWW.NS,Financial Services,184.88999938964844,-6.781283249258962,40.78275855618605,41.90428745282229,Bullish,0.0,0.0,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- high volatility (risky)
+"
+167,NHPC Ltd.,NHPC.NS,Power,78.87000274658203,-5.612727320537569,3.180097003363791,25.49179099240748,Bullish,1.0480440736348748,0.013228803443992,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+
+Risks:
+- negative short-term returns
 - high debt
 "
-104,Adani Total Gas Ltd.,ATGL.NS,Oil Gas & Consumable Fuels,632.9000244140625,28.416357223526447,-1.8379178884742164,85.92723480891658,Bullish,0.4359586883921037,0.0647894819039466,2,HOLD,"HOLD because:
+153,L&T Finance Ltd.,LTF.NS,Financial Services,286.6000061035156,-0.1880645390309077,24.333006348241582,27.13172472633159,Bullish,3.613371272012349,0.0637466996643955,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+
+Risks:
+- negative short-term returns
+- high debt
+"
+124,Dixon Technologies (India) Ltd.,DIXON.NS,Consumer Durables,11524.0,2.099760786745808,-35.41827976267486,44.46490248816062,Bullish,0.222895488671849,0.0171746052277338,2,HOLD,"HOLD because:
 - positive short-term returns
 - bullish trend
 - low debt levels
@@ -380,49 +652,16 @@ Risks:
 - weak long-term performance
 - high volatility (risky)
 "
-106,Alkem Laboratories Ltd.,ALKEM.NS,Healthcare,5582.0,0.2874595759971177,13.289266019788482,27.056720680531644,Bearish,0.1152202735615822,0.0578491175413269,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-"
-179,Phoenix Mills Ltd.,PHOENIXLTD.NS,Realty,1792.199951171875,8.710419611337183,23.483285051751412,40.86576506368783,Bearish,0.4486172092158743,0.0289988716569712,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-- high volatility (risky)
-"
-178,Persistent Systems Ltd.,PERSISTENT.NS,Information Technology,5446.5,16.542562455837206,5.644327302128893,29.29396252302694,Bearish,0.0491998420652422,0.2789640861753098,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-"
-176,Page Industries Ltd.,PAGEIND.NS,Textiles,37975.0,21.81234963913392,-19.07827006495314,29.011998696912077,Bullish,0.1860529734308511,0.1928185043877926,2,HOLD,"HOLD because:
+120,Colgate Palmolive (India) Ltd.,COLPAL.NS,Fast Moving Consumer Goods,2059.89990234375,4.172139016440735,-15.51655324238964,28.52825917705855,Bullish,0.0365521757676617,0.4933977313009571,2,HOLD,"HOLD because:
 - positive short-term returns
 - bullish trend
 - low debt levels
+- good liquidity
 
 Risks:
 - weak long-term performance
 "
-126,FSN E-Commerce Ventures Ltd.,NYKAA.NS,Consumer Services,269.6600036621094,4.075645430272523,25.06261467799016,31.760360861049787,Bearish,1.014839235214558,0.0473819338837333,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-
-Risks:
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-173,Oracle Financial Services Software Ltd.,OFSS.NS,Information Technology,7992.5,16.712908878504674,-9.202203247092475,38.32216720899193,Bullish,0.0054529800057399,0.6825566963782015,2,HOLD,"HOLD because:
+151,KPIT Technologies Ltd.,KPITTECH.NS,Information Technology,771.9500122070312,3.229476438658163,-37.24989394980539,31.47108447747463,Bullish,0.1184231762150267,0.5039192683529454,2,HOLD,"HOLD because:
 - positive short-term returns
 - bullish trend
 - low debt levels
@@ -432,26 +671,24 @@ Risks:
 - weak long-term performance
 - high volatility (risky)
 "
-130,GMR Airports Ltd.,GMRAIRPORT.NS,Services,96.8499984741211,0.3730962983954589,5.466619343318779,50.022605009401374,Bearish,-15.261210663811903,0.0109932460958999,2,HOLD,"HOLD because:
+123,Dabur India Ltd.,DABUR.NS,Fast Moving Consumer Goods,443.3999938964844,0.1241927933586239,-18.46705277540157,25.94189833951994,Bullish,0.0879647504002059,0.0366724943349488,2,HOLD,"HOLD because:
 - positive short-term returns
-- strong long-term performance
+- bullish trend
 - low debt levels
 
 Risks:
-- bearish trend
-- high volatility (risky)
+- weak long-term performance
 "
-172,One 97 Communications Ltd.,PAYTM.NS,Financial Services,1161.6500244140625,9.651689413217902,5.007911811440668,51.54777161574249,Bearish,0.0106743330205567,0.3219700492977397,2,HOLD,"HOLD because:
-- positive short-term returns
+169,National Aluminium Co. Ltd.,NATIONALUM.NS,Metals & Mining,424.4500122070313,-3.2592564770299037,108.08049390395928,39.16924995828433,Bullish,0.017472188275044,0.0239130777352306,2,HOLD,"HOLD because:
 - strong long-term performance
+- bullish trend
 - low debt levels
-- good liquidity
 
 Risks:
-- bearish trend
+- negative short-term returns
 - high volatility (risky)
 "
-170,Oberoi Realty Ltd.,OBEROIRLTY.NS,Realty,1710.5999755859375,14.751461167030545,-1.8244044758297215,33.31567267461258,Bullish,0.2101512905598648,0.0380364806623,2,HOLD,"HOLD because:
+125,Exide Industries Ltd.,EXIDEIND.NS,Automobile and Auto Components,386.5,17.121212121212114,-6.359781950333132,41.22419504989623,Bullish,0.1449464835540785,0.0242314274189549,2,HOLD,"HOLD because:
 - positive short-term returns
 - bullish trend
 - low debt levels
@@ -460,16 +697,49 @@ Risks:
 - weak long-term performance
 - high volatility (risky)
 "
-63,Muthoot Finance Ltd.,MUTHOOTFIN.NS,Financial Services,3571.300048828125,3.73274335103384,35.282747285613844,47.36521006861148,Bearish,3.3651121807200206,0.0824904239555051,2,HOLD,"HOLD because:
+126,FSN E-Commerce Ventures Ltd.,NYKAA.NS,Consumer Services,262.29998779296875,-2.729368749235394,8.102533981525827,22.95459803515796,Bullish,1.014839235214558,0.0473819338837333,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+
+Risks:
+- negative short-term returns
+- high debt
+"
+128,Fortis Healthcare Ltd.,FORTIS.NS,Healthcare,928.4500122070312,4.296787179902251,-2.046733542079149,23.77755238502615,Bullish,0.2775870044479483,0.0308974723874458,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+"
+132,Godfrey Phillips India Ltd.,GODFRYPHLP.NS,Fast Moving Consumer Goods,2282.800048828125,3.401734806235157,-37.803415708913825,38.20631300298073,Bullish,0.0338339545268076,0.008299871730685,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+- high volatility (risky)
+"
+133,Godrej Properties Ltd.,GODREJPROP.NS,Realty,1762.699951171875,0.8755823820560504,-11.988221080618455,34.95993678688111,Bullish,0.7301908567586582,0.0396405131560161,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+- high volatility (risky)
+"
+145,Indus Towers Ltd.,INDUSTOWER.NS,Telecommunication,442.0499877929687,6.995036747773797,36.41413499308279,22.28741219174647,Bearish,0.6509817436604376,0.0048806888389698,2,HOLD,"HOLD because:
 - positive short-term returns
 - strong long-term performance
+- low debt levels
 
 Risks:
 - bearish trend
-- high volatility (risky)
-- high debt
 "
-152,Kalyan Jewellers India Ltd.,KALYANKJIL.NS,Consumer Durables,426.8500061035156,6.247667978473093,-30.16328096976979,46.94520279497714,Bullish,1.0324295764532188,0.0358764612806345,2,HOLD,"HOLD because:
+144,Indian Renewable Energy Development Agency Ltd.,IREDA.NS,Financial Services,133.25,0.180441698425704,-7.93998680349789,36.86778870344876,Bullish,6.305952151357712,0.0008246913957005,2,HOLD,"HOLD because:
 - positive short-term returns
 - bullish trend
 
@@ -478,391 +748,281 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-167,NHPC Ltd.,NHPC.NS,Power,83.55999755859375,14.246647875170847,-0.3002087779593876,25.065306515232916,Bullish,1.0480440736348748,0.013228803443992,2,HOLD,"HOLD because:
+25,Cipla Ltd.,CIPLA.NS,Healthcare,1401.0,12.91102070177834,-9.810739154040329,34.57793275802063,Bullish,0.0140475003566453,0.0965415338999867,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+- high volatility (risky)
+"
+24,Cholamandalam Investment and Finance Company Ltd.,CHOLAFIN.NS,Financial Services,1537.699951171875,-2.051090689944135,5.314130584178645,31.078239096243493,Bullish,7.418860950901803,0.0365919123689309,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+
+Risks:
+- negative short-term returns
+- high volatility (risky)
+- high debt
+"
+138,Housing & Urban Development Corporation Ltd.,HUDCO.NS,Financial Services,203.5099945068359,3.3517803676708757,-3.4137719422627666,34.01166226966561,Bullish,5.971838479471564,5.39233976517627e-05,2,HOLD,"HOLD because:
 - positive short-term returns
 - bullish trend
 
 Risks:
 - weak long-term performance
-- high debt
-"
-153,L&T Finance Ltd.,LTF.NS,Financial Services,287.1400146484375,4.111685046186886,36.66825621459742,49.84953109873223,Bearish,3.613371272012349,0.0637466996643955,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-
-Risks:
-- bearish trend
 - high volatility (risky)
 - high debt
 "
-140,ICICI Prudential Asset Management Company Ltd.,ICICIAMC.NS,Financial Services,3338.89990234375,8.051512793265413,29.801069187392137,49.38973989872711,Bearish,0.0,0.1523754279409924,2,HOLD,"HOLD because:
+141,IDFC First Bank Ltd.,IDFCFIRSTB.NS,Financial Services,71.31999969482422,4.071211097657579,-1.763083755095585,23.30326768366639,Bullish,0.86811984973181,0.0493832668046778,2,HOLD,"HOLD because:
 - positive short-term returns
-- strong long-term performance
+- bullish trend
 - low debt levels
 
 Risks:
-- bearish trend
-- high volatility (risky)
+- weak long-term performance
 "
-200,Yes Bank Ltd.,YESBANK.NS,Financial Services,20.190000534057617,0.0495551473270738,0.8995517397144992,37.881622532252926,Bearish,1.4815778227017051,0.1742963719298733,2,HOLD,"HOLD because:
-- positive short-term returns
+168,NMDC Ltd.,NMDC.NS,Metals & Mining,87.98999786376953,-1.9937635774841644,21.648721066827335,29.568003698469113,Bullish,0.1439875106791304,0.0075063939750612,2,HOLD,"HOLD because:
 - strong long-term performance
+- bullish trend
+- low debt levels
 
 Risks:
+- negative short-term returns
+"
+66,Oil & Natural Gas Corporation Ltd.,ONGC.NS,Oil Gas & Consumable Fuels,265.3999938964844,-6.565743600762808,18.8663975690458,32.407273159331865,Bullish,0.0025604920981173,0.254498782733303,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- high volatility (risky)
+"
+53,Jindal Steel Ltd.,JINDALSTEL.NS,Metals & Mining,1207.199951171875,-4.944885734498028,16.654585655118947,21.2479229578172,Bullish,0.3900842812358535,0.064451764117954,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+"
+46,ITC Ltd.,ITC.NS,Fast Moving Consumer Goods,286.8999938964844,-6.486308568536536,-28.09310569858875,18.942319812596544,Bullish,0.00406739678181,0.0350426220020189,2,HOLD,"HOLD because:
+- bullish trend
+- low volatility (stable)
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+182,Prestige Estates Projects Ltd.,PRESTIGE.NS,Realty,1369.199951171875,0.91390786390817,-9.35452160398047,30.43999852470906,Bullish,0.8545613693833884,0.0468493169848009,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+- high volatility (risky)
+"
+189,Suzlon Energy Ltd.,SUZLON.NS,Capital Goods,56.9900016784668,7.670510768718075,-1.5206450141009298,33.1948589371472,Bullish,0.1212174813126052,0.1314687906248586,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+- high volatility (risky)
+"
+193,Tata Investment Corporation Ltd.,TATAINVEST.NS,Financial Services,690.1500244140625,-3.1572299486693156,2.1158614107705365,24.701253921147288,Bullish,7.129125437777432e-05,0.0021538396241012,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+"
+179,Phoenix Mills Ltd.,PHOENIXLTD.NS,Realty,1771.199951171875,-0.6116393335608872,13.306694071215386,23.33365974248046,Bullish,0.4486172092158743,0.0289988716569712,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+"
+69,Power Grid Corporation of India Ltd.,POWERGRID.NS,Power,290.54998779296875,-8.660804081085615,4.69752855012151,19.29637472987252,Bearish,1.4516903815025683,0.0218905334378663,2,HOLD,"HOLD because:
+- strong long-term performance
+- low volatility (stable)
+
+Risks:
+- negative short-term returns
 - bearish trend
+- high debt
+"
+68,Power Finance Corporation Ltd.,PFC.NS,Financial Services,428.6000061035156,-7.798214375397395,11.742561821811526,25.314651505932684,Bullish,8.500292555484258,0.0010143105704452,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+
+Risks:
+- negative short-term returns
+- high debt
+"
+44,Hyundai Motor India Ltd.,HYUNDAI.NS,Automobile and Auto Components,1924.0,1.114144977289211,-24.302630642420187,24.457745311962192,Bullish,0.0521726644398033,0.3511161668222363,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+- good liquidity
+
+Risks:
+- weak long-term performance
+"
+67,Pidilite Industries Ltd.,PIDILITIND.NS,Chemicals,1482.800048828125,11.404962346215244,-4.921291244078474,24.685679118563883,Bullish,0.0465571646200814,0.0799119818635274,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+"
+186,SRF Ltd.,SRF.NS,Chemicals,2715.800048828125,8.871519295575258,-4.593132215230378,30.62740168476777,Bullish,0.3743034325450254,0.0373970430817877,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+- high volatility (risky)
+"
+176,Page Industries Ltd.,PAGEIND.NS,Textiles,38195.0,4.557897618395845,-14.845121446847042,25.63542813551491,Bullish,0.1860529734308511,0.1928185043877926,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
+- low debt levels
+
+Risks:
+- weak long-term performance
+"
+63,Muthoot Finance Ltd.,MUTHOOTFIN.NS,Financial Services,3342.89990234375,-6.395434249757914,18.790863721443717,30.38619667074277,Bullish,3.3651121807200206,0.0824904239555051,2,HOLD,"HOLD because:
+- strong long-term performance
+- bullish trend
+
+Risks:
+- negative short-term returns
 - high volatility (risky)
 - high debt
 "
-5,Adani Ports and Special Economic Zone Ltd.,ADANIPORTS.NS,Services,1573.4000244140625,7.012172492826307,11.462174243872724,42.03432007017487,Bearish,0.8217265880776912,0.0484134982800325,2,HOLD,"HOLD because:
-- positive short-term returns
+88,Tata Power Co. Ltd.,TATAPOWER.NS,Power,420.75,-1.6019658572823614,9.059101428947304,26.247444539883094,Bullish,0.6371745419479267,0.1342345088476208,2,HOLD,"HOLD because:
 - strong long-term performance
+- bullish trend
 - low debt levels
 
 Risks:
-- bearish trend
-- high volatility (risky)
+- negative short-term returns
 "
-20,Bosch Ltd.,BOSCHLTD.NS,Automobile and Auto Components,37505.0,6.036188860616343,0.2744438069046895,50.5198540688746,Bearish,1.879462734413694,0.0169180479405651,2,HOLD,"HOLD because:
-- positive short-term returns
+89,Tata Steel Ltd.,TATASTEEL.NS,Metals & Mining,208.02000427246097,-1.9328639162288552,24.05773697442808,23.26728855011652,Bullish,1.0398314658071992,0.051078796111635,2,HOLD,"HOLD because:
 - strong long-term performance
+- bullish trend
 
 Risks:
-- bearish trend
-- high volatility (risky)
+- negative short-term returns
 - high debt
 "
-9,Asian Paints Ltd.,ASIANPAINT.NS,Consumer Durables,2464.0,6.800741003961752,4.920934091124107,35.937905477307964,Bearish,0.1180573417987083,0.0431794203438217,2,HOLD,"HOLD because:
+196,Vishal Mega Mart Ltd.,VMM.NS,Consumer Services,121.7699966430664,3.589956173332065,-19.560052374597316,22.967269523300526,Bullish,0.2701609766263176,0.1101520905031345,2,HOLD,"HOLD because:
 - positive short-term returns
-- strong long-term performance
+- bullish trend
 - low debt levels
 
 Risks:
-- bearish trend
-- high volatility (risky)
+- weak long-term performance
 "
-40,Hindalco Industries Ltd.,HINDALCO.NS,Metals & Mining,1039.0,10.531914893617024,50.46283983343793,37.663929161624296,Bearish,0.5167691922172194,0.0689393406902368,2,HOLD,"HOLD because:
+174,PB Fintech Ltd.,POLICYBZR.NS,Financial Services,1702.5,6.366364236433242,-8.683760045805833,28.74981370932568,Bullish,0.050094212316628,0.5134803360235985,2,HOLD,"HOLD because:
 - positive short-term returns
-- strong long-term performance
+- bullish trend
+- low debt levels
+- good liquidity
+
+Risks:
+- weak long-term performance
+"
+58,Lodha Developers Ltd.,LODHA.NS,Realty,938.0999755859376,7.395532408235561,-21.300337618629396,38.440885051598634,Bullish,0.550837466217033,0.1123001653605462,2,HOLD,"HOLD because:
+- positive short-term returns
+- bullish trend
 - low debt levels
 
 Risks:
-- bearish trend
+- weak long-term performance
 - high volatility (risky)
 "
-17,Bharat Electronics Ltd.,BEL.NS,Capital Goods,462.75,2.372505709399908,16.961230934416083,33.45209013236424,Bearish,0.0030655020128778,0.0342362384429601,2,HOLD,"HOLD because:
+93,Trent Ltd.,TRENT.NS,Consumer Services,4224.0,3.4457411772190083,-23.60282148670646,32.92436756091223,Bullish,0.4096112227971306,0.0882287007204896,2,HOLD,"HOLD because:
 - positive short-term returns
-- strong long-term performance
+- bullish trend
 - low debt levels
 
 Risks:
-- bearish trend
+- weak long-term performance
 - high volatility (risky)
 "
-53,Jindal Steel Ltd.,JINDALSTEL.NS,Metals & Mining,1270.0,2.601385514757415,27.19470478491246,47.44528859129231,Bearish,0.3900842812358535,0.064451764117954,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
+185,SBI Cards and Payment Services Ltd.,SBICARD.NS,Financial Services,624.4000244140625,-10.184117743065348,-20.83043546328942,17.16468919706934,Bearish,3.2775792861848885,0.0494534047548029,1,SELL,"SELL because:
+- low volatility (stable)
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+- high debt
+"
+195,UPL Ltd.,UPL.NS,Chemicals,644.7999877929688,-2.295632113619817,-7.276392701269874,29.173207117555993,Bullish,0.779496257647753,0.1888950892857142,1,SELL,"SELL because:
+- bullish trend
 - low debt levels
 
 Risks:
-- bearish trend
-- high volatility (risky)
+- negative short-term returns
+- weak long-term performance
 "
-57,Larsen & Toubro Ltd.,LT.NS,Construction,4096.10009765625,0.7229485046198914,17.788644073508266,52.24351375381031,Bearish,0.0321466678359308,0.0351846063352664,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-- high volatility (risky)
-"
-37,HDFC Asset Management Company Ltd.,HDFCAMC.NS,Financial Services,2792.39990234375,5.381532602004824,0.3918713767301796,53.89236198761069,Bearish,0.0,0.0195430817812721,2,HOLD,"HOLD because:
-- positive short-term returns
-- strong long-term performance
-- low debt levels
-
-Risks:
-- bearish trend
-- high volatility (risky)
-"
-150,KEI Industries Ltd.,KEI.NS,Capital Goods,4839.2998046875,-7.043799372118709,24.047049305295378,48.94132797791705,Bearish,0.0375418917167178,0.3642764310803097,1,SELL,"SELL because:
-- strong long-term performance
+188,Supreme Industries Ltd.,SUPREMEIND.NS,Capital Goods,3549.0,-3.133360098754412,-22.454319292213356,19.958851329996435,Bearish,0.0133911851375511,0.6263317809709562,1,SELL,"SELL because:
+- low volatility (stable)
 - low debt levels
 - good liquidity
 
 Risks:
 - negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-147,Info Edge (India) Ltd.,NAUKRI.NS,Consumer Services,1054.550048828125,5.61342502034301,-27.165056388676337,27.560578512148332,Bearish,0.0076596718075909,0.0441608536048819,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
 - weak long-term performance
 - bearish trend
 "
-146,IndusInd Bank Ltd.,INDUSINDBK.NS,Financial Services,853.9000244140625,-9.400527913627322,0.7076305964428098,46.24702329314356,Bearish,0.8283023632596115,0.1328100539874361,1,SELL,"SELL because:
-- strong long-term performance
+143,Indian Railway Catering And Tourism Corporation Ltd.,IRCTC.NS,Consumer Services,509.8500061035156,-9.745090446339956,-27.68362371823513,23.249131547414756,Bullish,0.0245119725856411,0.1203750228867312,1,SELL,"SELL because:
+- bullish trend
 - low debt levels
 
 Risks:
 - negative short-term returns
-- bearish trend
-- high volatility (risky)
+- weak long-term performance
 "
-138,Housing & Urban Development Corporation Ltd.,HUDCO.NS,Financial Services,196.91000366210935,9.117298338756452,-10.069706863499183,45.50943492556834,Bearish,5.971838479471564,5.39233976517627e-05,1,SELL,"SELL because:
-- positive short-term returns
+7,Ambuja Cements Ltd.,AMBUJACEM.NS,Construction Materials,447.8500061035156,-2.429192570040173,-20.972296372581766,26.593245247257887,Bullish,0.0147539679940871,0.2943459170922826,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
 
 Risks:
+- negative short-term returns
 - weak long-term performance
-- bearish trend
-- high volatility (risky)
+"
+14,Bajaj Finserv Ltd.,BAJAJFINSV.NS,Financial Services,1783.5999755859375,-3.0072352000618197,-11.457508242200245,20.153968078533293,Bullish,3.9291429237612214,0.0111054392826478,1,SELL,"SELL because:
+- bullish trend
+
+Risks:
+- negative short-term returns
+- weak long-term performance
 - high debt
 "
-28,DLF Ltd.,DLF.NS,Realty,601.75,1.9569616323418917,-26.87720399575818,43.7185848754536,Bearish,0.0964209630492604,0.0116547632932227,1,SELL,"SELL because:
-- positive short-term returns
+10,Avenue Supermarts Ltd.,DMART.NS,Consumer Services,4054.5,-12.4014259479313,-15.413177451679683,19.861254762894166,Bearish,0.0382531997059887,0.2388935543736327,1,SELL,"SELL because:
+- low volatility (stable)
 - low debt levels
 
 Risks:
+- negative short-term returns
 - weak long-term performance
 - bearish trend
-- high volatility (risky)
 "
-145,Indus Towers Ltd.,INDUSTOWER.NS,Telecommunication,412.25,-8.092740782711427,2.6646775077348694,35.12917196958995,Bearish,0.6509817436604376,0.0048806888389698,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-155,LIC Housing Finance Ltd.,LICHSGFIN.NS,Financial Services,540.0,2.2824107423722317,-10.605249674218042,35.82438242235174,Bearish,7.22215351096782,0.0051785682517944,1,SELL,"SELL because:
-- positive short-term returns
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-144,Indian Renewable Energy Development Agency Ltd.,IREDA.NS,Financial Services,133.00999450683594,15.341361455091684,-14.40033937634686,42.321237276925,Bearish,6.305952151357712,0.0008246913957005,1,SELL,"SELL because:
-- positive short-term returns
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-142,Indian Bank,INDIANB.NS,Financial Services,939.4500122070312,-3.808939873763806,44.05427846929841,48.37098713485706,Bearish,0.4666891614395219,0.0682332045253353,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-60,Maruti Suzuki India Ltd.,MARUTI.NS,Automobile and Auto Components,13453.0,-6.498470948012236,8.295031549789723,38.934321034787466,Bearish,1.3558763655130888,0.0461418318205006,1,SELL,"SELL because:
-- strong long-term performance
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-133,Godrej Properties Ltd.,GODREJPROP.NS,Realty,1758.800048828125,1.4594778672122777,-23.947073659184937,44.182236139368875,Bearish,0.7301908567586582,0.0396405131560161,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-31,Eicher Motors Ltd.,EICHERMOT.NS,Automobile and Auto Components,7189.5,-8.1331459238436,33.16370536718405,49.48080908081118,Bearish,0.0215119956387179,0.0372512725590004,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-135,Hero MotoCorp Ltd.,HEROMOTOCO.NS,Automobile and Auto Components,5230.5,-6.456228203523207,23.95569512959552,41.70173912348424,Bearish,0.0363184177699921,0.0426819700808904,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-23,Canara Bank,CANBK.NS,Financial Services,142.3699951171875,-7.287055626017769,25.42506601869352,47.918263374357025,Bearish,0.010689525097881,0.1211768813767961,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-132,Godfrey Phillips India Ltd.,GODFRYPHLP.NS,Fast Moving Consumer Goods,2207.699951171875,8.066959948521202,-23.954949554682536,52.748297092066196,Bearish,0.0338339545268076,0.008299871730685,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-32,Eternal Ltd.,ETERNAL.NS,Consumer Services,254.8800048828125,5.8779584623466,-18.607692846685396,45.74986580710008,Bearish,0.067453903750371,0.1253529079616036,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-128,Fortis Healthcare Ltd.,FORTIS.NS,Healthcare,890.2000122070312,-4.536191720425609,5.280589564031191,34.10614862832151,Bearish,0.2775870044479483,0.0308974723874458,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-127,Federal Bank Ltd.,FEDERALBNK.NS,Financial Services,293.75,-0.4068527402497413,38.94134449741049,38.90568524456198,Bearish,0.8786133310927305,0.125779742777226,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-125,Exide Industries Ltd.,EXIDEIND.NS,Automobile and Auto Components,330.0,2.230487137331938,-15.644174411386002,41.01380465084726,Bearish,0.1449464835540785,0.0242314274189549,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-124,Dixon Technologies (India) Ltd.,DIXON.NS,Consumer Durables,11371.5,12.023445965914693,-32.15314476186103,57.81167062576256,Bearish,0.222895488671849,0.0171746052277338,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-121,Container Corporation of India Ltd.,CONCOR.NS,Services,503.1000061035156,5.031316514303885,-15.758519127328874,39.155446762159315,Bearish,0.0676249718299961,0.1821353347174117,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-119,Coforge Ltd.,COFORGE.NS,Information Technology,1316.800048828125,13.253642739120597,-20.88872363409949,39.65355276128398,Bearish,0.1677953348382242,0.1911718768772376,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-24,Cholamandalam Investment and Finance Company Ltd.,CHOLAFIN.NS,Financial Services,1579.0,-7.31936108151563,1.8551571545212031,51.84735940046556,Bearish,7.418860950901803,0.0365919123689309,1,SELL,"SELL because:
-- strong long-term performance
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-162,Marico Ltd.,MARICO.NS,Fast Moving Consumer Goods,757.2999877929688,-2.804342672969229,8.196750331149506,23.481714904080377,Bearish,0.1393710691823899,0.0785854616895874,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-"
-21,Britannia Industries Ltd.,BRITANNIA.NS,Fast Moving Consumer Goods,5735.5,-3.750629300218156,2.4266536100624236,24.991905292982096,Bearish,0.0085642098557187,0.054902143812813,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-"
-180,Polycab India Ltd.,POLYCAB.NS,Capital Goods,8182.5,-4.281452886471316,19.60970618330653,47.04250018819812,Bearish,0.1535542148747713,0.0562313143859892,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-3,Adani Enterprises Ltd.,ADANIENT.NS,Metals & Mining,2218.300048828125,4.410239426950979,-14.95552323725764,45.41734881906645,Bearish,1.8249239724076631,0.0219233969356882,1,SELL,"SELL because:
-- positive short-term returns
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-198,Voltas Ltd.,VOLTAS.NS,Consumer Durables,1440.0999755859375,-3.9356948142794335,7.150295802525108,46.271666386848445,Bearish,0.1369469926687905,0.0982785114917147,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-197,Vodafone Idea Ltd.,IDEA.NS,Telecommunication,9.609999656677246,-6.608360619015263,30.393484476265225,45.47450429951187,Bearish,-3.3166671880910465,0.0009575415344826,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-196,Vishal Mega Mart Ltd.,VMM.NS,Consumer Services,118.9499969482422,1.4671957195733445,-15.041781576218472,49.701704255206366,Bearish,0.2701609766263176,0.1101520905031345,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-195,UPL Ltd.,UPL.NS,Chemicals,664.7000122070312,6.719119894276937,-8.512831412167298,39.34892140151031,Bearish,0.779496257647753,0.1888950892857142,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-194,Tube Investments of India Ltd.,TIINDIA.NS,Automobile and Auto Components,2790.199951171875,-1.670430816644164,-4.794647615142644,39.74324294773733,Bullish,0.5595395729199221,0.0793478865305155,1,SELL,"SELL because:
+184,Rail Vikas Nigam Ltd.,RVNL.NS,Construction,245.4499969482422,-16.482362545777917,-24.691621064908382,30.34772158751984,Bullish,0.5662422119153124,0.2866418164204097,1,SELL,"SELL because:
 - bullish trend
 - low debt levels
 
@@ -871,259 +1031,125 @@ Risks:
 - weak long-term performance
 - high volatility (risky)
 "
-192,Tata Elxsi Ltd.,TATAELXSI.NS,Information Technology,4592.5,3.218488337460057,-26.236749116607772,34.94934689555695,Bearish,0.0672352859830449,0.1858621310654776,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-189,Suzlon Energy Ltd.,SUZLON.NS,Capital Goods,52.93000030517578,29.255187592275856,-18.968155920904252,46.801798743788936,Bearish,0.1212174813126052,0.1314687906248586,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-184,Rail Vikas Nigam Ltd.,RVNL.NS,Construction,303.05999755859375,1.20553855548573,-18.917314631195836,51.98642139702858,Bearish,0.5662422119153124,0.2866418164204097,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-8,Apollo Hospitals Enterprise Ltd.,APOLLOHOSP.NS,Healthcare,7699.0,-1.1871911698645987,4.82906884702432,24.49431371688995,Bearish,0.6598882164558041,0.0481569411470698,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
+20,Bosch Ltd.,BOSCHLTD.NS,Automobile and Auto Components,36625.0,-1.2270765911542636,-10.888077858880774,27.918027053683787,Bullish,1.879462734413694,0.0169180479405651,1,SELL,"SELL because:
+- bullish trend
 
 Risks:
 - negative short-term returns
-- bearish trend
-"
-11,Axis Bank Ltd.,AXISBANK.NS,Financial Services,1359.0999755859375,-0.9618941027845662,24.107387990648597,40.0323468142302,Bearish,1.1786587574823555,0.0797425694220822,1,SELL,"SELL because:
-- strong long-term performance
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
+- weak long-term performance
 - high debt
 "
-159,MRF Ltd.,MRF.NS,Automobile and Auto Components,139855.0,0.7419412929947855,-6.70678403920043,31.706038150206737,Bearish,0.2039737219865797,0.033456245740566,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-12,Bajaj Auto Ltd.,BAJAJ-AUTO.NS,Automobile and Auto Components,9773.5,-0.0255728314238923,17.916390179163912,34.97947600683498,Bearish,0.2624851017683497,0.1226484571690691,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
+13,Bajaj Finance Ltd.,BAJFINANCE.NS,Financial Services,908.25,0.0,-3.1303302421265333,24.723572452763495,Bullish,2.8477813307227304,0.0293256127877577,1,SELL,"SELL because:
+- bullish trend
 
 Risks:
 - negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-175,PI Industries Ltd.,PIIND.NS,Chemicals,3139.699951171875,1.3002532779861742,-23.367696140619753,38.362767772709475,Bearish,0.0181254307374224,0.2794263339151767,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
 - weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-174,PB Fintech Ltd.,POLICYBZR.NS,Financial Services,1600.5999755859375,8.965889371838598,-12.088756054739957,34.88664734398773,Bearish,0.050094212316628,0.5134803360235985,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-- good liquidity
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-171,Oil India Ltd.,OIL.NS,Oil Gas & Consumable Fuels,470.1000061035156,-3.6778981945323697,8.054374279470311,31.380148345914765,Bearish,0.615765399741037,0.0123279841299169,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-16,Bank of Baroda,BANKBARODA.NS,Financial Services,280.44000244140625,-11.027921452869029,13.602852526950285,44.163523843469136,Bearish,0.7222580658885577,0.0772904859401488,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-165,MphasiS Ltd.,MPHASIS.NS,Information Technology,2462.199951171875,9.164262964835968,-7.209347986739212,34.54359404472576,Bearish,0.1961098193302394,0.1868703029972341,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-164,Motilal Oswal Financial Services Ltd.,MOTILALOFS.NS,Financial Services,815.4500122070312,13.651569645579276,-9.157702106156096,56.52565635974951,Bearish,1.3296480924388028,0.2884334449143848,1,SELL,"SELL because:
-- positive short-term returns
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
 - high debt
 "
-163,Max Financial Services Ltd.,MFSL.NS,Financial Services,1683.199951171875,-6.840828775514806,10.315893125356723,37.77912170934502,Bearish,0.2734114145294681,0.0079182250588105,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-117,Blue Star Ltd.,BLUESTARCO.NS,Consumer Durables,1866.0999755859375,-1.9132732937746424,5.769989454199109,52.46955506656084,Bearish,0.1243058772862819,0.0820038228244198,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-160,Mahindra & Mahindra Financial Services Ltd.,M&MFIN.NS,Financial Services,299.3500061035156,-18.21038084603398,15.512256667499225,46.381722779349744,Bearish,5.026752180500579,0.0399074431651806,1,SELL,"SELL because:
+11,Axis Bank Ltd.,AXISBANK.NS,Financial Services,1286.5999755859375,-4.668049876975444,22.486666572921376,21.81528887667808,Bearish,1.1786587574823555,0.0797425694220822,1,SELL,"SELL because:
 - strong long-term performance
 
 Risks:
 - negative short-term returns
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-118,Cochin Shipyard Ltd.,COCHINSHIP.NS,Capital Goods,1561.0999755859375,7.743802145165191,-15.327491163981488,60.0335826311697,Bearish,0.1004446772271944,0.040495209250883,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-101,360 ONE WAM Ltd.,360ONE.NS,Financial Services,1113.300048828125,3.591709259329523,-0.5366784435648975,37.06296493677614,Bearish,0.003922554024387,0.0901349780790076,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-47,Indian Hotels Co. Ltd.,INDHOTEL.NS,Consumer Services,659.2999877929688,1.274959722422242,-12.559683316582394,40.773769607994815,Bearish,0.2763506981186681,0.0485806456492799,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-72,Reliance Industries Ltd.,RELIANCE.NS,Oil Gas & Consumable Fuels,1365.0,0.5154639175257714,-2.312944211061241,29.267442871603215,Bearish,1.4516903815025683,0.0218905334378663,1,SELL,"SELL because:
-- positive short-term returns
-
-Risks:
-- weak long-term performance
 - bearish trend
 - high debt
 "
-99,Wipro Ltd.,WIPRO.NS,Information Technology,204.32000732421875,2.8957041788348237,-18.381636874635387,27.717454536318865,Bearish,0.2318398085738534,0.2674440276008446,1,SELL,"SELL because:
-- positive short-term returns
+154,LG Electronics India Ltd.,LGEINDIA.NS,Consumer Durables,1523.9000244140625,-3.4712059576067156,-9.823066311722018,27.711833677351898,Bullish,0.0,0.0,1,SELL,"SELL because:
+- bullish trend
 - low debt levels
 
 Risks:
+- negative short-term returns
+- weak long-term performance
+"
+177,Patanjali Foods Ltd.,PATANJALI.NS,Fast Moving Consumer Goods,456.2000122070313,-1.8819227379875512,-24.177901186138417,19.84984601024623,Bearish,0.0692712950524035,0.0263268615153995,1,SELL,"SELL because:
+- low volatility (stable)
+- low debt levels
+
+Risks:
+- negative short-term returns
 - weak long-term performance
 - bearish trend
 "
-73,SBI Life Insurance Company Ltd.,SBILIFE.NS,Financial Services,1970.9000244140625,-2.8816147470458353,10.037904216339722,31.981081900879257,Bearish,0.540785437902158,0.0874588528619858,1,SELL,"SELL because:
+155,LIC Housing Finance Ltd.,LICHSGFIN.NS,Financial Services,533.1500244140625,-1.268513997395837,-3.7982654870648336,34.03973438492805,Bullish,7.22215351096782,0.0051785682517944,1,SELL,"SELL because:
+- bullish trend
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- high volatility (risky)
+- high debt
+"
+19,Bharti Airtel Ltd.,BHARTIARTL.NS,Telecommunication,1829.0,-0.9691929274699862,-3.4981294317550815,27.76713776763676,Bullish,0.7507680863382618,0.0040725370432036,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+157,Lenskart Solutions Ltd.,LENSKART.NS,Consumer Services,523.8499755859375,-2.0016859884721128,29.955338043684733,27.9397110384388,Bearish,0.0,0.0,1,SELL,"SELL because:
 - strong long-term performance
 - low debt levels
 
 Risks:
 - negative short-term returns
 - bearish trend
-- high volatility (risky)
 "
-97,Varun Beverages Ltd.,VBL.NS,Fast Moving Consumer Goods,473.8999938964844,6.55555135459569,-2.2744318718885492,43.1617945530916,Bearish,0.128107713360394,0.3063385003367844,1,SELL,"SELL because:
-- positive short-term returns
+158,Lupin Ltd.,LUPIN.NS,Healthcare,2267.699951171875,-2.5483476075687572,16.9399756740652,26.791272241675827,Bearish,0.3166663760281338,0.1621069759280233,1,SELL,"SELL because:
+- strong long-term performance
 - low debt levels
-- good liquidity
 
 Risks:
+- negative short-term returns
+- bearish trend
+"
+159,MRF Ltd.,MRF.NS,Automobile and Auto Components,123420.0,-11.751456866039822,-17.527056266321384,17.818643106082774,Bearish,0.2039737219865797,0.033456245740566,1,SELL,"SELL because:
+- low volatility (stable)
+- low debt levels
+
+Risks:
+- negative short-term returns
 - weak long-term performance
 - bearish trend
-- high volatility (risky)
 "
-74,Samvardhana Motherson International Ltd.,MOTHERSON.NS,Automobile and Auto Components,125.02999877929688,-2.512230042585939,21.70598213971411,55.07237026978711,Bearish,6.331558258988778,0.0011783242577576,1,SELL,"SELL because:
-- strong long-term performance
+175,PI Industries Ltd.,PIIND.NS,Chemicals,2775.0,-10.83477785689525,-25.704059340013018,34.71164872093252,Bullish,0.0181254307374224,0.2794263339151767,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
 
 Risks:
 - negative short-term returns
-- bearish trend
+- weak long-term performance
 - high volatility (risky)
-- high debt
 "
-76,Shriram Finance Ltd.,SHRIRAMFIN.NS,Financial Services,1036.949951171875,-1.477439318586693,64.67032327431836,63.66420907694275,Bearish,3.166996105176181,0.0833664274923484,1,SELL,"SELL because:
-- strong long-term performance
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-95,Union Bank of India,UNIONBANK.NS,Financial Services,188.91000366210935,-4.653510822934914,34.72400657361945,52.82053926449516,Bearish,0.2414900189352963,0.0942283872083861,1,SELL,"SELL because:
+17,Bharat Electronics Ltd.,BEL.NS,Capital Goods,410.75,-11.237169097784982,11.245590186254638,21.70964304083059,Bearish,0.0030655020128778,0.0342362384429601,1,SELL,"SELL because:
 - strong long-term performance
 - low debt levels
 
 Risks:
 - negative short-term returns
 - bearish trend
-- high volatility (risky)
 "
-52,JSW Steel Ltd.,JSWSTEEL.NS,Metals & Mining,1240.300048828125,-2.1305136084360576,19.974849124265393,40.186888202354055,Bearish,0.0858545292280232,0.4641466580142764,1,SELL,"SELL because:
+16,Bank of Baroda,BANKBARODA.NS,Financial Services,268.5,-4.257596041028755,14.616241055262602,22.54427871214212,Bearish,0.7222580658885577,0.0772904859401488,1,SELL,"SELL because:
 - strong long-term performance
+- low debt levels
+
+Risks:
+- negative short-term returns
+- bearish trend
+"
+172,One 97 Communications Ltd.,PAYTM.NS,Financial Services,1118.800048828125,-3.6887164537831474,-10.831267046501525,37.07529988684606,Bullish,0.0106743330205567,0.3219700492977397,1,SELL,"SELL because:
+- bullish trend
 - low debt levels
 - good liquidity
 
 Risks:
 - negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-93,Trent Ltd.,TRENT.NS,Consumer Services,4107.7001953125,6.735096669156815,-20.30073350189173,47.82880921757762,Bearish,0.4096112227971306,0.0882287007204896,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
 - weak long-term performance
-- bearish trend
 - high volatility (risky)
 "
-92,Torrent Pharmaceuticals Ltd.,TORNTPHARM.NS,Healthcare,4179.5,-4.341760203984702,19.55333651877191,20.846559268402583,Bearish,0.4218746912336032,0.0775072475520506,1,SELL,"SELL because:
+142,Indian Bank,INDIANB.NS,Financial Services,833.0,-11.331099135008827,25.40459164471207,23.852768076776197,Bearish,0.4666891614395219,0.0682332045253353,1,SELL,"SELL because:
 - strong long-term performance
 - low debt levels
 
@@ -1131,33 +1157,31 @@ Risks:
 - negative short-term returns
 - bearish trend
 "
-51,InterGlobe Aviation Ltd.,INDIGO.NS,Services,4638.39990234375,2.610388517591522,-20.495582601103536,55.856385077785085,Bearish,7.131551418628979,0.0100783937683199,1,SELL,"SELL because:
-- positive short-term returns
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-36,HCL Technologies Ltd.,HCLTECH.NS,Information Technology,1442.300048828125,5.200587077179075,-2.8432080125732173,24.42375261523024,Bearish,0.0901442825353528,0.2293217362214602,1,SELL,"SELL because:
-- positive short-term returns
+28,DLF Ltd.,DLF.NS,Realty,590.5999755859375,-1.8529330143851277,-21.831780143212686,26.325347206980183,Bullish,0.0964209630492604,0.0116547632932227,1,SELL,"SELL because:
+- bullish trend
 - low debt levels
 
 Risks:
+- negative short-term returns
 - weak long-term performance
-- bearish trend
 "
-48,Indian Oil Corporation Ltd.,IOC.NS,Oil Gas & Consumable Fuels,145.8800048828125,-17.525956045034853,2.856617836521269,39.43461271380904,Bearish,0.8165203939871086,0.0021313478535924,1,SELL,"SELL because:
+23,Canara Bank,CANBK.NS,Financial Services,130.8000030517578,-7.2537728257009775,23.303168169315036,27.62115510470138,Bearish,0.010689525097881,0.1211768813767961,1,SELL,"SELL because:
 - strong long-term performance
 - low debt levels
 
 Risks:
 - negative short-term returns
 - bearish trend
-- high volatility (risky)
 "
-80,State Bank of India,SBIN.NS,Financial Services,1080.25,-9.215061951785152,32.43226478288,34.09565126035972,Bearish,0.0336886312281742,0.0256008055926722,1,SELL,"SELL because:
+39,HDFC Life Insurance Company Ltd.,HDFCLIFE.NS,Financial Services,594.7999877929688,-5.811561711327196,-21.140207120587505,23.221547163764104,Bullish,0.1745960740391018,0.0053392737827902,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+95,Union Bank of India,UNIONBANK.NS,Financial Services,167.8800048828125,-11.132284353194866,31.83603715312735,33.2564341413289,Bearish,0.2414900189352963,0.0942283872083861,1,SELL,"SELL because:
 - strong long-term performance
 - low debt levels
 
@@ -1166,77 +1190,23 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-49,Indian Railway Finance Corporation Ltd.,IRFC.NS,Financial Services,104.83999633789062,6.657342342534633,-21.23099774118442,44.28714178178028,Bearish,7.825128422747464,0.013023204905334,1,SELL,"SELL because:
-- positive short-term returns
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-87,Tata Motors Passenger Vehicles Ltd.,TMPV.NS,Automobile and Auto Components,355.70001220703125,1.281321139974012,-8.993218203295871,47.66769993651948,Bearish,0.1196275401128339,0.2574697422780707,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-86,Tata Motors Ltd.,TMCV.NS,Capital Goods,439.1000061035156,-11.82730801134224,33.282740881362805,62.03488003348101,Bearish,0.0991177339693528,0.1304613360894484,1,SELL,"SELL because:
-- strong long-term performance
+139,ICICI Lombard General Insurance Company Ltd.,ICICIGI.NS,Financial Services,1792.199951171875,-5.008745558153205,-3.9260944889876304,23.23438210082068,Bullish,0.0,0.0016057551202354,1,SELL,"SELL because:
+- bullish trend
 - low debt levels
 
 Risks:
 - negative short-term returns
-- bearish trend
-- high volatility (risky)
+- weak long-term performance
 "
-85,Tata Consumer Products Ltd.,TATACONSUM.NS,Fast Moving Consumer Goods,1113.199951171875,-1.0664771170228238,3.7658371089636766,24.23288623494692,Bearish,0.1196275401128339,0.2574697422780707,1,SELL,"SELL because:
-- strong long-term performance
+42,Hindustan Unilever Ltd.,HINDUNILVR.NS,Fast Moving Consumer Goods,2153.5,-3.8959321191455953,-17.58073867472103,22.969844741161776,Bullish,0.0333589733209181,0.2005549866208582,1,SELL,"SELL because:
+- bullish trend
 - low debt levels
 
 Risks:
 - negative short-term returns
-- bearish trend
-"
-82,TVS Motor Company Ltd.,TVSMOTOR.NS,Automobile and Auto Components,3735.800048828125,-1.6847792320472732,33.99784490779558,45.24105302154754,Bearish,0.3122329778357355,0.1579590302574704,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-100,Zydus Lifesciences Ltd.,ZYDUSLIFE.NS,Healthcare,943.9500122070312,4.085344227100052,-1.6974733447507109,25.00234185391421,Bearish,0.1341454759509207,0.0762498501378731,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
 - weak long-term performance
-- bearish trend
 "
-50,Infosys Ltd.,INFY.NS,Information Technology,1318.699951171875,2.312043307731315,-13.759247829988652,26.526116854092507,Bearish,0.0858545292280232,0.4641466580142764,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-- good liquidity
-
-Risks:
-- weak long-term performance
-- bearish trend
-"
-62,Mazagoan Dock Shipbuilders Ltd.,MAZDOCK.NS,Capital Goods,2616.39990234375,18.399848155096564,-11.04298058534572,62.28010442458092,Bearish,0.3515745026712525,0.0315450165226147,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-111,Bank of India,BANKINDIA.NS,Financial Services,148.10000610351562,-14.04526785816287,29.13070272117062,49.396366205093194,Bearish,1.162819177706616,0.1033657331625699,1,SELL,"SELL because:
+91,Titan Company Ltd.,TITAN.NS,Consumer Durables,4074.89990234375,-8.663200082040534,10.397978774165528,30.05385244593752,Bearish,1.7874225739848588,0.0140233607828274,1,SELL,"SELL because:
 - strong long-term performance
 
 Risks:
@@ -1245,16 +1215,16 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-112,Bharat Dynamics Ltd.,BDL.NS,Capital Goods,1380.699951171875,8.888008767498023,-18.32092864922371,53.676916800404726,Bearish,0.0005275694578242,0.0173086209557377,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
+90,Tech Mahindra Ltd.,TECHM.NS,Information Technology,1483.9000244140625,-0.4761888387617374,-0.0641734178510766,34.67435316114288,Bullish,1.0398314658071992,0.051078796111635,1,SELL,"SELL because:
+- bullish trend
 
 Risks:
+- negative short-term returns
 - weak long-term performance
-- bearish trend
 - high volatility (risky)
+- high debt
 "
-70,Punjab National Bank,PNB.NS,Financial Services,114.4800033569336,-9.178896798656488,3.4426721342960764,44.35906010079962,Bearish,0.0465571646200814,0.0799119818635274,1,SELL,"SELL because:
+86,Tata Motors Ltd.,TMCV.NS,Capital Goods,379.5,-13.573219147135518,15.191982376226656,34.23905715054043,Bearish,0.0991177339693528,0.1304613360894484,1,SELL,"SELL because:
 - strong long-term performance
 - low debt levels
 
@@ -1263,7 +1233,172 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-108,Astral Ltd.,ASTRAL.NS,Capital Goods,1605.0,-3.880707086671964,9.285551492168498,42.48712069602913,Bearish,0.0644733204312966,0.4460500256729993,1,SELL,"SELL because:
+80,State Bank of India,SBIN.NS,Financial Services,964.4000244140624,-9.628449388493133,19.149987067545094,29.789387173554605,Bearish,0.0336886312281742,0.0256008055926722,1,SELL,"SELL because:
+- strong long-term performance
+- low debt levels
+
+Risks:
+- negative short-term returns
+- bearish trend
+"
+47,Indian Hotels Co. Ltd.,INDHOTEL.NS,Consumer Services,654.25,-0.7659620637752163,-15.553404323975473,25.21916428924416,Bullish,0.2763506981186681,0.0485806456492799,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+48,Indian Oil Corporation Ltd.,IOC.NS,Oil Gas & Consumable Fuels,140.24000549316406,-3.866190842383866,4.804848945402496,31.364028322429917,Bearish,0.8165203939871086,0.0021313478535924,1,SELL,"SELL because:
+- strong long-term performance
+- low debt levels
+
+Risks:
+- negative short-term returns
+- bearish trend
+- high volatility (risky)
+"
+76,Shriram Finance Ltd.,SHRIRAMFIN.NS,Financial Services,947.1500244140624,-7.391833349883903,62.67013263426953,32.19033279173741,Bearish,3.166996105176181,0.0833664274923484,1,SELL,"SELL because:
+- strong long-term performance
+
+Risks:
+- negative short-term returns
+- bearish trend
+- high volatility (risky)
+- high debt
+"
+49,Indian Railway Finance Corporation Ltd.,IRFC.NS,Financial Services,97.51000213623048,-6.991600970717493,-19.504600031893748,21.938020263240077,Bullish,7.825128422747464,0.013023204905334,1,SELL,"SELL because:
+- bullish trend
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- high debt
+"
+73,SBI Life Insurance Company Ltd.,SBILIFE.NS,Financial Services,1830.0999755859375,-7.322630230487692,2.3194753705248816,23.57207510469198,Bearish,0.540785437902158,0.0874588528619858,1,SELL,"SELL because:
+- strong long-term performance
+- low debt levels
+
+Risks:
+- negative short-term returns
+- bearish trend
+"
+72,Reliance Industries Ltd.,RELIANCE.NS,Oil Gas & Consumable Fuels,1321.199951171875,-3.2087947859432253,-3.9127308238636416,23.937915340025427,Bullish,1.4516903815025683,0.0218905334378663,1,SELL,"SELL because:
+- bullish trend
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- high debt
+"
+70,Punjab National Bank,PNB.NS,Financial Services,106.0500030517578,-7.363731706831079,2.2168704113328275,23.516582736064464,Bearish,0.0465571646200814,0.0799119818635274,1,SELL,"SELL because:
+- strong long-term performance
+- low debt levels
+
+Risks:
+- negative short-term returns
+- bearish trend
+"
+51,InterGlobe Aviation Ltd.,INDIGO.NS,Services,4405.0,-5.023717119448035,-23.25783972125436,34.305134110734876,Bullish,7.131551418628979,0.0100783937683199,1,SELL,"SELL because:
+- bullish trend
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- high volatility (risky)
+- high debt
+"
+62,Mazagoan Dock Shipbuilders Ltd.,MAZDOCK.NS,Capital Goods,2456.5,-6.111447344135468,-7.447931882252434,28.709942219083068,Bullish,0.3515745026712525,0.0315450165226147,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+61,Max Healthcare Institute Ltd.,MAXHEALTH.NS,Healthcare,965.0999755859376,-2.579119587993428,-16.816064798905927,28.386023119677073,Bullish,0.0,0.0098414950788214,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+60,Maruti Suzuki India Ltd.,MARUTI.NS,Automobile and Auto Components,13127.0,-1.559805024371952,-10.469240212794984,21.22258877488603,Bullish,1.3558763655130888,0.0461418318205006,1,SELL,"SELL because:
+- bullish trend
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- high debt
+"
+59,Mahindra & Mahindra Ltd.,M&M.NS,Automobile and Auto Components,3045.60009765625,-4.830943562104995,-14.480665602483288,29.095988677559166,Bullish,0.0963640448844186,0.2604407400391488,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+41,Hindustan Aeronautics Ltd.,HAL.NS,Capital Goods,4303.7998046875,-1.921111439863832,-1.481161148075094,29.5858290765005,Bullish,3.3160280501669304e-05,0.0638109258928801,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+94,UltraTech Cement Ltd.,ULTRACEMCO.NS,Construction Materials,11482.0,-2.908844917977338,-9.24037625484151,20.223457142502593,Bullish,0.4096112227971306,0.0882287007204896,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+32,Eternal Ltd.,ETERNAL.NS,Consumer Services,250.5800018310547,-0.8036098232025779,-23.193869170557942,29.73796466511711,Bullish,0.067453903750371,0.1253529079616036,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+54,Jio Financial Services Ltd.,JIOFIN.NS,Financial Services,238.9499969482422,-2.013451837045943,-22.782359824766285,29.599347218540817,Bullish,0.0321466678359308,0.0351846063352664,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+118,Cochin Shipyard Ltd.,COCHINSHIP.NS,Capital Goods,1467.4000244140625,-6.0021749175100725,-10.649965414878004,40.33903279836195,Bullish,0.1004446772271944,0.040495209250883,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- high volatility (risky)
+"
+102,APL Apollo Tubes Ltd.,APLAPOLLO.NS,Capital Goods,1831.0999755859375,-10.472794608542424,9.456629138808514,26.8370696061199,Bearish,0.0,0.0195430817812721,1,SELL,"SELL because:
+- strong long-term performance
+- low debt levels
+
+Risks:
+- negative short-term returns
+- bearish trend
+"
+112,Bharat Dynamics Ltd.,BDL.NS,Capital Goods,1204.5999755859375,-12.754398624876597,-16.21330988095564,34.77947388922662,Bullish,0.0005275694578242,0.0173086209557377,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- high volatility (risky)
+"
+108,Astral Ltd.,ASTRAL.NS,Capital Goods,1578.199951171875,-0.0316716295347241,11.145485178411496,31.32320589739101,Bearish,0.0644733204312966,0.4460500256729993,1,SELL,"SELL because:
 - strong long-term performance
 - low debt levels
 - good liquidity
@@ -1273,7 +1408,7 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-107,Ashok Leyland Ltd.,ASHOKLEY.NS,Capital Goods,174.77999877929688,-16.37720521848992,40.99787691655288,63.391225310139774,Bearish,4.084511314092686,0.0993593864976096,1,SELL,"SELL because:
+107,Ashok Leyland Ltd.,ASHOKLEY.NS,Capital Goods,155.44000244140625,-11.065337265685748,19.671322299719503,36.29642527464657,Bearish,4.084511314092686,0.0993593864976096,1,SELL,"SELL because:
 - strong long-term performance
 
 Risks:
@@ -1282,79 +1417,39 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-41,Hindustan Aeronautics Ltd.,HAL.NS,Capital Goods,4388.10009765625,11.046158245083928,-5.151880196323622,35.798061837707365,Bearish,3.3160280501669304e-05,0.0638109258928801,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-113,Bharat Forge Ltd.,BHARATFORG.NS,Automobile and Auto Components,1860.5,-1.0003750513308485,52.212746081358816,44.94840613143811,Bearish,0.7238752000089913,0.0546905796421335,1,SELL,"SELL because:
+111,Bank of India,BANKINDIA.NS,Financial Services,139.91000366210938,-5.5300486859411695,24.287113832640618,25.11687798091533,Bearish,1.162819177706616,0.1033657331625699,1,SELL,"SELL because:
 - strong long-term performance
-- low debt levels
 
 Risks:
 - negative short-term returns
 - bearish trend
-- high volatility (risky)
-"
-71,REC Ltd.,RECLTD.NS,Financial Services,373.2999877929687,11.201550602534804,-2.822674471489861,44.77956271963345,Bearish,8.500292555484258,0.0010143105704452,1,SELL,"SELL because:
-- positive short-term returns
-
-Risks:
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
 - high debt
 "
-43,Hindustan Zinc Ltd.,HINDZINC.NS,Metals & Mining,592.2999877929688,-4.104271937031367,32.77291631677943,45.750461471695296,Bearish,0.8656761218670269,0.0045360045360045,1,SELL,"SELL because:
-- strong long-term performance
+37,HDFC Asset Management Company Ltd.,HDFCAMC.NS,Financial Services,2674.300048828125,-4.229331673321579,-4.017943514468369,25.768244717603313,Bullish,0.0,0.0195430817812721,1,SELL,"SELL because:
+- bullish trend
 - low debt levels
 
 Risks:
 - negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-102,APL Apollo Tubes Ltd.,APLAPOLLO.NS,Capital Goods,2105.699951171875,-5.246820640522243,25.299414779131357,48.59950248474797,Bearish,0.0,0.0195430817812721,1,SELL,"SELL because:
-- strong long-term performance
-- low debt levels
-
-Risks:
-- negative short-term returns
-- bearish trend
-- high volatility (risky)
-"
-56,LTM Ltd.,LTM.NS,Information Technology,4715.7998046875,8.426643746310635,-6.691733187821525,36.45757516690013,Bearish,0.0963640448844186,0.2604407400391488,1,SELL,"SELL because:
-- positive short-term returns
-- low debt levels
-
-Risks:
 - weak long-term performance
-- bearish trend
-- high volatility (risky)
 "
-67,Pidilite Industries Ltd.,PIDILITIND.NS,Chemicals,1393.4000244140625,-4.919820920227735,-4.164512451684432,39.05704908969293,Bearish,0.0465571646200814,0.0799119818635274,0,SELL,"SELL because:
+121,Container Corporation of India Ltd.,CONCOR.NS,Services,463.6499938964844,-7.841385754011343,-13.486126525450128,29.597203996789737,Bullish,0.0676249718299961,0.1821353347174117,1,SELL,"SELL because:
+- bullish trend
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+"
+134,Havells India Ltd.,HAVELLS.NS,Consumer Durables,1176.800048828125,-8.852910612591403,-25.512751736035323,29.15932751564723,Bearish,0.0382686252296129,0.1474460723716453,0,SELL,"SELL because:
 - low debt levels
 
 Risks:
 - negative short-term returns
 - weak long-term performance
 - bearish trend
-- high volatility (risky)
 "
-14,Bajaj Finserv Ltd.,BAJAJFINSV.NS,Financial Services,1838.9000244140625,-5.304083562750794,-9.516312540836758,36.73474636918512,Bearish,3.9291429237612214,0.0111054392826478,0,SELL,"SELL because:
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-59,Mahindra & Mahindra Ltd.,M&M.NS,Automobile and Auto Components,3200.199951171875,-4.021836538177803,-1.861447851504039,48.042787601330275,Bearish,0.0963640448844186,0.2604407400391488,0,SELL,"SELL because:
+147,Info Edge (India) Ltd.,NAUKRI.NS,Consumer Services,995.0,-5.646962787048404,-25.839444960418778,31.609188812424534,Bearish,0.0076596718075909,0.0441608536048819,0,SELL,"SELL because:
 - low debt levels
 
 Risks:
@@ -1363,34 +1458,7 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-58,Lodha Developers Ltd.,LODHA.NS,Realty,872.5499877929688,-9.6926126299816,-33.98490633300455,53.48866214589382,Bearish,0.550837466217033,0.1123001653605462,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-15,Bajaj Holdings & Investment Ltd.,BAJAJHLDNG.NS,Financial Services,10355.5,-3.17438055165965,-26.53214042877554,41.18514984162785,Bearish,0.00049435653491,0.0319387798330849,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-81,Sun Pharmaceutical Industries Ltd.,SUNPHARMA.NS,Healthcare,1675.5,-4.393723252496429,-0.3319341057936853,22.66024408918847,Bearish,0.032709149323119,0.5235260619241862,0,SELL,"SELL because:
-- low debt levels
-- good liquidity
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-188,Supreme Industries Ltd.,SUPREMEIND.NS,Capital Goods,3709.0,-6.201000308525295,-12.326298075480324,33.859981440164475,Bearish,0.0133911851375511,0.6263317809709562,0,SELL,"SELL because:
+50,Infosys Ltd.,INFY.NS,Information Technology,1160.9000244140625,-11.966325365947128,-18.408409874390507,33.47831251178475,Bearish,0.0858545292280232,0.4641466580142764,0,SELL,"SELL because:
 - low debt levels
 - good liquidity
 
@@ -1400,25 +1468,15 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-55,Kotak Mahindra Bank Ltd.,KOTAKBANK.NS,Financial Services,383.6000061035156,-7.141127950651205,-10.46169784777783,31.927455572473875,Bearish,0.550837466217033,0.1123001653605462,0,SELL,"SELL because:
+21,Britannia Industries Ltd.,BRITANNIA.NS,Fast Moving Consumer Goods,5204.5,-6.8295739348370965,-14.44188722669736,23.222164427432933,Bearish,0.0085642098557187,0.054902143812813,0,SELL,"SELL because:
 - low debt levels
 
 Risks:
 - negative short-term returns
 - weak long-term performance
 - bearish trend
-- high volatility (risky)
 "
-54,Jio Financial Services Ltd.,JIOFIN.NS,Financial Services,237.1499938964844,-1.7198545805170329,-24.942392702454253,42.09837103464368,Bearish,0.0321466678359308,0.0351846063352664,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-13,Bajaj Finance Ltd.,BAJFINANCE.NS,Financial Services,908.25,-7.155635062611809,-5.287033897663207,48.3365001555171,Bearish,2.8477813307227304,0.0293256127877577,0,SELL,"SELL because:
+149,Jubilant Foodworks Ltd.,JUBLFOOD.NS,Consumer Services,427.5,-6.852600799767339,-34.83231707317073,37.233214990845994,Bearish,2.0790979232889533,0.0157248901538303,0,SELL,"SELL because:
 
 Risks:
 - negative short-term returns
@@ -1427,7 +1485,23 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-7,Ambuja Cements Ltd.,AMBUJACEM.NS,Construction Materials,459.0,-6.469689251146205,-26.015476799263016,48.28313587859069,Bearish,0.0147539679940871,0.2943459170922826,0,SELL,"SELL because:
+192,Tata Elxsi Ltd.,TATAELXSI.NS,Information Technology,4285.39990234375,-6.686991783478502,-21.38323422594478,28.31061971056733,Bearish,0.0672352859830449,0.1858621310654776,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+"
+71,REC Ltd.,RECLTD.NS,Financial Services,337.6499938964844,-9.549958495111364,-4.577375051261956,22.49385863479139,Bearish,8.500292555484258,0.0010143105704452,0,SELL,"SELL because:
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+- high debt
+"
+190,Swiggy Ltd.,SWIGGY.NS,Consumer Services,257.8999938964844,-8.024251244565416,-39.04514531408761,40.77552566085039,Bearish,0.1666370337376034,0.2468130187324841,0,SELL,"SELL because:
 - low debt levels
 
 Risks:
@@ -1436,7 +1510,7 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-75,Shree Cement Ltd.,SHREECEM.NS,Construction Materials,25290.0,-3.19617224880383,-20.10814739586771,36.42958831984515,Bearish,0.4383005218216318,0.1070130240203808,0,SELL,"SELL because:
+198,Voltas Ltd.,VOLTAS.NS,Consumer Durables,1245.699951171875,-11.577235377860806,-11.18637010873449,36.671202309997966,Bearish,0.1369469926687905,0.0982785114917147,0,SELL,"SELL because:
 - low debt levels
 
 Risks:
@@ -1445,7 +1519,7 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-182,Prestige Estates Projects Ltd.,PRESTIGE.NS,Realty,1356.800048828125,-1.4884193184660388,-20.002248448847393,46.97160671617199,Bearish,0.8545613693833884,0.0468493169848009,0,SELL,"SELL because:
+199,Waaree Energies Ltd.,WAAREEENER.NS,Capital Goods,3140.800048828125,-9.387799519001682,-2.389754712538905,40.16538656555111,Bearish,0.1574362815427462,0.0502191664778715,0,SELL,"SELL because:
 - low debt levels
 
 Risks:
@@ -1454,7 +1528,32 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-191,Tata Communications Ltd.,TATACOMM.NS,Telecommunication,1521.0999755859375,-1.5150549960545434,-11.998844339835845,40.496064536876695,Bearish,4.090243183932053,0.0226610017699265,0,SELL,"SELL because:
+122,Coromandel International Ltd.,COROMANDEL.NS,Chemicals,1753.5999755859375,-14.46688043360862,-22.028770807266916,24.321608960541564,Bearish,0.0703816707146484,0.0330635469041617,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+"
+135,Hero MotoCorp Ltd.,HEROMOTOCO.NS,Automobile and Auto Components,4903.0,-4.971411958523109,-6.586309395340805,25.06633644970675,Bearish,0.0363184177699921,0.0426819700808904,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+"
+165,MphasiS Ltd.,MPHASIS.NS,Information Technology,2271.39990234375,-6.978464373696525,-20.613730563869115,31.372038879845793,Bearish,0.1961098193302394,0.1868703029972341,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+- high volatility (risky)
+"
+152,Kalyan Jewellers India Ltd.,KALYANKJIL.NS,Consumer Durables,355.04998779296875,-16.820901319873617,-29.265867285898793,39.37227527879022,Bearish,1.0324295764532188,0.0358764612806345,0,SELL,"SELL because:
 
 Risks:
 - negative short-term returns
@@ -1463,7 +1562,7 @@ Risks:
 - high volatility (risky)
 - high debt
 "
-190,Swiggy Ltd.,SWIGGY.NS,Consumer Services,277.45001220703125,-3.996535568501302,-33.822298817643116,39.407718452102216,Bearish,0.1666370337376034,0.2468130187324841,0,SELL,"SELL because:
+117,Blue Star Ltd.,BLUESTARCO.NS,Consumer Durables,1589.0,-14.07559844023545,-18.26131687242798,32.50601353680604,Bearish,0.1243058772862819,0.0820038228244198,0,SELL,"SELL because:
 - low debt levels
 
 Risks:
@@ -1472,16 +1571,31 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-185,SBI Cards and Payment Services Ltd.,SBICARD.NS,Financial Services,695.2000122070312,-6.545813498865027,-21.242319935562037,38.19877194345784,Bearish,3.2775792861848885,0.0494534047548029,0,SELL,"SELL because:
+45,ICICI Bank Ltd.,ICICIBANK.NS,Financial Services,1256.4000244140625,-6.622071764097914,-10.608322702663642,20.608313452054382,Bearish,0.6487604844081014,0.1030060639842314,0,SELL,"SELL because:
+- low debt levels
 
 Risks:
 - negative short-term returns
 - weak long-term performance
 - bearish trend
-- high volatility (risky)
+"
+82,TVS Motor Company Ltd.,TVSMOTOR.NS,Automobile and Auto Components,3355.699951171875,-10.174530025381925,-3.1401663388194723,29.362645532523935,Bearish,0.3122329778357355,0.1579590302574704,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+"
+83,Tata Capital Ltd.,TATACAP.NS,Financial Services,305.8999938964844,-9.456862995361892,-7.443269622848902,23.09010681195291,Bearish,1.2691556209225403,0.0911790258753816,0,SELL,"SELL because:
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
 - high debt
 "
-186,SRF Ltd.,SRF.NS,Chemicals,2494.5,-1.6752069373275558,-20.56947276876181,46.555558204542585,Bearish,0.3743034325450254,0.0373970430817877,0,SELL,"SELL because:
+178,Persistent Systems Ltd.,PERSISTENT.NS,Information Technology,5194.2998046875,-5.566770208390148,-1.5220129640441726,40.05514144202911,Bearish,0.0491998420652422,0.2789640861753098,0,SELL,"SELL because:
 - low debt levels
 
 Risks:
@@ -1490,271 +1604,7 @@ Risks:
 - bearish trend
 - high volatility (risky)
 "
-177,Patanjali Foods Ltd.,PATANJALI.NS,Fast Moving Consumer Goods,468.2999877929687,-6.86157534558366,-25.696341347439812,25.58541223351617,Bearish,0.0692712950524035,0.0263268615153995,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-116,Biocon Ltd.,BIOCON.NS,Healthcare,358.1000061035156,-7.694291832522504,-9.93460749337014,34.433751280139155,Bearish,0.8483644428017002,0.1038031449454395,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-18,Bharat Petroleum Corporation Ltd.,BPCL.NS,Oil Gas & Consumable Fuels,312.1000061035156,-16.72891775121593,-2.602874230967034,49.67527039876208,Bearish,0.0030655020128778,0.0342362384429601,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-19,Bharti Airtel Ltd.,BHARTIARTL.NS,Telecommunication,1846.9000244140625,-1.4040106472007596,-4.607197577432942,22.36888667969439,Bearish,0.7507680863382618,0.0040725370432036,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-120,Colgate Palmolive (India) Ltd.,COLPAL.NS,Fast Moving Consumer Goods,2106.0,-4.916696335961501,-5.785448375552993,40.65409864806138,Bearish,0.0365521757676617,0.4933977313009571,0,SELL,"SELL because:
-- low debt levels
-- good liquidity
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-122,Coromandel International Ltd.,COROMANDEL.NS,Chemicals,2050.199951171875,-5.945503933992658,-15.230785521633427,45.8126634537296,Bearish,0.0703816707146484,0.0330635469041617,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-123,Dabur India Ltd.,DABUR.NS,Fast Moving Consumer Goods,442.8500061035156,-12.756107017618012,-13.14257028352831,34.78280543870954,Bearish,0.0879647504002059,0.0366724943349488,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-35,Grasim Industries Ltd.,GRASIM.NS,Construction Materials,2720.5,-2.045153488262519,-0.2011530385930826,36.12971586721257,Bearish,1.9107376809354355,0.0142467877909635,0,SELL,"SELL because:
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-38,HDFC Bank Ltd.,HDFCBANK.NS,Financial Services,799.9000244140625,-9.040254468149488,-20.376264796590593,39.951293919741495,Bearish,0.9543063355044986,0.0814442312545546,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-39,HDFC Life Insurance Company Ltd.,HDFCLIFE.NS,Financial Services,616.4500122070312,-12.844617157342563,-18.59896710105893,35.05602986855553,Bearish,0.1745960740391018,0.0053392737827902,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-34,Godrej Consumer Products Ltd.,GODREJCP.NS,Fast Moving Consumer Goods,1109.4000244140625,-5.663263230096726,-8.217462344811178,35.57429122947882,Bearish,0.3335985244820025,0.0593280793753676,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-61,Max Healthcare Institute Ltd.,MAXHEALTH.NS,Healthcare,1007.6500244140624,-7.009039579463494,-20.494713192078905,24.9587900602018,Bearish,0.0,0.0098414950788214,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-134,Havells India Ltd.,HAVELLS.NS,Consumer Durables,1306.4000244140625,-3.515507798075146,-15.57816141850392,31.997398099998016,Bearish,0.0382686252296129,0.1474460723716453,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-42,Hindustan Unilever Ltd.,HINDUNILVR.NS,Fast Moving Consumer Goods,2240.800048828125,-3.4387677958266583,-7.358478510947486,26.3291278080456,Bearish,0.0333589733209181,0.2005549866208582,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-136,Hindustan Petroleum Corporation Ltd.,HINDPETRO.NS,Oil Gas & Consumable Fuels,370.8500061035156,-12.638396677617049,-11.580652045426486,59.300540807907545,Bearish,1.3795913483206044,0.0011575180701161,0,SELL,"SELL because:
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-139,ICICI Lombard General Insurance Company Ltd.,ICICIGI.NS,Financial Services,1891.5999755859375,-0.2057517496208083,-0.4800416268135876,24.07857333219784,Bearish,0.0,0.0016057551202354,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-30,Dr. Reddy's Laboratories Ltd.,DRREDDY.NS,Healthcare,1235.699951171875,-4.534925226748143,-2.354804332526672,26.62751109124201,Bearish,0.1402749949008362,0.0940425996162312,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-141,IDFC First Bank Ltd.,IDFCFIRSTB.NS,Financial Services,68.52999877929688,-4.527723676887807,-5.981617021347862,44.18926632732675,Bearish,0.86811984973181,0.0493832668046778,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-44,Hyundai Motor India Ltd.,HYUNDAI.NS,Automobile and Auto Components,1902.800048828125,-11.415267745431802,-8.281397027015192,37.47437631693227,Bearish,0.0521726644398033,0.3511161668222363,0,SELL,"SELL because:
-- low debt levels
-- good liquidity
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-143,Indian Railway Catering And Tourism Corporation Ltd.,IRCTC.NS,Consumer Services,564.9000244140625,-0.7118354347613653,-24.33215124998447,32.11759234255835,Bearish,0.0245119725856411,0.1203750228867312,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-45,ICICI Bank Ltd.,ICICIBANK.NS,Financial Services,1346.800048828125,-1.9796179892194288,-8.508018722999855,31.910259154829753,Bearish,0.6487604844081014,0.1030060639842314,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-29,Divi's Laboratories Ltd.,DIVISLAB.NS,Healthcare,6229.0,-2.725072226126335,-5.456477195112697,21.36717999133284,Bearish,0.0002672189190994,0.2114111054508405,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-149,Jubilant Foodworks Ltd.,JUBLFOOD.NS,Consumer Services,458.9500122070313,-9.235633788816656,-30.048768589396634,51.07085265969946,Bearish,2.0790979232889533,0.0157248901538303,0,SELL,"SELL because:
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-- high debt
-"
-96,United Spirits Ltd.,UNITDSPR.NS,Fast Moving Consumer Goods,1307.699951171875,-0.6910766493628651,-1.02597746598746,38.386156098136475,Bearish,0.0592300098716683,0.1930404354587869,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-151,KPIT Technologies Ltd.,KPITTECH.NS,Information Technology,747.7999877929688,-0.8551557450488856,-39.88937189952245,42.23135078519694,Bearish,0.1184231762150267,0.5039192683529454,0,SELL,"SELL because:
-- low debt levels
-- good liquidity
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-25,Cipla Ltd.,CIPLA.NS,Healthcare,1240.800048828125,-8.197686353891742,-16.607296964273242,20.40446978120114,Bearish,0.0140475003566453,0.0965415338999867,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-154,LG Electronics India Ltd.,LGEINDIA.NS,Consumer Durables,1578.699951171875,-0.860341185138358,-6.580275261002133,44.15858500582839,Bearish,0.0,0.0,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-94,UltraTech Cement Ltd.,ULTRACEMCO.NS,Construction Materials,11886.0,-5.0714799137449145,-2.7849343638817303,47.14176013117651,Bearish,0.4096112227971306,0.0882287007204896,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-46,ITC Ltd.,ITC.NS,Fast Moving Consumer Goods,306.79998779296875,-2.5722471452883866,-23.593174139874073,20.75829810098529,Bearish,0.00406739678181,0.0350426220020189,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-"
-161,Mankind Pharma Ltd.,MANKIND.NS,Healthcare,2125.0,-5.366288131819196,-17.90548057314877,30.538317064811732,Bearish,0.5938611773751621,0.0308808423701895,0,SELL,"SELL because:
-- low debt levels
-
-Risks:
-- negative short-term returns
-- weak long-term performance
-- bearish trend
-- high volatility (risky)
-"
-84,Tata Consultancy Services Ltd.,TCS.NS,Information Technology,2581.5,-1.2244117084369566,-16.193395320923454,25.37871914899963,Bearish,0.032709149323119,0.5235260619241862,0,SELL,"SELL because:
+84,Tata Consultancy Services Ltd.,TCS.NS,Information Technology,2258.89990234375,-12.496614280699204,-24.267876880605144,24.301013917692146,Bearish,0.032709149323119,0.5235260619241862,0,SELL,"SELL because:
 - low debt levels
 - good liquidity
 
@@ -1763,7 +1613,57 @@ Risks:
 - weak long-term performance
 - bearish trend
 "
-33,GAIL (India) Ltd.,GAIL.NS,Oil Gas & Consumable Fuels,157.82000732421875,-4.392075894053892,-12.92341777512338,41.320664808233,Bearish,0.2540706173295583,0.0274938032593551,0,SELL,"SELL because:
+34,Godrej Consumer Products Ltd.,GODREJCP.NS,Fast Moving Consumer Goods,1029.300048828125,-4.795816900067873,-16.62216797318232,29.85051698364725,Bearish,0.3335985244820025,0.0593280793753676,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+"
+36,HCL Technologies Ltd.,HCLTECH.NS,Information Technology,1183.800048828125,-17.92276164796863,-15.299808348554611,39.451160487380434,Bearish,0.0901442825353528,0.2293217362214602,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+- high volatility (risky)
+"
+96,United Spirits Ltd.,UNITDSPR.NS,Fast Moving Consumer Goods,1270.0,-2.52513806106176,-3.462559153753364,25.120160993595945,Bearish,0.0592300098716683,0.1930404354587869,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+"
+38,HDFC Bank Ltd.,HDFCBANK.NS,Financial Services,744.5499877929688,-6.919619318881553,-22.71642423449156,23.05513724367042,Bearish,0.9543063355044986,0.0814442312545546,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+"
+98,Vedanta Ltd.,VEDL.NS,Metals & Mining,352.6000061035156,-55.22539605034722,-19.531153583963835,199.84110629534243,Bearish,1.9631060863207916,0.026701885783068,0,SELL,"SELL because:
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+- high volatility (risky)
+- high debt
+"
+99,Wipro Ltd.,WIPRO.NS,Information Technology,204.25,-0.034263567790338,-14.013529301162986,21.003546129957545,Bearish,0.2318398085738534,0.2674440276008446,0,SELL,"SELL because:
+- low debt levels
+
+Risks:
+- negative short-term returns
+- weak long-term performance
+- bearish trend
+"
+56,LTM Ltd.,LTM.NS,Information Technology,4061.60009765625,-14.55738778575818,-19.635930002844283,36.501628277226274,Bearish,0.0963640448844186,0.2604407400391488,0,SELL,"SELL because:
 - low debt levels
 
 Risks:

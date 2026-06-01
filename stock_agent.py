@@ -5,35 +5,44 @@ from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.agents import create_agent
 
-embeddings = OllamaEmbeddings(model="nomic-embed-text:latest")
-
-model = ChatOllama(
-    model="gpt-oss:20b-cloud",
-    temperature=0,
-)
-
+try:
+    embeddings = OllamaEmbeddings(model="nomic-embed-text:latest")
+    model = ChatOllama(
+        model="gpt-oss:20b-cloud",
+        temperature=0,
+    )
+except Exception as e:
+    embeddings = None
+    model = None
 
 loader = CSVLoader("data/features.csv")
 recommendation_loader = CSVLoader("data/recommendations.csv")
 docs = loader.load()
 recommendation_docs = recommendation_loader.load()
 
-
 # We do not want to split CSV rows! Each stock should be its own document
 all_splits = docs
 # print(f"Split stock data into {len(all_splits)} sub-documents.")
 
-vector_store = Chroma(
-    collection_name="example_collection",
-    embedding_function=embeddings,
-    persist_directory="models/chroma_langchain_db", 
-)
+vector_store = None
+ollama_ready = False
 
-# Only add documents if the collection is empty to avoid duplicating on every import
-if vector_store._collection.count() == 0:
-    document_ids = vector_store.add_documents(documents=all_splits)
+if embeddings is not None:
+    try:
+        vector_store = Chroma(
+            collection_name="example_collection",
+            embedding_function=embeddings,
+            persist_directory="models/chroma_langchain_db", 
+        )
+        # Only add documents if the collection is empty to avoid duplicating on every import
+        if vector_store._collection.count() == 0:
+            document_ids = vector_store.add_documents(documents=all_splits)
+        ollama_ready = True
+    except Exception as e:
+        print(f"Warning: Chroma vector store initialization failed: {e}")
+        vector_store = None
+        ollama_ready = False
 
-# print(document_ids[:3])
 
 
 from langchain.tools import tool
@@ -49,9 +58,12 @@ def stock_details(query: str):
     if matched_docs:
         # If we get too many matches, limit to top 2
         retrieved_docs = matched_docs[:2]
-    else:
+    elif vector_store is not None:
         # Fall back to vector semantic search
         retrieved_docs = vector_store.similarity_search(query, k=2)
+    else:
+        retrieved_docs = []
+        
         
     serialized = "\n\n".join(
         (f"Source: {doc.metadata}\nContent: {doc.page_content}")
@@ -97,13 +109,31 @@ prompt = (
     "User: 'Why is Vedanta growing?'\n"
     "Response: 'Vedanta Ltd. is currently showing a strong 30-day return of 2.91% and has high 30-day volatility of 34.72%. These positive returns alongside its strong fundamentals are contributing to its growth.'\n"
 )
-agent = create_agent(model, tools, system_prompt=prompt)
+agent = None
+if ollama_ready and model is not None:
+    try:
+        agent = create_agent(model, tools, system_prompt=prompt)
+    except Exception as e:
+        print(f"Warning: Failed to create agent: {e}")
+        agent = None
+else:
+    ollama_ready = False
+
 
 
 def query_stock_info(query: str) -> str:
     """Query the stock RAG setup and return the agent's response."""
-    result = agent.invoke({"messages": [{"role": "user", "content": query}]})
-    return result["messages"][-1].content
+    if not ollama_ready or agent is None:
+        return (
+            "⚠️ **AI Advisor Offline**: The local Ollama server is currently offline or unreachable. "
+            "Please ensure Ollama is running (`nomic-embed-text` and `gpt-oss:20b-cloud` models) to use the AI chat assistant. "
+            "You can still view the full stock charts and performance metrics on this page!"
+        )
+    try:
+        result = agent.invoke({"messages": [{"role": "user", "content": query}]})
+        return result["messages"][-1].content
+    except Exception as e:
+        return f"⚠️ **AI Advisor Error**: Failed to query local model: {e}"
 
 if __name__ == '__main__':
     while True:
