@@ -1,4 +1,4 @@
-# PAD: Portfolio Advisory Dashboard 📈
+# Portfolio Advisor 📈 - Analyzing stocks simplified
 
 An AI-powered stock market advisory analysis system focused on the Indian market (Nifty 100). PAD helps investors make data-driven decisions by combining technical indicators, fundamental ratios, and AI-powered insights.
 
