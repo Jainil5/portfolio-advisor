@@ -134,9 +134,8 @@ def train_and_predict(df, stock_id=None, save_models=True):
     }
 
 
-def save_prediction(result, predictions_dir=PREDICTIONS_DIR):
-    ensure_pipeline_directories()
-    os.makedirs(predictions_dir, exist_ok=True)
+def save_prediction(result):
+    os.makedirs(SILVER_DIR, exist_ok=True)
 
     stock_id = result.get("stock_id")
     if stock_id is None:
@@ -155,7 +154,7 @@ def save_prediction(result, predictions_dir=PREDICTIONS_DIR):
         "model_paths": result.get("model_paths"),
     }
 
-    output_path = os.path.join(predictions_dir, f"{stock_id}_prediction.json")
+    output_path = os.path.join(SILVER_DIR, f"{stock_id}_prediction.json")
     with open(output_path, "w") as file:
         json.dump(payload, file, indent=2)
 
