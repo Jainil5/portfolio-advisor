@@ -3,42 +3,15 @@ from langchain.agents import create_agent
 from langchain.tools import tool
 from langchain_community.document_loaders import CSVLoader
 from langchain_chroma import Chroma
-from langchain_ollama import ChatOllama, OllamaEmbeddings
+from backend.config import model,embeddings, PRICE_DIR, FUNDAMENTAL_DIR, STOCKS_FILE, FEATURES_FILE, TRANSACTIONS_FILE, RECOMMENDATIONS_FILE
+import os
+import pandas as pd
+
+docs = pd.read_csv(FEATURES_FILE)
+recommendation_docs = pd.read_csv(RECOMMENDATIONS_FILE)
 
 
-# ==========================================================
-# Models
-# ==========================================================
-
-embeddings = OllamaEmbeddings(
-    model="nomic-embed-text:latest"
-)
-
-model = ChatOllama(
-    model="gpt-oss:20b-cloud",
-    temperature=0,
-)
-
-
-# ==========================================================
-# Load CSV Files
-# ==========================================================
-
-
-def load_csv(path: str):
-    """Load CSV documents."""
-    return CSVLoader(path).load()
-
-
-docs = load_csv("data/features.csv")
-recommendation_docs = load_csv("data/recommendations.csv")
-
-
-# ==========================================================
 # Vector Store
-# ==========================================================
-
-
 def initialize_vector_store():
     """Initialize Chroma vector store."""
 
@@ -48,7 +21,6 @@ def initialize_vector_store():
         persist_directory="models/chroma_langchain_db",
     )
 
-    # Prevent duplicate insertions.
     if store._collection.count() == 0:
         store.add_documents(docs)
 
@@ -58,11 +30,7 @@ def initialize_vector_store():
 vector_store = initialize_vector_store()
 
 
-# ==========================================================
 # Helper Functions
-# ==========================================================
-
-
 def retrieve_documents(query: str, k: int = 2):
     """
     Search stock data using keyword matching first.
@@ -86,9 +54,7 @@ def retrieve_documents(query: str, k: int = 2):
     )
 
 
-# ==========================================================
 # Tools
-# ==========================================================
 
 
 @tool(response_format="content_and_artifact")
@@ -169,9 +135,7 @@ Snippet: {snippet}
         return f"Financial search failed: {e}"
 
 
-# ==========================================================
 # Agent
-# ==========================================================
 
 
 tools = [
@@ -233,9 +197,7 @@ agent = create_agent(
 )
 
 
-# ==========================================================
 # Query Function
-# ==========================================================
 
 
 def query_finance_info(query: str) -> str:
@@ -264,9 +226,7 @@ def query_finance_info(query: str) -> str:
 query_stock_info = query_finance_info
 
 
-# ==========================================================
 # Local Testing
-# ==========================================================
 
 if __name__ == "__main__":
 

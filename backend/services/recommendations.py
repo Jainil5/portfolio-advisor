@@ -1,7 +1,6 @@
 import pandas as pd
+from backend.config import FEATURES_FILE, RECOMMENDATIONS_FILE
 
-FEATURES_FILE = "data/features.csv"
-OUTPUT_FILE = "data/recommendations.csv"
 
 
 def generate_recommendation(row):
@@ -94,7 +93,7 @@ def generate_recommendations():
 
     df = df[[c for c in cols if c in df.columns]]
 
-    df.to_csv(OUTPUT_FILE, index=False)
+    df.to_csv(RECOMMENDATIONS_FILE, index=False)
 
     print("Recommendations generated")
 

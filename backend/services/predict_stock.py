@@ -9,11 +9,9 @@ import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
 from sklearn.metrics import accuracy_score, mean_absolute_error
 from sklearn.model_selection import train_test_split
+from backend.config import PRICE_DIR, FUNDAMENTAL_DIR, STOCKS_FILE, FEATURES_FILE
 
-PRICE_DIR = "data/prices"
-STOCKS_FILE = "data/stocks.csv"
 LOOKBACK = 5
-
 
 def find_price_file(stock_id=None, ticker=None):
     if stock_id is not None:

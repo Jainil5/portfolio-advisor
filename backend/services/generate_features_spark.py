@@ -1,14 +1,13 @@
 """PySpark feature generation — mirrors add_features.py logic."""
 
 import os
-
+from backend.config import PRICE_DIR, FEATURES_FILE, FUNDAMENTAL_DIR, STOCKS_FILE
 from pyspark.sql import SparkSession, Window
 from pyspark.sql import functions as F
 import shutil
-PRICE_DIR = "data/prices"
-FEATURES_FILE = "data/features.csv"
-STOCKS_FILE = "data/stocks.csv"
-FUNDAMENTAL_DIR = "data/fundamentals"
+
+
+
 
 PERIODS = [7, 30, 180]
 OUTPUT_COLS = [

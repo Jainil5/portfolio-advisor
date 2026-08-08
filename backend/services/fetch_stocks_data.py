@@ -3,10 +3,8 @@ import yfinance as yf
 import os
 import re
 from datetime import datetime, timedelta
+from backend.config import PRICE_DIR, FUNDAMENTAL_DIR, STOCKS_FILE
 
-STOCK_FILE = "data/stocks.csv"
-PRICE_DIR = "data/prices"
-FUNDAMENTAL_DIR = "data/fundamentals"
 
 os.makedirs(PRICE_DIR, exist_ok=True)
 os.makedirs(FUNDAMENTAL_DIR, exist_ok=True)
@@ -31,8 +29,8 @@ def update_stock_master():
         "yahoo_ticker": df["Symbol"] + ".NS"
     })
 
-    if os.path.exists(STOCK_FILE):
-        existing_df = pd.read_csv(STOCK_FILE)
+    if os.path.exists(STOCKS_FILE):
+        existing_df = pd.read_csv(STOCKS_FILE)
 
         existing_df["stock_id"] = pd.to_numeric(existing_df["stock_id"], errors="coerce").fillna(0).astype(int)
 
@@ -61,7 +59,7 @@ def update_stock_master():
         updated_df = new_df
 
     updated_df["stock_id"] = updated_df["stock_id"].astype(int)
-    updated_df.to_csv(STOCK_FILE, index=False)
+    updated_df.to_csv(STOCKS_FILE, index=False)
 
     return updated_df
 

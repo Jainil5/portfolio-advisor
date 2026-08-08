@@ -1,26 +1,20 @@
 import json
 import os
 import sys
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
-
 from backend.services.fetch_stocks_data import (
     fetch_fundamental_single,
     fetch_price_single,
     update_stock_master,
 )
 from backend.services.recommendations import generate_recommendations
+import os
+from backend.config import METADATA_FILE
 
-METADATA_FILE = "data/metadata.json"
 MAX_WORKERS = 10
-FEATURE_ENGINE = os.getenv("FEATURE_ENGINE", "pandas").lower()
 
-os.makedirs("data", exist_ok=True)
-
-
-def _get_feature_generator():
+def _get_feature_generator(FEATURE_ENGINE:str= "spark"):
     if FEATURE_ENGINE == "spark":
         from backend.services.generate_features_spark import generate_features as spark_generate
         return spark_generate

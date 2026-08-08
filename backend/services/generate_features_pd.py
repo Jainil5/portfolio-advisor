@@ -1,11 +1,6 @@
 import pandas as pd
 import os
-
-PRICE_DIR = "data/prices"
-FEATURES_FILE = "data/features.csv"
-STOCKS_FILE = "data/stocks.csv"
-FUNDAMENTAL_DIR = "data/fundamentals"
-
+from backend.config import PRICE_DIR, FUNDAMENTAL_DIR, STOCKS_FILE, FEATURES_FILE
 
 def get_stock_file_map():
     stock_map = {}

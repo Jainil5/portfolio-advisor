@@ -1,10 +1,26 @@
 import pandas as pd
 import yfinance as yf
+import os
 
-stocks_df = pd.read_csv("data/stocks.csv")
+STOCKS_FILE = os.getenv("STOCKS_FILE")
+
+stocks_df = pd.read_csv(STOCKS_FILE)
+
+def get_id_by_name(stock_name):
+    match = stocks_df[stocks_df["company_name"] == stock_name]
+    if match.empty:
+        print(f"Warning: No match found for stock name: {stock_name}")
+        return None
+    return match.stock_id.iloc[0]
+
+def get_name_by_id(stock_id):
+    match = stocks_df[stocks_df["stock_id"] == stock_id]
+    if match.empty:
+        print(f"Warning: No match found for stock id: {stock_id}")
+        return None
+    return match.company_name.iloc[0]
 
 def get_current_price_by_name(stock_name):
-    # 1. Convert to lower case
     search_name = stock_name
     
     match = pd.DataFrame()
