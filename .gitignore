@@ -1,9 +1,9 @@
 models/
 __pycache__/
 venv/
-.env
 .vscode/
 .DS_Store
 data/
+data_stocks/
 test/
 .cursor/

@@ -1,8 +1,8 @@
 import pandas as pd
 import yfinance as yf
 import os
+from backend.config import STOCKS_FILE
 
-STOCKS_FILE = os.getenv("STOCKS_FILE")
 
 stocks_df = pd.read_csv(STOCKS_FILE)
 

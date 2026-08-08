@@ -1,7 +1,11 @@
 import streamlit as st
-import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+import sys
+
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, PROJECT_ROOT)
+DATA_DIR = os.path.join(PROJECT_ROOT, 'backend', 'data')
+
 
 from backend.services.stock_agent import query_stock_info
 

@@ -1,14 +1,10 @@
 import streamlit as st
+from streamlit_autorefresh import st_autorefresh
 import pandas as pd
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from backend.services.helper_functions import get_current_price_by_name
-import threading
-import json
 from backend.services.stock_agent import query_stock_info
-from streamlit_autorefresh import st_autorefresh
 from backend.services.update_data_pipeline import update_finance_data
 
 st.set_page_config(
@@ -29,29 +25,19 @@ Welcome to your **AI-Powered Stock Portfolio Advisor**.
                                             
 @st.cache_data(ttl=60)
 def load_portfolio():
-    if not os.path.exists("data/user_portfolio.csv"):
+    if not os.path.exists("backend/data/transactions.csv"):
         return pd.DataFrame()
-    port_df = pd.read_csv("data/user_portfolio.csv")
+    port_df = pd.read_csv("backend/data/transactions.csv")
     
     # Use the name-based price lookup for fresh data
-    port_df['current_price'] = port_df['stock_name'].apply(get_current_price_by_name)
+    port_df['current_price'] = port_df['name'].apply(get_current_price_by_name)
     return port_df
 
 
-LOCK_FILE = "data/pipeline_running.lock"
 
 def run_pipeline_background():
-    try:
-        update_finance_data()
-    finally:
-        if os.path.exists(LOCK_FILE):
-            os.remove(LOCK_FILE)
-
+    update_finance_data()
     
-if not os.path.exists(LOCK_FILE):
-    open(LOCK_FILE, "w").close()
-    thread = threading.Thread(target=run_pipeline_background, daemon=True)
-    thread.start()
 
 
 st.title("🏠 Portfolio Advisor Dashboard")
@@ -66,9 +52,9 @@ else:
     results = []
 
     for _, row in portfolio_df.iterrows():
-        name = row["stock_name"]
+        name = row["name"]
         qty = row["quantity"]
-        buy_price = row["buy_price"]
+        buy_price = row["price"]
         
         # Robustly fetch current price using the new direct lookup helper
         current_price = get_current_price_by_name(name)

@@ -1,8 +1,14 @@
+import os
+import sys
 import streamlit as st
 import pandas as pd
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+# Add project root to PYTHONPATH for backend imports
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, PROJECT_ROOT)
+
+# Define data directories using PROJECT_ROOT
+DATA_DIR = os.path.join(PROJECT_ROOT, 'backend', 'data')
+PRICES_DIR = os.path.abspath(os.path.join(PROJECT_ROOT, 'data', 'prices'))
 
 from backend.services.helper_functions import get_current_price_by_name
 from backend.services.stock_agent import query_stock_info
@@ -18,7 +24,7 @@ def describe_term(title, content):
 # --- DATA LOADING ---
 @st.cache_data
 def load_data():
-    features = pd.read_csv("data/features.csv") if os.path.exists("data/features.csv") else pd.DataFrame()
+    features = pd.read_csv(os.path.join(DATA_DIR, "features.csv")) if os.path.exists(os.path.join(DATA_DIR, "features.csv")) else pd.DataFrame()
     return features
 
 features_df = load_data()
@@ -51,7 +57,7 @@ with st.sidebar:
         st.markdown(f"### Suggestion: <span style='color:{color}'>{suggestion}</span>", unsafe_allow_html=True)
         
         # Load latest OHLC from price file
-        price_file = next((os.path.join("data/prices", f) for f in os.listdir("data/prices") if f.startswith(f"{selected_id}_")), None)
+        price_file = next((os.path.join(PRICES_DIR, f) for f in os.listdir(PRICES_DIR) if f.startswith(f"{selected_id}_")), None)
         latest_data = {"High": "N/A", "Low": "N/A", "Close": "N/A", "Price": 0.0}
         
         if price_file:

@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, PROJECT_ROOT)
 
 from backend.services.helper_functions import get_current_price_by_name
 from backend.services.stock_agent import query_stock_info
@@ -10,7 +11,7 @@ from backend.services.stock_agent import query_stock_info
 st.set_page_config(page_title="Recommendations", page_icon="⭐", layout="wide")
 st.title("⭐ Top Stock Recommendations")
 
-RECOMMENDATIONS_FILE = "data/recommendations.csv"
+RECOMMENDATIONS_FILE = os.path.join(PROJECT_ROOT, 'backend', 'data', 'recommendations.csv')
 
 @st.cache_data
 def get_recommendations():

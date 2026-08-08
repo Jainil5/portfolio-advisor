@@ -1,18 +1,26 @@
+import os
+import sys
+# Add project root to PYTHONPATH for backend imports
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, PROJECT_ROOT)
 import streamlit as st
 import pandas as pd
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from test.update_data import add_stock
-from backend.services.helper_functions import get_current_price_by_name
+
+from backend.services.user_transactions import buy_stock
+from backend.services.helper_functions import get_current_price_by_name, get_id_by_name
 from backend.services.stock_agent import query_stock_info
 
 st.set_page_config(page_title="Portfolio", page_icon="💼", layout="wide")
 st.title("💼 Your Portfolio")
 
-PORTFOLIO_FILE = "data/user_portfolio.csv"
-STOCKS_FILE = "data/stocks.csv"
+# CSV file locations using DATA_DIR
+DATA_DIR = os.path.join(PROJECT_ROOT, 'backend', 'data')
+PORTFOLIO_FILE = os.path.join(DATA_DIR, 'transactions.csv')
+RECOMMENDATIONS_FILE = os.path.join(PROJECT_ROOT, 'backend', 'data', 'recommendations.csv')
+STOCKS_FILE = os.path.join(DATA_DIR, 'stocks.csv')
+features_path = os.path.join(DATA_DIR, 'features.csv')
+prices_dir = os.path.abspath(os.path.join(PROJECT_ROOT, 'data', 'prices'))
 
 # === 1. Add Stock Section ===
 with st.expander("➕ Add New Stock to Portfolio", expanded=False):
@@ -33,7 +41,8 @@ with st.expander("➕ Add New Stock to Portfolio", expanded=False):
                 
             submitted = st.form_submit_button("Add Stock")
             if submitted:
-                add_stock(selected_val, qty, price)
+                selected_id = selected_val
+                buy_stock(stock_id=selected_id, quantity=qty, price=price)
                 st.success(f"Added {qty} shares of {stock_options[selected_val]}!")
                 st.rerun()
     else:
@@ -51,14 +60,12 @@ if portfolio_df.empty:
     st.info("Portfolio is empty.")
     st.stop()
     
-# No longer merging with features.csv here, we use the direct lookup in the loop
-
 results = []
 for _, row in portfolio_df.iterrows():
-    s_id = row["stock_id"]
-    name = row["stock_name"]
+    s_id = row["asset_id"]
+    name = row["name"]
     qty = row["quantity"]
-    buy_price = row["buy_price"]
+    buy_price = row["price"]
 
     # Use the fresh lookup helper
     current_price = get_current_price_by_name(name)
@@ -80,6 +87,7 @@ for _, row in portfolio_df.iterrows():
     })
 
 res_df = pd.DataFrame(results)
+features_df = pd.read_csv(features_path) if os.path.exists(features_path) else pd.DataFrame()
 
 # Highlighting best/worst
 best_stock = res_df.loc[res_df['Return %'].idxmax()]
