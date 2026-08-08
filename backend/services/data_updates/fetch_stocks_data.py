@@ -1,20 +1,16 @@
-import pandas as pd
-import yfinance as yf
 import os
 import re
 from datetime import datetime, timedelta
-from backend.config import PRICE_DIR, FUNDAMENTAL_DIR, STOCKS_FILE
-
-
-os.makedirs(PRICE_DIR, exist_ok=True)
-os.makedirs(FUNDAMENTAL_DIR, exist_ok=True)
+import pandas as pd
+import yfinance as yf
+from backend.config import FUNDAMENTAL_DIR, PRICE_DIR, STOCKS_FILE
 
 
 def clean_name(name):
     return re.sub(r'[^a-zA-Z0-9]', '_', name)
 
 
-def update_stock_master():
+def update_stock_master(output_file=STOCKS_FILE):
     url = "https://archives.nseindia.com/content/indices/ind_nifty200list.csv"
     df = pd.read_csv(url)
 
@@ -29,8 +25,8 @@ def update_stock_master():
         "yahoo_ticker": df["Symbol"] + ".NS"
     })
 
-    if os.path.exists(STOCKS_FILE):
-        existing_df = pd.read_csv(STOCKS_FILE)
+    if os.path.exists(output_file):
+        existing_df = pd.read_csv(output_file)
 
         existing_df["stock_id"] = pd.to_numeric(existing_df["stock_id"], errors="coerce").fillna(0).astype(int)
 
@@ -58,18 +54,20 @@ def update_stock_master():
         new_df["is_active"] = True
         updated_df = new_df
 
+    os.makedirs(os.path.dirname(output_file) or ".", exist_ok=True)
     updated_df["stock_id"] = updated_df["stock_id"].astype(int)
-    updated_df.to_csv(STOCKS_FILE, index=False)
+    updated_df.to_csv(output_file, index=False)
 
     return updated_df
 
 
-def fetch_price_single(row):
+def fetch_price_single(row, output_dir=PRICE_DIR):
     ticker = row["yahoo_ticker"]
     try:
         stock_id = int(row["stock_id"])
         name = clean_name(row["company_name"])
-        file_path = f"{PRICE_DIR}/{stock_id}_{name}.csv"
+        os.makedirs(output_dir, exist_ok=True)
+        file_path = os.path.join(output_dir, f"{stock_id}_{name}.csv")
         stock = yf.Ticker(ticker)
         today = datetime.today().date()
 
@@ -79,7 +77,7 @@ def fetch_price_single(row):
                 existing["Date"] = pd.to_datetime(existing["Date"], utc=True, errors="coerce")
                 last_date = existing["Date"].max().date()
                 start_date = last_date + timedelta(days=1)
-                
+
                 if start_date > today:
                     return
                 data = stock.history(start=start_date.strftime("%Y-%m-%d"))
@@ -101,7 +99,7 @@ def fetch_price_single(row):
         combined = pd.concat([existing, data], ignore_index=True)
         combined["Date_Only"] = pd.to_datetime(combined["Date"], utc=True).dt.tz_convert('Asia/Kolkata').dt.date
         combined = combined.drop_duplicates(subset=["Date_Only"], keep="last").sort_values(by="Date_Only")
-        
+
         combined["Date"] = combined["Date_Only"]
         combined.drop(columns=["Date_Only"], inplace=True)
         combined.to_csv(file_path, index=False)
@@ -109,13 +107,14 @@ def fetch_price_single(row):
         print(f"Price error for {ticker}: {e}")
 
 
-def fetch_fundamental_single(row):
+def fetch_fundamental_single(row, output_dir=FUNDAMENTAL_DIR):
     name = row['company_name']
     try:
         ticker = row["yahoo_ticker"]
         stock_id = int(row["stock_id"])
         filename = clean_name(name)
-        file_path = f"{FUNDAMENTAL_DIR}/{stock_id}_{filename}.csv"
+        os.makedirs(output_dir, exist_ok=True)
+        file_path = os.path.join(output_dir, f"{stock_id}_{filename}.csv")
 
         stock = yf.Ticker(ticker)
         bs = stock.balance_sheet.T
@@ -125,7 +124,7 @@ def fetch_fundamental_single(row):
         bs.reset_index(inplace=True)
         bs.rename(columns={"index": "report_date"}, inplace=True)
         bs["report_date"] = pd.to_datetime(bs["report_date"], utc=True).dt.date
-        
+
         required_cols = [
             "report_date", "Total Debt", "Total Liabilities Net Minority Interest",
             "Total Assets", "Stockholders Equity", "Cash And Cash Equivalents"

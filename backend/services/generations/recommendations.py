@@ -1,6 +1,6 @@
 import pandas as pd
-from backend.config import FEATURES_FILE, RECOMMENDATIONS_FILE
-
+import os
+from backend.config import SILVER_DIR
 
 
 def generate_recommendation(row):
@@ -63,7 +63,7 @@ def generate_explanation(row):
 
 
 def generate_recommendations():
-    df = pd.read_csv(FEATURES_FILE)
+    df = pd.read_csv(os.path.join(SILVER_DIR, "features.csv"))
 
     if df.empty:
         print("No features data found")
@@ -93,7 +93,7 @@ def generate_recommendations():
 
     df = df[[c for c in cols if c in df.columns]]
 
-    df.to_csv(RECOMMENDATIONS_FILE, index=False)
+    df.to_csv(os.path.join(SILVER_DIR, "recommendations.csv"), index=False)
 
     print("Recommendations generated")
 

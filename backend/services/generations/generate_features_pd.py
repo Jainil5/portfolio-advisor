@@ -1,13 +1,18 @@
-import pandas as pd
 import os
-from backend.config import PRICE_DIR, FUNDAMENTAL_DIR, STOCKS_FILE, FEATURES_FILE
 
-def get_stock_file_map():
+import pandas as pd
+
+from backend.config import FUNDAMENTAL_DIR, PRICE_DIR, STOCKS_FILE, SILVER_DIR
+
+
+def get_stock_file_map(price_dir=PRICE_DIR):
     stock_map = {}
-    for file in os.listdir(PRICE_DIR):
+    if not os.path.isdir(price_dir):
+        return stock_map
+    for file in os.listdir(price_dir):
         if file.endswith(".csv"):
             stock_id = int(file.split("_")[0])
-            stock_map[stock_id] = os.path.join(PRICE_DIR, file)
+            stock_map[stock_id] = os.path.join(price_dir, file)
     return stock_map
 
 
@@ -51,11 +56,13 @@ def compute_features(df):
     return results
 
 
-def get_fundamental_features(stock_id):
+def get_fundamental_features(stock_id, fundamental_dir=FUNDAMENTAL_DIR):
     try:
-        for f in os.listdir(FUNDAMENTAL_DIR):
+        if not os.path.isdir(fundamental_dir):
+            return {}
+        for f in os.listdir(fundamental_dir):
             if f.startswith(f"{stock_id}_"):
-                file = os.path.join(FUNDAMENTAL_DIR, f)
+                file = os.path.join(fundamental_dir, f)
                 df = pd.read_csv(file)
 
                 if df.empty:
@@ -78,7 +85,7 @@ def get_fundamental_features(stock_id):
                     "cash_ratio": cash / liabilities if liabilities else 0
                 }
         return {}
-    except:
+    except Exception:
         return {}
 
 
@@ -175,8 +182,7 @@ def generate_features():
     ]
 
     final_df = final_df[[c for c in cols if c in final_df.columns]]
-    final_df.to_csv(FEATURES_FILE, index=False)
-
+    final_df.to_csv(os.path.join(SILVER_DIR, "features.csv"), index=False)
     print("Features generated")
 
 

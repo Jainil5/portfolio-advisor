@@ -2,20 +2,28 @@
 
 import argparse
 import glob
+import json
 import os
+from datetime import datetime
 
-import numpy as np
+import joblib
 import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier, GradientBoostingRegressor
 from sklearn.metrics import accuracy_score, mean_absolute_error
 from sklearn.model_selection import train_test_split
-from backend.config import PRICE_DIR, FUNDAMENTAL_DIR, STOCKS_FILE, FEATURES_FILE
+
+from backend.config import (
+    PRICE_DIR,
+    STOCKS_FILE,
+    SILVER_DIR,
+)
 
 LOOKBACK = 5
 
-def find_price_file(stock_id=None, ticker=None):
+
+def find_price_file(stock_id=None, ticker=None, price_dir=PRICE_DIR):
     if stock_id is not None:
-        matches = glob.glob(os.path.join(PRICE_DIR, f"{stock_id}_*.csv"))
+        matches = glob.glob(os.path.join(price_dir, f"{stock_id}_*.csv"))
         if matches:
             return matches[0]
 
@@ -24,7 +32,7 @@ def find_price_file(stock_id=None, ticker=None):
         row = stocks[stocks["ticker"] == ticker]
         if not row.empty:
             sid = int(row.iloc[0]["stock_id"])
-            matches = glob.glob(os.path.join(PRICE_DIR, f"{sid}_*.csv"))
+            matches = glob.glob(os.path.join(price_dir, f"{sid}_*.csv"))
             if matches:
                 return matches[0]
 
@@ -55,7 +63,23 @@ def build_features(df):
     return out.dropna().reset_index(drop=True)
 
 
-def train_and_predict(df):
+def _model_paths(stock_id):
+    base = os.path.join(SILVER_DIR, "predictions", str(stock_id))
+    return {
+        "regressor": f"{base}_regressor.joblib",
+        "classifier": f"{base}_classifier.joblib",
+    }
+
+
+def save_model_artifacts(stock_id, reg, clf):
+    paths = _model_paths(stock_id)
+    os.makedirs(os.path.dirname(paths["regressor"]), exist_ok=True)
+    joblib.dump(reg, paths["regressor"])
+    joblib.dump(clf, paths["classifier"])
+    return paths
+
+
+def train_and_predict(df, stock_id=None, save_models=True):
     features = build_features(df)
     if len(features) < 30:
         raise ValueError("Need at least ~30 trading days after feature engineering.")
@@ -82,7 +106,6 @@ def train_and_predict(df):
 
     price_pred = reg.predict(X_test)
     dir_pred = clf.predict(X_test)
-    dir_proba = clf.predict_proba(X_test)[:, 1]
 
     metrics = {
         "mae": mean_absolute_error(y_price_test, price_pred),
@@ -94,7 +117,12 @@ def train_and_predict(df):
     rise_prob = float(clf.predict_proba(latest)[0, 1])
     current_price = float(df["Close"].iloc[-1])
 
+    model_paths = None
+    if save_models and stock_id is not None:
+        model_paths = save_model_artifacts(stock_id, reg, clf)
+
     return {
+        "stock_id": stock_id,
         "current_price": current_price,
         "predicted_next_close": next_price,
         "predicted_change_pct": ((next_price / current_price) - 1) * 100 if current_price else 0,
@@ -102,14 +130,54 @@ def train_and_predict(df):
         "predicted_direction": "RISE" if rise_prob >= 0.5 else "FALL",
         "metrics": metrics,
         "last_date": str(df["Date"].iloc[-1].date()),
+        "model_paths": model_paths,
     }
 
 
-def predict(stock_id=None, ticker=None):
+def save_prediction(result, predictions_dir=PREDICTIONS_DIR):
+    ensure_pipeline_directories()
+    os.makedirs(predictions_dir, exist_ok=True)
+
+    stock_id = result.get("stock_id")
+    if stock_id is None:
+        raise ValueError("stock_id is required to save a prediction artifact")
+
+    payload = {
+        "stock_id": stock_id,
+        "generated_at": datetime.utcnow().isoformat(),
+        "last_date": result.get("last_date"),
+        "current_price": result.get("current_price"),
+        "predicted_next_close": result.get("predicted_next_close"),
+        "predicted_change_pct": result.get("predicted_change_pct"),
+        "rise_probability": result.get("rise_probability"),
+        "predicted_direction": result.get("predicted_direction"),
+        "metrics": result.get("metrics"),
+        "model_paths": result.get("model_paths"),
+    }
+
+    output_path = os.path.join(predictions_dir, f"{stock_id}_prediction.json")
+    with open(output_path, "w") as file:
+        json.dump(payload, file, indent=2)
+
+    return output_path
+
+
+def predict(stock_id=None, ticker=None, save=True):
     path = find_price_file(stock_id=stock_id, ticker=ticker)
     df = load_ohlcv(path)
-    result = train_and_predict(df)
+
+    if stock_id is None and ticker and os.path.exists(STOCKS_FILE):
+        stocks = pd.read_csv(STOCKS_FILE)
+        row = stocks[stocks["ticker"] == ticker]
+        if not row.empty:
+            stock_id = int(row.iloc[0]["stock_id"])
+
+    result = train_and_predict(df, stock_id=stock_id)
     result["price_file"] = path
+
+    if save and stock_id is not None:
+        result["prediction_file"] = save_prediction(result)
+
     return result
 
 
@@ -117,12 +185,13 @@ def main():
     parser = argparse.ArgumentParser(description="Predict next-day price/direction from OHLCV history")
     parser.add_argument("--stock-id", type=int, help="Stock ID from stocks.csv")
     parser.add_argument("--ticker", type=str, help="Ticker symbol, e.g. RELIANCE.NS")
+    parser.add_argument("--no-save", action="store_true", help="Skip writing prediction artifacts")
     args = parser.parse_args()
 
     if not args.stock_id and not args.ticker:
         parser.error("Provide --stock-id or --ticker")
 
-    out = predict(stock_id=args.stock_id, ticker=args.ticker)
+    out = predict(stock_id=args.stock_id, ticker=args.ticker, save=not args.no_save)
     print(f"File: {out['price_file']}")
     print(f"Last date: {out['last_date']}")
     print(f"Current close: {out['current_price']:.2f}")
@@ -130,6 +199,8 @@ def main():
     print(f"Direction: {out['predicted_direction']} (rise prob: {out['rise_probability']:.1%})")
     print(f"Holdout MAE: {out['metrics']['mae']:.2f}")
     print(f"Holdout direction accuracy: {out['metrics']['direction_accuracy']:.1%}")
+    if out.get("prediction_file"):
+        print(f"Prediction saved to: {out['prediction_file']}")
 
 
 if __name__ == "__main__":

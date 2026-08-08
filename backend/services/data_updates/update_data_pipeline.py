@@ -1,25 +1,22 @@
 import json
 import os
-import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
-from backend.services.fetch_stocks_data import (
+from backend.config import (
+    FUNDAMENTAL_DIR,
+    METADATA_FILE,
+    PRICE_DIR,
+    STOCKS_FILE,
+)
+from backend.services.data_updates.fetch_stocks_data import (
     fetch_fundamental_single,
     fetch_price_single,
     update_stock_master,
 )
-from backend.services.recommendations import generate_recommendations
-import os
-from backend.config import METADATA_FILE
+from backend.services.generations.recommendations import generate_recommendations
+from backend.services.generations.generate_features_pd import generate_features
 
 MAX_WORKERS = 10
-
-def _get_feature_generator(FEATURE_ENGINE:str= "spark"):
-    if FEATURE_ENGINE == "spark":
-        from backend.services.generate_features_spark import generate_features as spark_generate
-        return spark_generate
-    from backend.services.generate_features_pd import generate_features
-    return generate_features
 
 
 def load_metadata():
@@ -42,19 +39,22 @@ def update_required():
     return metadata.get("last_updated") != datetime.today().strftime("%Y-%m-%d")
 
 
+
 def _fetch_stock_data(row):
-    fetch_price_single(row)
-    fetch_fundamental_single(row)
+    fetch_price_single(row, output_dir=PRICE_DIR)
+    fetch_fundamental_single(row, output_dir=FUNDAMENTAL_DIR)
 
 
 def update_stocks():
     print("\nUpdating Stocks...\n")
 
     print("Updating Stock Master Dataset...")
-    stocks_df = update_stock_master()
+    stocks_df = update_stock_master(output_file=STOCKS_FILE)
     stocks = stocks_df.to_dict("records")
 
     print(f"Updating Prices and Fundamentals for {len(stocks)} Stocks...")
+    print(f"Price directory: {PRICE_DIR}")
+    print(f"Fundamental directory: {FUNDAMENTAL_DIR}")
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         futures = {executor.submit(_fetch_stock_data, row): row for row in stocks}
@@ -70,7 +70,6 @@ def update_stocks():
 
 def update_recommendations():
     print("\nGenerating Features...")
-    generate_features = _get_feature_generator()
     generate_features()
 
     print("Generating Recommendations...")
@@ -78,9 +77,9 @@ def update_recommendations():
     print("\nRecommendations Updated Successfully.\n")
 
 
-
 def update_finance_data(force=False):
     print("\nChecking Finance Data...\n")
+    print(f"Stock data root configured for: {os.getenv('APP_ENV', 'local')}")
 
     if not force and not update_required():
         print("Finance Data is already updated today.\n")
