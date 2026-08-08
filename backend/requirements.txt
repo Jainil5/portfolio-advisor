@@ -11,3 +11,5 @@ streamlit_autorefresh
 pyspark
 scikit-learn
 numpy
+pyarrow
+joblib

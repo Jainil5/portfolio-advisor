@@ -5,20 +5,16 @@ import os
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, PROJECT_ROOT)
 
+from backend.data_io import load_recommendations_df
 from backend.services.helper_functions import get_current_price_by_name
 from backend.services.stock_agent import query_stock_info
 
 st.set_page_config(page_title="Recommendations", page_icon="⭐", layout="wide")
 st.title("⭐ Top Stock Recommendations")
 
-RECOMMENDATIONS_FILE = os.path.join(PROJECT_ROOT, 'backend', 'data', 'recommendations.csv')
-
 @st.cache_data
 def get_recommendations():
-    if not os.path.exists(RECOMMENDATIONS_FILE):
-        return pd.DataFrame()
-        
-    return pd.read_csv(RECOMMENDATIONS_FILE)
+    return load_recommendations_df()
 
 recommended_df = get_recommendations()
 

@@ -3,6 +3,7 @@ from streamlit_autorefresh import st_autorefresh
 import pandas as pd
 import sys
 import os
+from backend.config import TRANSACTIONS_FILE
 from backend.services.helper_functions import get_current_price_by_name
 from backend.services.stock_agent import query_stock_info
 from backend.services.update_data_pipeline import update_finance_data
@@ -25,9 +26,9 @@ Welcome to your **AI-Powered Stock Portfolio Advisor**.
                                             
 @st.cache_data(ttl=60)
 def load_portfolio():
-    if not os.path.exists("backend/data/transactions.csv"):
+    if not os.path.exists(TRANSACTIONS_FILE):
         return pd.DataFrame()
-    port_df = pd.read_csv("backend/data/transactions.csv")
+    port_df = pd.read_csv(TRANSACTIONS_FILE)
     
     # Use the name-based price lookup for fresh data
     port_df['current_price'] = port_df['name'].apply(get_current_price_by_name)

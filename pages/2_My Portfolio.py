@@ -7,6 +7,14 @@ import streamlit as st
 import pandas as pd
 
 
+from backend.config import (
+    FEATURES_FILE,
+    PRICE_DIR,
+    RECOMMENDATIONS_FILE,
+    STOCKS_FILE,
+    TRANSACTIONS_FILE,
+)
+from backend.data_io import load_features_df
 from backend.services.user_transactions import buy_stock
 from backend.services.helper_functions import get_current_price_by_name, get_id_by_name
 from backend.services.stock_agent import query_stock_info
@@ -14,13 +22,10 @@ from backend.services.stock_agent import query_stock_info
 st.set_page_config(page_title="Portfolio", page_icon="💼", layout="wide")
 st.title("💼 Your Portfolio")
 
-# CSV file locations using DATA_DIR
-DATA_DIR = os.path.join(PROJECT_ROOT, 'backend', 'data')
-PORTFOLIO_FILE = os.path.join(DATA_DIR, 'transactions.csv')
-RECOMMENDATIONS_FILE = os.path.join(PROJECT_ROOT, 'backend', 'data', 'recommendations.csv')
-STOCKS_FILE = os.path.join(DATA_DIR, 'stocks.csv')
-features_path = os.path.join(DATA_DIR, 'features.csv')
-prices_dir = os.path.abspath(os.path.join(PROJECT_ROOT, 'data', 'prices'))
+# Runtime data paths come from backend.config
+PORTFOLIO_FILE = TRANSACTIONS_FILE
+features_path = FEATURES_FILE
+prices_dir = PRICE_DIR
 
 # === 1. Add Stock Section ===
 with st.expander("➕ Add New Stock to Portfolio", expanded=False):
@@ -87,7 +92,7 @@ for _, row in portfolio_df.iterrows():
     })
 
 res_df = pd.DataFrame(results)
-features_df = pd.read_csv(features_path) if os.path.exists(features_path) else pd.DataFrame()
+features_df = load_features_df()
 
 # Highlighting best/worst
 best_stock = res_df.loc[res_df['Return %'].idxmax()]
