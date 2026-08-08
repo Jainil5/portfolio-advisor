@@ -1,8 +1,5 @@
 import os
 
-from langchain_ollama import ChatOllama, OllamaEmbeddings
-
-
 # PATH CONFIGURATION
 
 STOCK_DATA_ROOT = os.getenv(
@@ -51,15 +48,4 @@ FEATURES_FILE = os.path.join(
 RECOMMENDATIONS_FILE = os.path.join(
     SILVER_DIR,
     "recommendations.csv",
-)
-
-# LLM CONFIGURATION
-
-embeddings = OllamaEmbeddings(
-    model="nomic-embed-text:latest",
-)
-
-model = ChatOllama(
-    model="gpt-oss:20b-cloud",
-    temperature=0,
 )
