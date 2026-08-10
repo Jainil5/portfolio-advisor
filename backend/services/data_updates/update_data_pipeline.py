@@ -68,13 +68,13 @@ def update_stocks():
     print("\nStocks Updated Successfully.\n")
 
 
-def update_recommendations():
-    print("\nGenerating Features...")
-    generate_features()
+# def update_recommendations():
+#     print("\nGenerating Features...")
+#     generate_features()
 
-    print("Generating Recommendations...")
-    generate_recommendations()
-    print("\nRecommendations Updated Successfully.\n")
+#     print("Generating Recommendations...")
+#     generate_recommendations()
+#     print("\nRecommendations Updated Successfully.\n")
 
 
 def update_finance_data(force=False):
@@ -88,7 +88,7 @@ def update_finance_data(force=False):
     try:
         print("\nStarting Finance Update Pipeline...\n")
         update_stocks()
-        update_recommendations()
+        # update_recommendations()
         save_metadata()
         print("\nFinance Data Updated Successfully.\n")
     except Exception as e:

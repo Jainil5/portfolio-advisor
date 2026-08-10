@@ -49,3 +49,9 @@ RECOMMENDATIONS_FILE = os.path.join(
     SILVER_DIR,
     "recommendations.csv",
 )
+
+TRANSACTIONS_FILE = os.path.join(
+    BRONZE_DIR,
+    "transactions.csv",
+)
+

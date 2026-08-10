@@ -1,8 +1,5 @@
 import os
 import sys
-# Add project root to PYTHONPATH for backend imports
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.insert(0, PROJECT_ROOT)
 import streamlit as st
 import pandas as pd
 
@@ -10,12 +7,10 @@ import pandas as pd
 from backend.config import (
     FEATURES_FILE,
     PRICE_DIR,
-    RECOMMENDATIONS_FILE,
     STOCKS_FILE,
     TRANSACTIONS_FILE,
 )
-from backend.data_io import load_features_df
-from backend.services.user_transactions import buy_stock
+from backend.services.user_transactions import add_transaction
 from backend.services.helper_functions import get_current_price_by_name, get_id_by_name
 from backend.services.stock_agent import query_stock_info
 
@@ -47,7 +42,7 @@ with st.expander("➕ Add New Stock to Portfolio", expanded=False):
             submitted = st.form_submit_button("Add Stock")
             if submitted:
                 selected_id = selected_val
-                buy_stock(stock_id=selected_id, quantity=qty, price=price)
+                add_transaction(stock_id=selected_id, quantity=qty, price=price)
                 st.success(f"Added {qty} shares of {stock_options[selected_val]}!")
                 st.rerun()
     else:
@@ -67,10 +62,10 @@ if portfolio_df.empty:
     
 results = []
 for _, row in portfolio_df.iterrows():
-    s_id = row["asset_id"]
-    name = row["name"]
+    s_id = row["stock_id"]
+    name = row["stock_name"]
     qty = row["quantity"]
-    buy_price = row["price"]
+    buy_price = row["buy_price"]
 
     # Use the fresh lookup helper
     current_price = get_current_price_by_name(name)
@@ -92,7 +87,7 @@ for _, row in portfolio_df.iterrows():
     })
 
 res_df = pd.DataFrame(results)
-features_df = load_features_df()
+features_df = pd.read_csv("backend/data/silver/features.csv")
 
 # Highlighting best/worst
 best_stock = res_df.loc[res_df['Return %'].idxmax()]

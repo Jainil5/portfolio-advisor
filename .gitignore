@@ -1,9 +1,9 @@
-models/
+backend/models/
 __pycache__/
 venv/
 .vscode/
 .DS_Store
-data/
+backend/data/
 data_stocks/
-test/
+backend/test/
 .cursor/

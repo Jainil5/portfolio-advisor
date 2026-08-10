@@ -8,9 +8,8 @@ from langchain.tools import tool
 from backend.config import (
     FEATURES_FILE,
     RECOMMENDATIONS_FILE,
-    model,
 )
-
+from backend.model import llm
 
 # ============================================================
 # DATA LOADING
@@ -286,7 +285,7 @@ Rules:
 
 
 agent = create_agent(
-    model=model,
+    model=llm,
     tools=tools,
     system_prompt=SYSTEM_PROMPT,
 )
@@ -296,7 +295,7 @@ agent = create_agent(
 # QUERY
 # ============================================================
 
-def query_finance_info(query: str) -> str:
+def query_stock_info(query: str) -> str:
     """Query the Finance Agent."""
 
     try:
@@ -324,7 +323,7 @@ if __name__ == "__main__":
 
             query = "Should i buy Vedanta?"
 
-            response = query_finance_info(query)
+            response = query_stock_info(query)
 
             print("\n", response)
             print() 

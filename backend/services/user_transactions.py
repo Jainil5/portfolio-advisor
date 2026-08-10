@@ -1,10 +1,8 @@
 import os
 import uuid
 from datetime import datetime
-
 import pandas as pd
-from backend.config import STOCKS_FILE, TRANSACTIONS_FILE, PORTFOLIO_FILE
-
+from backend.config import STOCKS_FILE, TRANSACTIONS_FILE
 
 def load_csv(path: str) -> pd.DataFrame:
     """Safely load a CSV file."""
@@ -25,8 +23,6 @@ def generate_transaction_id():
     """Generate a short transaction id."""
     
     return str(uuid.uuid4())[:8]
-
-
 
 # Asset Helpers
 
@@ -94,7 +90,8 @@ def update_portfolio():
     """Update the portfolio snapshot using transactions.csv."""
     transactions = load_csv(TRANSACTIONS_FILE)
     if transactions.empty:
-        save_csv(pd.DataFrame(), PORTFOLIO_FILE)
+        save_csv(pd.DataFrame(), TRANSACTIONS_FILE
+        )
         return
 
     portfolio = []
@@ -106,7 +103,7 @@ def update_portfolio():
 
         for _, row in group.iterrows():
             qty = float(row["quantity"])
-            price = float(row["price"])
+            price = float(row["buy_price"])
             if row["action"] == "buy":
                 quantity += qty
                 total_investment += (qty * price)
@@ -128,7 +125,7 @@ def update_portfolio():
         })
 
     portfolio_df = pd.DataFrame(portfolio)
-    save_csv(portfolio_df, PORTFOLIO_FILE)
+    save_csv(portfolio_df, TRANSACTIONS_FILE)
 
 # Public Functions
 
@@ -146,9 +143,6 @@ def get_transactions():
     """Return all transactions."""
     return load_csv(TRANSACTIONS_FILE)
 
-def get_portfolio():
-    """Return portfolio."""
-    return load_csv(PORTFOLIO_FILE)
 
 def delete_transaction(transaction_id: str):
     """Delete a transaction."""
@@ -163,17 +157,14 @@ def clear_portfolio():
     """Delete everything."""
     if os.path.exists(TRANSACTIONS_FILE):
         os.remove(TRANSACTIONS_FILE)
-    if os.path.exists(PORTFOLIO_FILE):
-        os.remove(PORTFOLIO_FILE)
     print("Portfolio Cleared.")
 
 # Testing
 
 if __name__ == "__main__":
-    buy_stock(stock_id=1, quantity=10, price=1500)
-    sell_stock(stock_id=1, quantity=3, price=1900)
+    buy_stock(stock_id=1, quantity=10, price=1000)
+    sell_stock(stock_id=1, quantity=3, price=1300)
 
     print("\nPortfolio\n")
-    print(get_portfolio())
     print("\nTransactions\n")
     print(get_transactions())

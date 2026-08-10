@@ -7,7 +7,6 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, PROJECT_ROOT)
 
 from backend.config import PRICE_DIR
-from backend.data_io import load_features_df
 from backend.services.helper_functions import get_current_price_by_name
 from backend.services.stock_agent import query_stock_info
 
@@ -19,12 +18,9 @@ def describe_term(title, content):
     with st.expander(f"📚 What is {title}?", expanded=False):
         st.write(content)
 
-# --- DATA LOADING ---
-@st.cache_data
-def load_data():
-    return load_features_df()
 
-features_df = load_data()
+
+features_df = pd.read_csv("backend/data/silver/features.csv")
 
 # --- SIDEBAR: SELECTION & KEY METRICS ---
 with st.sidebar:

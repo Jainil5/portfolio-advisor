@@ -6,7 +6,6 @@ import os
 from backend.config import TRANSACTIONS_FILE
 from backend.services.helper_functions import get_current_price_by_name
 from backend.services.stock_agent import query_stock_info
-from backend.services.update_data_pipeline import update_finance_data
 
 st.set_page_config(
     page_title="Dashboard - AI Portfolio Advisor",
@@ -26,19 +25,13 @@ Welcome to your **AI-Powered Stock Portfolio Advisor**.
                                             
 @st.cache_data(ttl=60)
 def load_portfolio():
-    if not os.path.exists(TRANSACTIONS_FILE):
-        return pd.DataFrame()
     port_df = pd.read_csv(TRANSACTIONS_FILE)
     
     # Use the name-based price lookup for fresh data
-    port_df['current_price'] = port_df['name'].apply(get_current_price_by_name)
+    port_df['current_price'] = port_df['stock_name'].apply(get_current_price_by_name)
     return port_df
 
 
-
-def run_pipeline_background():
-    update_finance_data()
-    
 
 
 st.title("🏠 Portfolio Advisor Dashboard")
@@ -53,9 +46,9 @@ else:
     results = []
 
     for _, row in portfolio_df.iterrows():
-        name = row["name"]
+        name = row["stock_name"]
         qty = row["quantity"]
-        buy_price = row["price"]
+        buy_price = row["buy_price"]
         
         # Robustly fetch current price using the new direct lookup helper
         current_price = get_current_price_by_name(name)

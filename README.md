@@ -7,7 +7,12 @@ An AI-powered stock market advisory analysis system focused on the Indian market
 - **AI-Powered Analysis**: Uses advanced scoring algorithms to categorize stocks into Buy/Hold/Sell.
 - **Interactive Dashboard**: Visualize price trends, technical metrics, and fundamental health.
 - **Deep Insights**: Contextual explanations for every recommendation.
+- **Intelligent AI Agent**: Fetches the latest news for stocks, compares multiple stocks, and provides detailed, real-time information and insights.
 
+## Enterprise Architecture & Scale
+- **Apache Airflow**: Orchestrates and schedules the daily data pipelines, ensuring reliable and automated fetching of market data.
+- **Databricks**: Provides a scalable, unified analytics platform to handle heavy computational workloads and model training.
+- **PySpark**: Powers the distributed data processing engine, enabling rapid, parallelized calculation of complex technical indicators and large-scale feature engineering.
 ---
 
 ## Project Setup
@@ -34,7 +39,7 @@ pip install -r requirements.txt
 Before running the UI, you must populate the local database with the latest market data. This script fetches the Nifty 100 list, historical prices, and company fundamentals.
 
 ```bash
-python update_data.py
+python -m backend.services.data_updates.update_data_pipeline
 ```
 *Note: This process may take 5-10 minutes depending on your internet connection.*
 
