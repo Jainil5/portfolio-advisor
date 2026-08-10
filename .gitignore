@@ -9,3 +9,4 @@ backend/test/
 .cursor/
 test/*
 test
+test/airflow/setup.txt
