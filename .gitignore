@@ -8,3 +8,4 @@ data_stocks/
 backend/test/
 .cursor/
 test/*
+test
