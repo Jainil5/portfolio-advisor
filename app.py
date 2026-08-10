@@ -14,6 +14,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+
+
 st_autorefresh(interval=60000, key="refresh")
 
 st.sidebar.title("📈 AI FinTech Portfolio Advisor")
