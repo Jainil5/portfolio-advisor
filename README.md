@@ -14,7 +14,16 @@ An AI-powered stock market advisory analysis system focused on the Indian market
 - **Databricks**: Provides a scalable, unified analytics platform to handle heavy computational workloads and model training.
 - **PySpark**: Powers the distributed data processing engine, enabling rapid, parallelized calculation of complex technical indicators and large-scale feature engineering.
 ---
+## DEMO
+- **Stock Agent** - Agent that recommends, compares and analyze the stocks.
+<img width="2059" height="1150" alt="SCR-20260811-srdh" src="https://github.com/user-attachments/assets/9077a3ad-21c3-4965-bf18-13ad45b23e70" />
 
+- **Analysis Page** - Feature engineering on stocks with different metrics like Moving Averages, Volatality, and more.
+<img width="2525" height="1220" alt="SCR-20260811-sqrc" src="https://github.com/user-attachments/assets/1bf33d6e-5ede-4c8f-8f37-9471b02975db" />
+
+
+
+---
 ## Project Setup
 
 ### 1. Prerequisites
