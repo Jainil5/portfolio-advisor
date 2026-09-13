@@ -10,3 +10,30 @@ backend/test/
 test/*
 test
 test/airflow/setup.txt
+.env
+.cursor
+.codex
+.claude
+.agents
+.context-engine
+frontend/node_modules
+.eco-memory
+# Frontend
+frontend/dist/
+frontend/build/
+*.log
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# IDE / OS
+.idea/
+*.swp
