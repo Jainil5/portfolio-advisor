@@ -40,23 +40,68 @@ python3.11 -m venv venv
 # Activate the virtual environment (macOS/Linux)
 source venv/bin/activate
 
-# Install dependencies
-pip install -r requirements.txt
+# Install the package and its dependencies (editable)
+pip install -e .
+
+# Optional extras: PySpark feature generation, and dev tooling (pytest)
+pip install -e ".[spark,dev]"
 ```
 
 ### 3. Data Initialization
-Before running the UI, you must populate the local database with the latest market data. This script fetches the Nifty 100 list, historical prices, and company fundamentals.
+Before running the UI, you must populate the local dataset with the latest market data. This fetches the Nifty listings, historical prices, and company fundamentals into `data/` (git-ignored).
 
 ```bash
-python -m backend.services.data_updates.update_data_pipeline
+python scripts/update_data.py            # bronze: prices + fundamentals
+python -m backend.pipelines.features     # silver: features + AI scores
+python -m backend.pipelines.recommendations
 ```
-*Note: This process may take 5-10 minutes depending on your internet connection.*
 
-### 4. Launching the Dashboard
-Once the data is ready, launch the Streamlit interface:
+*Note: This process may take 5-10 minutes depending on your internet connection. You can also trigger the whole chain later from the app: Settings (⚙) → Update Data.*
+
+### 4. Launching the App
+The frontend is a React (Vite + TypeScript) app served against a FastAPI backend that reads the CSV/DuckDB data:
 
 ```bash
-streamlit run app.py
+# Terminal 1 — API (port 8000)
+uvicorn backend.api:app --reload --port 8000
+
+# Terminal 2 — frontend (port 5173, proxies /api -> :8000)
+cd src/frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 — the Stock Screener is the home page; click any row for the TradingView-style chart page (candles, MA20/50, RSI, 1W–5Y ranges, fundamentals, AI analysis, news).
+
+### 5. Repository Layout
+
+```
+src/
+├── backend/            # pip-installable Python package (backend.api, pipelines, agents, news, …)
+└── frontend/           # React + Vite + TypeScript app
+data/                   # bronze/ + silver/ datasets (git-ignored)
+scripts/  dags/  tests/ # entry points, Airflow DAG, pytest suite
+```
+
+### 6. Latest News (optional)
+Keeps a rolling news snapshot per stock in `data/bronze/stock_news.csv`: the 5 newest headlines (Google News, fetched with [Scrapling](https://github.com/D4Vinci/Scrapling)) plus a short LLM summary. Each run merges in fresh headlines, drops the oldest beyond 5, and rewrites the summary only when headlines changed. The AI advisor reads it through its `latest_stock_news` tool.
+
+```bash
+pip install -e ".[news]"
+
+python -m backend.news.fetch                    # all active stocks
+python -m backend.news.fetch --symbols TCS,INFY
+python -m backend.news.fetch --no-summary       # headlines only, no LLM
+```
+
+Run it on a schedule (cron / Airflow) to keep it fresh.
+
+**BSE corporate announcements.** Exchange filings are the primary source (results, dividends, orders, M&A are filed with BSE/NSE before the media reports them). This scrapes BSE's announcements for *all* listed companies into `data/bronze/bse_news.csv`, keeping the last 7 days. Rows for stocks in `stocks.csv` get a `ticker`; routine compliance filings are flagged `is_routine`.
+
+```bash
+python -m backend.news.bse_news            # today + yesterday, stops at already-stored filings
+python -m backend.news.bse_news --days 7   # backfill
+python -m backend.news.bse_news --full     # re-walk every page (repair an interrupted run)
 ```
 
 ## Documentation

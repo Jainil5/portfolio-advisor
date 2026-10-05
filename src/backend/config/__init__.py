@@ -1,0 +1,35 @@
+"""Configuration and project paths."""
+
+from backend.config.settings import (
+    BRONZE_DIR,
+    BSE_NEWS_FILE,
+    DATA_ROOT,
+    FEATURES_FILE,
+    FUNDAMENTAL_DIR,
+    METADATA_FILE,
+    NEWS_FILE,
+    PORTFOLIO_FILE,
+    PRICE_DIR,
+    PROJECT_ROOT,
+    RECOMMENDATIONS_FILE,
+    SILVER_DIR,
+    STOCKS_FILE,
+    TRANSACTIONS_FILE,
+)
+
+__all__ = [
+    "BRONZE_DIR",
+    "BSE_NEWS_FILE",
+    "DATA_ROOT",
+    "FEATURES_FILE",
+    "FUNDAMENTAL_DIR",
+    "METADATA_FILE",
+    "NEWS_FILE",
+    "PORTFOLIO_FILE",
+    "PRICE_DIR",
+    "PROJECT_ROOT",
+    "RECOMMENDATIONS_FILE",
+    "SILVER_DIR",
+    "STOCKS_FILE",
+    "TRANSACTIONS_FILE",
+]

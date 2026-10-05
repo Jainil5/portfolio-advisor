@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portfolio-advisor"
+version = "0.1.0"
+description = "AI-powered stock portfolio advisor for the Indian Nifty market"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain",
+    "langchain-ollama",
+    "langchain-chroma",
+    "langchain-community",
+    "langchain-core",
+    "yfinance",
+    "requests",
+    "fastapi",
+    "uvicorn[standard]",
+    "pandas",
+    "numpy",
+    "python-dotenv",
+    "scikit-learn",
+    "joblib",
+    "pyarrow",
+    "ddgs",
+]
+
+[project.optional-dependencies]
+spark = ["pyspark>=3.5"]
+news = [
+    "scrapling",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov",
+]
+
+[project.scripts]
+portfolio-advisor = "backend.pipelines.update_pipeline:update_finance_data"
+predict = "backend.analytics.predict:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["live: hits the real network (opt-in: pytest -m live)"]
+addopts = "-m 'not live'"
